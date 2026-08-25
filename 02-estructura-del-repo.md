@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SecciÓn uno
+title: Sección uno
 nav_order: 2
 ---
 
