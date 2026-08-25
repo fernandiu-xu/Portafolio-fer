@@ -1,18 +1,18 @@
 /* === HEADER (barra superior) === */
-.site-header { background-color: #E00034 !important; }
+.site-header { background-color: #F4B6C2 !important; }
 .site-title, .site-nav a { color: #ffffff !important; }
 
 /* === ENLACES EN CONTENIDO (sin morado/azul y con subrayado del color) === */
-:root { --link-color: #E00034; }
+:root { --link-color: #F4B6C2; }
 a, a:visited { color: var(--link-color); }
 a { text-decoration-color: rgba(224, 0, 52, 0.4); }
-a:hover { color: #b00028; text-decoration-color: rgba(176, 0, 40, 0.6); }
-a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
+a:hover { color: #E89AAA; text-decoration-color: rgba(176, 0, 40, 0.6); }
+a:focus { outline: 2px solid #F4B6C2; outline-offset: 2px; }
 
 /* === SIDEBAR ROJO COMPLETO === */
 .side-bar,
 .side-bar .site-nav,
-.side-bar .nav-list { background-color: #E00034 !important; }
+.side-bar .nav-list { background-color: #F4B6C2 !important; }
 
 /* Título del sitio en el sidebar */
 .side-bar .site-title {
@@ -30,12 +30,12 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
   background: none !important;            /* quita el gradiente lila */
 }
 .nav-list .nav-list-link.active {
-  color: #FFD5DE !important;
+  color: #F4B6C2 !important;
   font-weight: 500;
   background-color: rgba(255,255,255,0.12) !important;
 }
 .nav-list .nav-list-link:hover {
-  color: #FFD5DE !important;
+  color: #F4B6C2 !important;
   background-color: rgba(255,255,255,0.08) !important;
 }
 
@@ -51,15 +51,15 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
 }
 .nav-list-expander:hover,
 .nav-list-expander:hover svg {
-  color: #FFD5DE !important;
-  stroke: #FFD5DE !important;
+  color: #F4B6C2 !important;
+  stroke: #F4B6C2 !important;
 }
 
 /* === FOOTER DEL SIDEBAR (texto y enlace legibles) === */
 .side-bar .site-footer { color: #ffffff !important; }
 .side-bar .site-footer a,
 .side-bar .site-footer a:visited {
-  color: #FFD5DE !important;
+  color: #F4B6C2 !important;
   text-decoration-color: rgba(255,213,222,0.6);
 }
 .side-bar .site-footer a:hover {
@@ -80,11 +80,11 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
   stroke:#ffffff !important;
 }
 #menu-toggle:focus + label,
-.menu-button:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
+.menu-button:focus { outline: 2px solid #F4B6C2; outline-offset: 2px; }
 
 /* === MIGAS (breadcrumbs) a la paleta === */
-.breadcrumbs li a, .breadcrumbs li a:visited { color: #E00034; }
-.breadcrumbs li a:hover { color: #b00028; }
+.breadcrumbs li a, .breadcrumbs li a:visited { color: #F4B6C2; }
+.breadcrumbs li a:hover { color: #E89AAA; }
 
 /* === CONTENIDO === */
 .page-content { background-color: #ffffff; color: #333333; }
@@ -128,7 +128,7 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
   }
   .side-bar .site-footer a,
   .side-bar .site-footer a:visited {
-    color: #FFD5DE !important;
+    color: #F4B6C2 !important;
     text-decoration-color: rgba(255, 213, 222, 0.6) !important;
   }
   .side-bar .site-footer a:hover {
@@ -156,11 +156,11 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
   /* Enlaces del footer en rojo Ibero */
   footer.site-footer a,
   footer.site-footer a:visited {
-    color: #E00034 !important;
+    color: #F4B6C2 !important;
     text-decoration-color: rgba(224, 0, 52, 0.5) !important;
   }
   footer.site-footer a:hover {
-    color: #b00028 !important;
+    color: #E89AAA !important;
     text-decoration-color: rgba(176, 0, 40, 0.7) !important;
   }
 }
@@ -206,7 +206,7 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
 
 /* Hover y Activo más notorios */
 .side-bar .nav-list .nav-list-link:hover {
-  color: #FFD5DE !important;
+  color: #F4B6C2 !important;
   background: rgba(255,255,255,0.10) !important;
 }
 .side-bar .nav-list .nav-list-link.active {
@@ -218,12 +218,12 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
 /* Barra izquierda solo para hijos (nivel 2+) en hover/activo */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link:hover,
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link.active {
-  border-left-color: #FFD5DE;
+  border-left-color: #F4B6C2;
 }
 
 /* Mejor foco accesible */
 .side-bar .nav-list .nav-list-link:focus {
-  outline: 2px solid #FFD5DE !important;
+  outline: 2px solid #F4B6C2 !important;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -248,12 +248,12 @@ footer.site-footer { display: none !important; }
 
 .custom-footer a,
 .custom-footer a:visited{
-  color: #E00034;                     /* rojo IBERO */
+  color: #F4B6C2;                     /* rojo IBERO */
   text-decoration-color: rgba(224,0,52,.45);
 }
 
 .custom-footer a:hover{
-  color: #b00028;
+  color: #E89AAA;
   text-decoration-color: rgba(176,0,40,.65);
 }
 
@@ -336,4 +336,53 @@ video {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* ===== RECUADROS AMARILLO PASTEL ===== */
+
+/* Acerca de mí y Sección 1 */
+.side-bar .nav-list-link[href*="acerca"],
+.side-bar .nav-list-link[href*="seccion"] {
+  background-color: #FFF2B2 !important;
+  color: #333333 !important;
+  border-radius: 6px;
+  margin: 4px 8px;
+}
+
+/* Mantener el amarillo al pasar el mouse */
+.side-bar .nav-list-link[href*="acerca"]:hover,
+.side-bar .nav-list-link[href*="seccion"]:hover {
+  background-color: #FFF2B2 !important;
+  color: #333333 !important;
+}
+
+/* Mantener el amarillo cuando está seleccionado */
+.side-bar .nav-list-link[href*="acerca"].active,
+.side-bar .nav-list-link[href*="seccion"].active {
+  background-color: #FFF2B2 !important;
+  color: #333333 !important;
+}
+
+/* ===== DOS RECUADROS DEL MENÚ ===== */
+
+.side-bar .nav-list > .nav-list-item:nth-child(1) > .nav-list-link,
+.side-bar .nav-list > .nav-list-item:nth-child(2) > .nav-list-link {
+  background-color: #FFF2B2 !important;
+  color: #333333 !important;
+  border-radius: 6px;
+  margin: 4px 8px;
+}
+
+/* Mantenerlos amarillos al pasar el mouse */
+.side-bar .nav-list > .nav-list-item:nth-child(1) > .nav-list-link:hover,
+.side-bar .nav-list > .nav-list-item:nth-child(2) > .nav-list-link:hover {
+  background-color: #FFF2B2 !important;
+  color: #333333 !important;
+}
+
+/* Mantenerlos amarillos cuando están seleccionados */
+.side-bar .nav-list > .nav-list-item:nth-child(1) > .nav-list-link.active,
+.side-bar .nav-list > .nav-list-item:nth-child(2) > .nav-list-link.active {
+  background-color: #FFF2B2 !important;
+  color: #333333 !important;
 }
