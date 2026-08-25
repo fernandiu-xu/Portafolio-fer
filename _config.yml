@@ -14,6 +14,8 @@ plugins:
 url: "https://fernandiu-xu.github.io/"
 baseurl: "/Portafolio-fer"
 
+
+
 #Configuracion Formato, Header y Footer
 just_the_docs:
   # incluir CSS adicional
