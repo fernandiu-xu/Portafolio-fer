@@ -1,5 +1,9 @@
 ---
 layout: default
-title: Sección uno
-nav_order: 2
+title: Acerca de mí
+nav_order: 1
 ---
+
+# Acerca de mí
+
+Hola soy Fernanda, esta es una página exclusiva para proyectos escolares y tal vez más cosas.
