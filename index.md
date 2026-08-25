@@ -2,6 +2,7 @@
 layout: default
 title: Inicio
 nav_order: 1
+nav_exclude: true
 ---
 
 # Plantilla de documentación con Just the Docs
