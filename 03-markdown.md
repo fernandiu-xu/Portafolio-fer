@@ -2,6 +2,7 @@
 layout: default
 title: Escribir en Markdown
 nav_order: 4
+nav_exclude: true
 ---
 
 # Escribir en Markdown
