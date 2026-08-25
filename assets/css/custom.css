@@ -387,22 +387,22 @@ video {
   color: #333333 !important;
 }
 
-/* ===== PUNTITOS BLANCOS EN EL SIDEBAR ROSA ===== */
+/* ===== CÍRCULOS EN TODO EL SIDEBAR ROSA ===== */
 
-.side-bar {
+.side-bar,
+.side-bar .site-nav,
+.side-bar .nav-list {
   background-color: #F4B6C2 !important;
   background-image: radial-gradient(
-    rgba(255, 255, 255, 0.5) 1.5px,
-    transparent 1.5px
+    circle,
+    rgba(255, 255, 255, 0.5) 0 4px,
+    transparent 4.5px
   ) !important;
-  background-size: 40px 40px !important;
-
+  background-size: 32px 32px !important;
 }
 
-/* Los cuadros amarillos quedan por encima de los puntitos */
-
+/* Los cuadros amarillos tapan los círculos */
 .side-bar .nav-list-link {
   position: relative;
   z-index: 2;
-
 }
