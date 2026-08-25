@@ -386,3 +386,23 @@ video {
   background-color: #FFF2B2 !important;
   color: #333333 !important;
 }
+
+/* ===== PUNTITOS BLANCOS EN EL SIDEBAR ROSA ===== */
+
+.side-bar {
+  background-color: #F4B6C2 !important;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.5) 1.5px,
+    transparent 1.5px
+  ) !important;
+  background-size: 40px 40px !important;
+
+}
+
+/* Los cuadros amarillos quedan por encima de los puntitos */
+
+.side-bar .nav-list-link {
+  position: relative;
+  z-index: 2;
+
+}
