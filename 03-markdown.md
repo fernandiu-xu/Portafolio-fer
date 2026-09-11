@@ -11,3 +11,6 @@ Arduino IDE es el programa que se utiliza para escribir, revisar y enviar instru
 
 En resumen, Arduino es la tarjeta que realiza las acciones y Arduino IDE es el programa con el que le damos las instrucciones.
 
+![foto de Arduino](assets/img/ARDUINO%20FOTO.webp)
+
+![programa Arduino IDE](assets/img/ARDUINOIDE.png)
