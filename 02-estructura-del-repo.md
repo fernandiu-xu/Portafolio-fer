@@ -11,19 +11,19 @@ JUST THE DOCS, que nos fue proporcionado, por ell profesor, al hacer picar Fork,
 
 Ya estando el link, y creado un apartado de codigo, tuve que cambiar el link y nombre de usuario, para que fuera con mi nombre, al igual que el link fuera mio.
 
-![Cambio de nombre](assets/img/CAMBIODENOMBRE.png)
+![cambio de nombre]({{ '/assets/img/01-publicar/CAMBIONOMBRE.png' | relative_url }})
 
 Despues empece cambiando el color de la pagina, le puse el color de mi eleccion, que fue rosa y con los apartados del color amarillo, igualmente le agregue unos puntitos blancos, todo esto lon cambie en el apartado de custom.css, ahi primero cambie el color, despues agregue una funcion que hizo que tuviera los puntos de la parte de atras, seiguiendo las funciones de los colores. 
 
-![Imagen color página](assets/img/IMAGENCOLORPAG.png)
+![imagen del color de la página]({{ '/assets/img/01-publicar/IMAGENCOLORPAG.png' | relative_url }})
 
-![Puntos blancos](assets/img/PUNTOSBLANCOS.png)
+![puntos blancos]({{ '/assets/img/01-publicar/PUNTOSBLANCOS.png' | relative_url }})
 
 Despues al cambiarle el aspecto, deje solamente dos casillas, las cuales son "SOBRE MI" Y "SEMANA UNO", los demas que quedaban, los oculte con la funcion "nav_exclude:true" con esto pude hacer que las demas casillas que no queria no aparecieran.
 
-![Eliminar página](assets/img/ELIMINARPAGINA.png)
+![eliminar página]({{ '/assets/img/01-publicar/ELIMINARPAGINA.png' | relative_url }})
 
-![Eliminar página dos](assets/img/ELIMINAD2.png)
+![segunda imagen de eliminación]({{ '/assets/img/01-publicar/ELIMINAD2.png' | relative_url }})
 
 
 Despues empece cambiando el texto de las dos casillas que si queria en mi web, lo unico que hice fue cambiar el texto y borrando la informacion de cada uno, al final solo quedaron los dos, con su respectivo nombre.
