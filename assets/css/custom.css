@@ -407,10 +407,15 @@ video {
   z-index: 2;
 }
 
-/* botón de sección dos */
+/* botón de sección tres */
 
-.side-bar .nav-list > .nav-list-item:nth-child(3) > .nav-list-link {
-  background-color: #FFF2B2 !important;
+.side-bar .nav-list > .nav-list-item:nth-child(3) > .nav-list-link,
+.side-bar .nav-list > .nav-list-item:nth-child(3) > .nav-list-link:visited,
+.side-bar .nav-list > .nav-list-item:nth-child(3) > .nav-list-link:hover,
+.side-bar .nav-list > .nav-list-item:nth-child(3) > .nav-list-link.active {
+  display: block !important;
+  visibility: visible !important;
+  background: #FFF2B2 !important;
   color: #333333 !important;
   border-radius: 6px;
   margin: 4px 8px;
