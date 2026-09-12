@@ -50,3 +50,20 @@ Coloqué dos leds en la protoboard y utilicé una resistencia para proteger cada
 <video width="100%" controls>
   <source src="{{ '/videos/ARDUINOLED.mp4' | relative_url }}" type="video/mp4">
 </video>
+
+<h3 style="color: #E89AAA;">7, salida digital con dos leds II</h3>
+
+En esta práctica mantuve la conexión de los dos leds, las resistencias, los cables y la protoboard, después cambié el código para controlar cada led de manera separada, hice que uno prendiera mientras el otro permanecía apagado y después cambiaban de estado, con esto aprendí que Arduino puede controlar varias salidas en diferentes momentos.
+
+
+<h3 style="color: #E89AAA;">8, display de 7 segmentos</h3>
+
+En esta parte coloqué el display de 7 segmentos en la protoboard y conecté sus diferentes partes a los pines digitales del Arduino utilizando varios cables, también usé resistencias para controlar la corriente y proteger los segmentos, después escribí y cargué el código para prender ciertas partes del display, al combinar los segmentos pude formar un número
+
+<h3 style="color: #E89AAA;">9, display de 7 segmentos</h3>
+
+En la última práctica utilicé la misma conexión del display de 7 segmentos, con la protoboard, los cables y las resistencias, después modifiqué el código para cambiar cuáles segmentos debían prender y cuáles debían permanecer apagados, de esta manera pude mostrar un número diferente y entendí que cada número necesita una combinación específica.
+
+<h3 style="color: #f2254e;">conclusión</h3>
+
+Con todas estas prácticas aprendí a conectar y utilizar una tarjeta Arduino, un cable USB, cables de conexión, leds, resistencias, una protoboard y un display de 7 segmentos, también aprendí a cargar códigos desde Arduino IDE y a utilizar instrucciones como HIGH, LOW y delay, al realizar cada circuito pude observar cómo el código y las conexiones trabajan juntos para que los componentes hagan lo que se les indica.
