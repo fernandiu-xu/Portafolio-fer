@@ -11,7 +11,7 @@ JUST THE DOCS, que nos fue proporcionado, por ell profesor, al hacer picar Fork,
 
 Ya estando el link, y creado un apartado de codigo, tuve que cambiar el link y nombre de usuario, para que fuera con mi nombre, al igual que el link fuera mio.
 
-![cambio de nombre]({{ '/assets/img/01-publicar/CAMBIONOMBRE.png' | relative_url }})
+![cambio de nombre]({{ '/assets/img/01-publicar/CAMBIODENOMBRE.png' | relative_url }})
 
 Despues empece cambiando el color de la pagina, le puse el color de mi eleccion, que fue rosa y con los apartados del color amarillo, igualmente le agregue unos puntitos blancos, todo esto lon cambie en el apartado de custom.css, ahi primero cambie el color, despues agregue una funcion que hizo que tuviera los puntos de la parte de atras, seiguiendo las funciones de los colores. 
 
@@ -31,7 +31,7 @@ Despues empece cambiando el texto de las dos casillas que si queria en mi web, l
 
 Para finalizar cambie, el nombre, el link de linkedin al mio, fue bastante sencillo, ya que solo tuve que remplazar el link del profesor, con el mio, al igual que el nombre.
 
-![Cambiar link](assets/img/CAMBIAR-LINK.png)
+![cambiar link]({{ '/assets/img/01-publicar/CAMBIAR%20LINK.png' | relative_url }})
 
 
 El resulltado final me gusto mucho, como fue que quedo la web!
