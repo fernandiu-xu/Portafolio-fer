@@ -48,6 +48,5 @@ Coloqué un led y una resistencia en la protoboard, después los conecté al Ard
 Coloqué dos leds en la protoboard y utilicé una resistencia para proteger cada uno, después conecté los leds al Arduino usando varios cables y asigné un pin digital diferente para cada uno, en el código indiqué que ambos pines funcionaran como salidas, al terminar revisé que los dos leds prendieran correctameNTE.
 
 <video width="100%" controls>
-  <source src="{{ '/assets/img/01-publicar/ARDUINOLED.mp4' | relative_url }}" type="video/mp4">
-  Tu navegador no puede reproducir este video.
+  <source src="{{ '/videos/ARDUINOLED.mp4' | relative_url }}" type="video/mp4">
 </video>
