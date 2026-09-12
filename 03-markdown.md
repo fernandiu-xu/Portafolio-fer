@@ -14,3 +14,10 @@ En resumen, Arduino es la tarjeta que realiza las acciones y Arduino IDE es el p
 ![foto de Arduino]({{ '/assets/img/01-publicar/ARDUINO%20FOTO.webp' | relative_url }})
 
 ![programa Arduino IDE]({{ '/assets/img/01-publicar/ARDUINOIDE.png' | relative_url }}) 
+
+<h3 style="color: #E89AAA;">0, Ejemplo blink</h3>
+
+En esta práctica conecté el Arduino a la computadora y puse el código, al cargarlo pude ver cómo el led del arduino prendía y apagaba varias veces.
+
+![código uno]({{ '/assets/img/01-publicar/CODIGO1.png' | relative_url }})
+
