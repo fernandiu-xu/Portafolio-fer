@@ -69,7 +69,7 @@ En la última práctica utilicé la misma conexión del display de 7 segmentos, 
 Con todas estas prácticas aprendí a conectar y utilizar una tarjeta Arduino, un cable USB, cables de conexión, leds, resistencias, una protoboard y un display de 7 segmentos, también aprendí a cargar códigos desde Arduino IDE y a utilizar instrucciones como HIGH, LOW y delay, al realizar cada circuito pude observar cómo el código y las conexiones trabajan juntos para que los componentes hagan lo que se les indica.
 
 
-# 2 ARDUINO
+# 2 Arduino Basico Entradas Digitales
 
 <h3 style="color: #E89AAA;">10, Entrada digital con botón</h3>
 
@@ -99,6 +99,36 @@ En esta actividad mantuve la conexión de los dos botones y el led, utilizando n
 
 En esta última práctica coloqué varios leds, un botón y sus resistencias en la protoboard, después utilicé cables para conectar cada componente con un pin diferente del Arduino, en el código agregué un contador que aumentaba cada vez que presionaba el botón, los leds se iban prendiendo de acuerdo con el valor del contador, con esta actividad pude ver cómo Arduino guarda un valor y lo va cambiando cada vez que recibe una señal
 
-<h3 style="color: #E89AAA;">Conclusión de la segunda parte</h3>
+<h3 style="color: #ff315a;">Conclusión de la segunda parte</h3>
 
 Con estas prácticas aprendí a utilizar botones como entradas digitales y leds como salidas, también aprendí a conectar los componentes con cables, resistencias y una protoboard, entendí que Arduino puede leer las señales de los botones, tomar decisiones y controlar los leds de diferentes maneras.
+
+# 3 Arduino Básico Servomotores
+
+<h3 style="color: #E89AAA;">17, servomotor</h3>
+
+En esta práctica conecté un servomotor al Arduino utilizando cables y una protoboard, el servomotor tiene tres conexiones, una para la corriente, otra para tierra o GND y otra para recibir la señal del Arduino, después cargué el código para controlar su movimiento, con esta actividad pude observar cómo el servomotor cambiaba de posición de acuerdo con las instrucciones que tenía el programa
+
+<h3 style="color: #E89AAA;">18, servomotor en varias posiciones</h3>
+
+En esta actividad utilicé el mismo servomotor, pero cambié el código para moverlo a diferentes posiciones, primero indiqué los ángulos a los que debía girar y agregué pequeños tiempos de espera entre cada movimiento, al cargar el programa el servomotor se movió de una posición a otra de manera automática, con esto entendí que se puede controlar el ángulo y la velocidad de sus movimientos desde el código
+
+<h3 style="color: #E89AAA;">19, servomotor y potenciómetro</h3>
+
+En esta práctica conecté un servomotor y un potenciómetro al Arduino utilizando cables y una protoboard, el potenciómetro funcionó como una perilla que podía girar con la mano, cuando lo movía Arduino leía su posición y mandaba una señal al servomotor, de esta manera el servomotor giraba de acuerdo con el movimiento que yo hacía en el potenciómetro
+
+<h3 style="color: #E89AAA;">19.2, dos servomotores y un potenciómetro</h3>
+
+En esta parte conecté dos servomotores y un potenciómetro en la misma protoboard, utilicé varios cables para llevar corriente, conectar la tierra y mandar las señales desde el Arduino, después modifiqué el código para que los dos servomotores respondieran al mismo potenciómetro, al girar la perilla pude controlar el movimiento de ambos servomotores al mismo tiempo
+
+<h3 style="color: #E89AAA;">20.2, dos servomotores y dos potenciómetros</h3>
+
+En esta actividad conecté dos servomotores y dos potenciómetros, cada potenciómetro quedó encargado de controlar uno de los servomotores, utilicé la protoboard y varios cables para realizar todas las conexiones con el Arduino, después cargué el código y comprobé que podía mover cada servomotor por separado girando su potenciómetro correspondiente
+
+<h3 style="color: #E89AAA;">21, fuente externa</h3>
+
+En esta última práctica conecté una fuente externa para darle energía al servomotor sin depender solamente de la corriente del Arduino, también conecté el potenciómetro, la protoboard y los cables necesarios para mandar las señales, fue importante unir la tierra de la fuente externa con la tierra del Arduino para que todo funcionara correctamente, con esta conexión el servomotor pudo recibir energía de una fuente diferente mientras Arduino seguía controlando su movimiento
+
+<h3 style="color: #ff315a;">conclusión de la tercera parte</h3>
+
+Con estas prácticas aprendí a conectar y controlar uno o varios servomotores utilizando Arduino, cables, una protoboard, potenciómetros y una fuente externa, también aprendí que el código permite elegir la posición del servomotor y que un potenciómetro puede usarse para controlar su movimiento con la mano, por último entendí que una fuente externa ayuda a dar suficiente energía cuando se conectan varios componentes
