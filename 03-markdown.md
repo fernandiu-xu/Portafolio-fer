@@ -192,8 +192,25 @@ En esta primera parte aprendí a utilizar salidas digitales y a relacionar las i
 
 ### 10. Entrada digital con botón
 
-En esta práctica conecté un botón y un led al Arduino utilizando la protoboard, cables y resistencias. El botón funcionó como una entrada porque enviaba una señal que la tarjeta podía leer, mientras que el led fue la salida. A través del programa hice que el led respondiera al estado del botón.
+En esta práctica conecté un botón y un led al Arduino utilizando la protoboard, cables y resistencias. Configuré el pin 8 como entrada para leer el botón y el pin 13 como salida para controlar el led. En el programa utilicé digitalRead para conocer el estado del botón y digitalWrite para enviar ese mismo estado al led. Al presionarlo y soltarlo pude observar cómo una señal de entrada produce una respuesta en el circuito.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-10-video.jpg' | relative_url }}" aria-label="Práctica 10: botón que controla el encendido de un LED">
+      <source src="{{ '/assets/videos/arduino-practica-10-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>El led responde al presionar y soltar el botón.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-10-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-10.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-10.png' | relative_url }}" alt="Código de Arduino que configura el pin 13 como OUTPUT y el pin 8 como INPUT y escribe en el LED el estado leído del botón" loading="lazy"></a>
+    <figcaption>digitalRead(8) lee el botón y digitalWrite envía su estado al led conectado al pin 13.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-10.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### 11. Entrada digital con dos botones
 
