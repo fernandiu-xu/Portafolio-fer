@@ -420,3 +420,177 @@ video {
   border-radius: 6px;
   margin: 4px 8px;
 }
+
+
+/* ===== PERSONALIZACIÓN DE FERNANDA · OCTUBRE 2026 =====
+   Estilos propios añadidos sobre la plantilla, sin cambiar el tema. */
+:root {
+  --fer-ink: #44333b;
+  --fer-muted: #71626a;
+  --fer-rose: #f4b6c2;
+  --fer-yellow: #fff1a8;
+  --fer-link: #9d3c59;
+}
+body { background-color: #fffdfb; }
+.main-content { color: var(--fer-ink); line-height: 1.75; }
+.main-content h1, .main-content h2, .main-content h3 { color: var(--fer-ink); }
+.main-content h1 { letter-spacing: -.035em; }
+.main-content h2 { margin-top: 2.5rem; }
+.main-content a, .main-content a:visited,
+.custom-footer a, .custom-footer a:visited { color: var(--fer-link); }
+.main-content a:hover, .custom-footer a:hover { color: #76273f; }
+.main-content img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: none;
+  margin: 1.5rem auto;
+  border-radius: 16px;
+  border: 1px solid #f0e4e6;
+}
+.main-content video { border-radius: 16px; margin: 1rem 0; }
+.main-content :where(a, button):focus-visible {
+  outline: 3px solid #87364f;
+  outline-offset: 4px;
+}
+.side-bar {
+  background-color: var(--fer-rose) !important;
+  background-image: radial-gradient(circle, rgba(255,255,255,.5) 0 4px, transparent 4.5px) !important;
+  background-size: 32px 32px !important;
+}
+.side-bar .site-nav, .side-bar .nav-list, .side-bar .site-header {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+.side-bar .site-header { border-bottom-color: rgba(255,255,255,.25); }
+.side-bar .site-title { color: #50323c !important; font-weight: 650; }
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link,
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link:visited {
+  display: block;
+  background: var(--fer-yellow) !important;
+  color: #493a30 !important;
+  padding: .7rem 1rem;
+  margin: .5rem .75rem;
+  border: 1px solid rgba(105,76,52,.08);
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: .95rem;
+  line-height: 1.45;
+  box-shadow: 0 3px 0 rgba(111,65,79,.06);
+  transition: background-color .18s ease, transform .18s ease;
+}
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link:hover {
+  background: #ffe994 !important;
+  color: #493a30 !important;
+  transform: translateX(3px);
+}
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link.active {
+  background: #ffe994 !important;
+  color: #493a30 !important;
+  box-shadow: inset 4px 0 #9d3c59;
+}
+.side-bar .nav-list .nav-list-link:focus-visible {
+  outline: 3px solid #87364f !important;
+  outline-offset: 2px;
+}
+.side-bar .site-footer, .side-bar .site-footer a { color: #50323c !important; }
+.aux-nav .aux-nav-list-item a { color: #8c3d56; }
+.custom-footer { border-top: 1px solid #ecdde1; color: #71626a; font-size: .82rem; }
+.fer-home { padding-top: .5rem; }
+.fer-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  background: #fff3f5;
+  border: 1px solid #efd8df;
+  border-radius: 24px;
+}
+.fer-home .fer-eyebrow {
+  margin: 0 0 .8rem;
+  font-size: .7rem;
+  letter-spacing: .09em;
+  font-weight: 650;
+  color: #8b4a60;
+}
+.fer-home #fer-title {
+  margin: 0 0 .75rem;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -.06em;
+  overflow-wrap: normal;
+}
+.fer-home .fer-hello { margin: 0 0 .75rem; font-size: 1.25rem; font-weight: 600; }
+.fer-home .fer-intro { margin: 0 0 1.5rem; font-size: .95rem; color: #67535c; }
+.fer-home a.fer-button, .fer-home a.fer-button:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .75rem 1rem;
+  background: var(--fer-yellow);
+  border: 1px solid #e8d992;
+  border-radius: 10px;
+  color: #493a30;
+  font-weight: 650;
+  font-size: .85rem;
+  text-decoration: none;
+  background-image: none;
+}
+.fer-home a.fer-button:hover { background-color: #ffe994; }
+.fer-portrait { min-width: 0; margin: 0; }
+.fer-home .fer-portrait img {
+  width: 100%;
+  height: auto;
+  max-width: 260px;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 5px solid white;
+  box-shadow: 0 8px 24px #a9657e1a;
+}
+.fer-portrait figcaption { margin-top: .75rem; font-size: .72rem; text-align: center; color: #80616e; }
+.fer-interests { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 2.75rem; }
+.fer-interests span { padding: .3rem .8rem; border: 1px solid #ecdde1; border-radius: 100px; color: #715660; font-size: .75rem; }
+.fer-home .fer-section-heading h2 { margin: 0 0 .6rem; font-size: 1.75rem; letter-spacing: -.025em; }
+.fer-section-heading > p:last-child { color: var(--fer-muted); font-size: .9rem; margin-bottom: 1.5rem; }
+.fer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.fer-home a.fer-card, .fer-home a.fer-card:visited {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: #fff;
+  background-image: none;
+  border: 1px solid #ecdde1;
+  border-radius: 16px;
+  color: var(--fer-ink);
+  text-decoration: none;
+  box-shadow: 0 4px 16px #69455505;
+  transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.fer-home a.fer-card:nth-child(2), .fer-home a.fer-card:nth-child(3) { background-color: #fffdf2; }
+.fer-home a.fer-card:hover { border-color: #d796a8; transform: translateY(-3px); box-shadow: 0 8px 20px #6945550d; }
+.fer-card__number { font-size: .7rem; font-weight: 650; color: #916277; }
+.fer-home .fer-card h3 { margin: .8rem 0 .5rem; font-size: 1.2rem; font-weight: 650; }
+.fer-home .fer-card p { margin: 0 0 1.25rem; font-size: .86rem; color: var(--fer-muted); }
+.fer-card__action { display: flex; justify-content: space-between; gap: 1rem; margin-top: auto; font-size: .8rem; font-weight: 650; color: #9d3c59; }
+.fer-note { display: flex; gap: 1rem; align-items: center; padding: 1rem 1.25rem; margin-top: 2rem; background: #fff3f5; border-radius: 12px; color: #855367; }
+.fer-note > span { font-size: 1.6rem; }
+.fer-home .fer-note p { margin: 0; font-size: .88rem; }
+.fer-home .fer-repo { margin-top: 1rem; font-size: .78rem; }
+@media (max-width: 800px) {
+  .fer-hero { grid-template-columns: 1fr; padding: 1.5rem; gap: 1.5rem; }
+  .fer-portrait { max-width: 220px; margin: 0 auto; }
+  .fer-home #fer-title { font-size: clamp(2rem, 8vw, 3rem); }
+}
+@media (max-width: 480px) {
+  .fer-grid { grid-template-columns: 1fr; }
+  .fer-hero { padding: 1.25rem; border-radius: 18px; }
+  .fer-home a.fer-card { padding: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link,
+  .fer-home a.fer-card { transition: none; transform: none; }
+}
+/* ===== FIN DE LA PERSONALIZACIÓN DE FERNANDA ===== */
