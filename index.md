@@ -5,6 +5,8 @@ nav_order: 1
 nav_exclude: true
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/custom.css?v=20261008-fer' | relative_url }}">
+
 <div class="fer-home">
   <section class="fer-hero" aria-labelledby="fer-title">
     <div class="fer-hero__text">
@@ -31,27 +33,27 @@ nav_exclude: true
       <p>Cada sección reúne una parte de mi proceso, desde mis primeros cambios en esta página hasta mis prácticas de electrónica y diseño.</p>
     </div>
     <div class="fer-grid">
-      <a class="fer-card" href="{% link 01-publicar-en-github-pages.md %}">
+      <a class="fer-card" href="{{ '/01-publicar-en-github-pages/' | relative_url }}">
         <span class="fer-card__number">01 / Sobre mí</span>
-        <h3>Acerca de mí</h3>
+        <span class="fer-card__title">Acerca de mí</span>
         <p>Mis intereses, lo que me inspira y las cosas que disfruto aprender.</p>
         <span class="fer-card__action">Conóceme <span aria-hidden="true">↗</span></span>
       </a>
-      <a class="fer-card" href="{% link 02-estructura-del-repo.md %}">
+      <a class="fer-card" href="{{ '/02-estructura-del-repo/' | relative_url }}">
         <span class="fer-card__number">02 / Mi primera página</span>
-        <h3>Sección uno</h3>
+        <span class="fer-card__title">Sección uno</span>
         <p>Cómo empecé a darle identidad a mi portafolio con GitHub y mis propios colores.</p>
         <span class="fer-card__action">Ver mi proceso <span aria-hidden="true">↗</span></span>
       </a>
-      <a class="fer-card" href="{% link 03-markdown.md %}">
+      <a class="fer-card" href="{{ '/03-markdown/' | relative_url }}">
         <span class="fer-card__number">03 / Electrónica</span>
-        <h3>Sección dos</h3>
+        <span class="fer-card__title">Sección dos</span>
         <p>Mis prácticas con Arduino, circuitos, leds, botones y servomotores.</p>
         <span class="fer-card__action">Explorar prácticas <span aria-hidden="true">↗</span></span>
       </a>
-      <a class="fer-card" href="{% link 04-estilos.md %}">
+      <a class="fer-card" href="{{ '/04-estilos/' | relative_url }}">
         <span class="fer-card__number">04 / Diseño en 3D</span>
-        <h3>Sección tres</h3>
+        <span class="fer-card__title">Sección tres</span>
         <p>Mis primeros diseños en SolidWorks y el proceso para crear piezas con medidas.</p>
         <span class="fer-card__action">Ver mis diseños <span aria-hidden="true">↗</span></span>
       </a>

@@ -572,7 +572,7 @@ body { background-color: #fffdfb; }
 .fer-home a.fer-card:nth-child(2), .fer-home a.fer-card:nth-child(3) { background-color: #fffdf2; }
 .fer-home a.fer-card:hover { border-color: #d796a8; transform: translateY(-3px); box-shadow: 0 8px 20px #6945550d; }
 .fer-card__number { font-size: .7rem; font-weight: 650; color: #916277; }
-.fer-home .fer-card h3 { margin: .8rem 0 .5rem; font-size: 1.2rem; font-weight: 650; }
+.fer-home .fer-card__title { margin: .8rem 0 .5rem; font-size: 1.2rem; font-weight: 650; }
 .fer-home .fer-card p { margin: 0 0 1.25rem; font-size: .86rem; color: var(--fer-muted); }
 .fer-card__action { display: flex; justify-content: space-between; gap: 1rem; margin-top: auto; font-size: .8rem; font-weight: 650; color: #9d3c59; }
 .fer-note { display: flex; gap: 1rem; align-items: center; padding: 1rem 1.25rem; margin-top: 2rem; background: #fff3f5; border-radius: 12px; color: #855367; }
