@@ -236,8 +236,25 @@ Después conecté dos botones y dos leds al Arduino para controlar cada luz por 
 
 ### 12. Condicionales con un botón
 
-Con el circuito de un botón y un led utilicé una condición if para que el programa tomara una decisión. Según el estado del botón, el led realizaba una acción o permanecía en otro estado. Esta práctica me ayudó a entender cómo una condición conecta una señal de entrada con una respuesta.
+Con el circuito de un botón y un led utilicé las condiciones if y else if para que el programa decidiera qué salida activar. Configuré el pin 8 como entrada y el pin 13 como salida. Cuando digitalRead(8) devuelve HIGH, el código enciende el led con digitalWrite(13, HIGH); cuando devuelve LOW, lo apaga. Al presionar y soltar el botón pude relacionar cada condición con la respuesta del circuito.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-12-video.jpg' | relative_url }}" aria-label="Práctica 12: botón y LED con condicionales">
+      <source src="{{ '/assets/videos/arduino-practica-12-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>El led se enciende al presionar el botón y se apaga al soltarlo.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-12-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-12.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-12.png' | relative_url }}" alt="Código de Arduino de la práctica 12 con condiciones if y else if para controlar el LED del pin 13 según el botón del pin 8" loading="lazy"></a>
+    <figcaption>Si digitalRead(8) es HIGH, se enciende el led del pin 13; si es LOW, se apaga.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-12.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### 13. Condicionales con dos botones
 
