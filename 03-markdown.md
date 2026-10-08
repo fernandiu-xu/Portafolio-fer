@@ -12,7 +12,34 @@ nav_order: 4
 
 <div class="fer-project-meta"><span>Arduino IDE</span><span>Circuitos</span><span>Programación</span></div>
 
-<nav class="fer-jump-nav" aria-label="Temas de las prácticas"><a href="#salidas-digitales">Salidas digitales</a><a href="#entradas-digitales">Entradas digitales</a><a href="#servomotores">Servomotores</a></nav>
+<nav class="fer-jump-nav" aria-label="Temas de las prácticas"><a href="#materiales">Materiales</a><a href="#salidas-digitales">Salidas digitales</a><a href="#entradas-digitales">Entradas digitales</a><a href="#servomotores">Servomotores</a></nav>
+
+<link rel="stylesheet" href="{{ '/assets/css/materiales.css' | relative_url }}">
+
+<section class="fer-materials" aria-labelledby="materiales">
+  <div class="fer-materials-heading">
+    <p>Para estas prácticas</p>
+    <h2 id="materiales">Materiales</h2>
+  </div>
+  <div class="fer-materials-scroll" role="region" aria-label="Tabla de materiales de Arduino" tabindex="0">
+    <table class="fer-materials-table" aria-labelledby="materiales">
+      <thead><tr><th scope="col">Material</th><th scope="col">Cantidad</th><th scope="col">Descripción</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Arduino Uno</th><td>1</td><td>Es la placa principal que recibe y ejecuta el código de cada circuito.</td></tr>
+        <tr><th scope="row">Protoboard</th><td>1</td><td>Permite conectar los componentes sin tener que soldarlos.</td></tr>
+        <tr><th scope="row">Cable USB tipo A-B</th><td>1</td><td>Conecta el Arduino a la computadora, proporciona energía y permite cargar el código.</td></tr>
+        <tr><th scope="row">Cables jumper</th><td>Varios</td><td>Se utilizan para realizar las conexiones entre el Arduino, la protoboard y los demás componentes.</td></tr>
+        <tr><th scope="row">LEDs rojos</th><td>5 o más</td><td>Emiten luz cuando reciben corriente eléctrica y sirven como indicadores visuales.</td></tr>
+        <tr><th scope="row">Resistencias de 220 Ω o 330 Ω</th><td>Varias</td><td>Limitan la corriente que reciben los LEDs para evitar que se dañen.</td></tr>
+        <tr><th scope="row">Resistencias de 10 kΩ</th><td>2</td><td>Mantienen estable la señal de entrada de los botones y evitan lecturas incorrectas.</td></tr>
+        <tr><th scope="row">Botones pulsadores</th><td>2</td><td>Funcionan como interruptores momentáneos y envían una señal cuando son presionados.</td></tr>
+        <tr><th scope="row">Potenciómetro</th><td>1</td><td>Es una resistencia variable. Al girar su perilla cambia el valor de la señal que recibe el Arduino.</td></tr>
+        <tr><th scope="row">Microservomotor SG90</th><td>1</td><td>Es un motor pequeño cuyo ángulo puede controlarse mediante una señal enviada por Arduino.</td></tr>
+        <tr><th scope="row">Display digital de 7 segmentos</th><td>1</td><td>Está formado por siete pequeños segmentos luminosos que permiten mostrar números del 0 al 9.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 ## Antes de empezar
 

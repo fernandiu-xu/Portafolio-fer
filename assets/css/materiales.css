@@ -1,0 +1,24 @@
+/* Tabla de materiales de las prácticas con Arduino */
+.fer-materials { margin: 2rem 0 2.75rem; border: 1px solid #eacfd8; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px #70405408; background: white; }
+.fer-materials-heading { padding: 1.1rem 1.4rem; background: #fff0f4; border-bottom: 1px solid #eacfd8; }
+.fer-materials-heading p { margin: 0 0 .3rem; color: #8d5166; font-size: .72rem; letter-spacing: .05em; }
+.main-content .fer-materials-heading h2 { margin: 0; padding: 0; border: 0; font-size: 1.5rem; line-height: 1.3; color: #8b3d57; scroll-margin-top: 2rem; }
+.fer-materials-scroll { overflow-x: auto; }
+.fer-materials-scroll:focus-visible { outline: 3px solid #9d3c59; outline-offset: -3px; }
+.main-content .fer-materials-table { width: 100%; min-width: 580px; margin: 0; display: table; border-collapse: collapse; table-layout: fixed; font-size: .86rem; line-height: 1.6; box-shadow: none; }
+.fer-materials-table th, .fer-materials-table td { padding: .85rem 1rem; vertical-align: top; border: 0; border-bottom: 1px solid #f1e2e7; overflow-wrap: break-word; }
+.main-content .fer-materials-table thead th { background: #f4b6c2; color: #51323e; font-weight: 650; text-align: left; }
+.fer-materials-table thead th:first-child { width: 29%; }
+.fer-materials-table thead th:nth-child(2) { width: 15%; text-align: center; }
+.fer-materials-table thead th:last-child { width: 56%; }
+.fer-materials-table tbody th { text-align: left; color: #63404e; font-weight: 600; }
+.fer-materials-table tbody td { color: #65555c; }
+.fer-materials-table tbody td:first-of-type { text-align: center; white-space: nowrap; font-weight: 600; color: #8b3d57; }
+.fer-materials-table tbody tr:nth-child(odd) { background: #fff; }
+.fer-materials-table tbody tr:nth-child(even) { background: #fff6f8; }
+.fer-materials-table tbody tr:hover { background: #ffeef3; }
+.fer-materials-table tbody tr:last-child th, .fer-materials-table tbody tr:last-child td { border-bottom: 0; }
+@media (max-width: 480px) {
+  .fer-materials-heading { padding: 1rem; }
+  .fer-materials-table th, .fer-materials-table td { padding: .75rem; }
+}
