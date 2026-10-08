@@ -28,7 +28,7 @@ nav_exclude: true
     <div class="fer-section-heading">
       <p class="fer-eyebrow">Un poco de mí y de lo que hago</p>
       <h2 id="mis-trabajos">Mis trabajos</h2>
-      <p>Cada sección reúne una parte de mi proceso, desde mis primeros cambios en esta página hasta mis prácticas de electrónica y diseño.</p>
+      <p>En cada proyecto comparto qué hice, cómo fue el proceso y lo que aprendí. Aquí puedes explorar la creación de mi página, mis prácticas de electrónica y el diseño de piezas para corte láser.</p>
     </div>
     <div class="fer-grid">
       <a class="fer-card" href="{{ '/01-publicar-en-github-pages/' | relative_url }}">
@@ -60,7 +60,7 @@ nav_exclude: true
 
         <span class="fer-card__number">04 / Diseño en 3D</span>
         <span class="fer-card__title">Cubo en SolidWorks</span>
-        <p>Mis primeros diseños en SolidWorks y el proceso para crear piezas con medidas.</p>
+        <p>El diseño de un cubo en SolidWorks, la preparación del archivo DXF y su fabricación en MDF.</p>
         <span class="fer-card__action">Ver mis diseños <span aria-hidden="true">↗</span></span>
       </a>
     </div>

@@ -12,7 +12,7 @@ nav_order: 1
   <img src="{{ '/assets/img/01-publicar/YO.jpg' | relative_url }}" alt="Fernanda Ramos">
   <div>
     <p class="fer-about-hello">Hola, soy Fernanda</p>
-    <p>Soy una persona curiosa y me gusta aprender cosas nuevas. Disfruto hacer preguntas, probar ideas y entender cómo funciona lo que tengo frente a mí.</p>
+    <p>Soy una persona curiosa y disfruto aprender cosas nuevas. Me gusta hacer preguntas, probar ideas y entender cómo funciona lo que tengo frente a mí.</p>
     <p>Este portafolio reúne una parte de ese proceso: lo que voy descubriendo, las cosas que construyo y lo que aprendo con cada proyecto.</p>
     <div class="fer-project-meta"><span>Mecatrónica</span><span>Música</span><span>Tenis</span></div>
   </div>
@@ -35,7 +35,7 @@ Me gusta mucho el deporte, especialmente el tenis. Durante un tiempo practiqué 
 
 Siempre quiero entender cómo funcionan las cosas. Me gusta armar, desarmar y volver a construir, experimentar y descubrir qué hay detrás de cada mecanismo. Esa curiosidad es una de las razones por las que me llama la atención la mecatrónica: combina la creatividad con la tecnología y permite convertir una idea en algo que realmente funciona.
 
-También me interesa la neurociencia y todo lo que podemos aprender sobre el cerebro. Para mí, ambas áreas invitan a hacer preguntas, buscar respuestas y seguir aprendiendo.
+También me interesa la neurociencia y todo lo que podemos aprender sobre el cerebro. Para mí, ambas áreas invitan a hacer preguntas, buscar respuestas y seguir aprendiendo. Me interesa esa posibilidad de conectar lo que pienso con algo que pueda explorar, diseñar o construir.
 
 ![Mecatrónica]({{ '/assets/img/01-publicar/mecatronica.png' | relative_url }})
 

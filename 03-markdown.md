@@ -43,10 +43,15 @@ nav_order: 4
 
 ## Antes de empezar
 
-En esta semana empezamos a trabajar con Arduino y la plataforma Arduino IDE, el cual es  una plataforma de electrónica que permite crear proyectos utilizando una tarjeta programable (Arduino), en ella se pueden conectar componentes como luces led, sensores, botones y motores.
-Arduino IDE es el programa que se utiliza para escribir, revisar y enviar instrucciones a la tarjeta desde una computadora, primero se conecta la tarjeta con un cable USB, después se escribe el código, se revisa que no tenga errores y finalmente se carga en Arduino.
+En estas prácticas trabajé con Arduino Uno y Arduino IDE para conocer cómo se relacionan el código y los circuitos. La tarjeta Arduino recibe las instrucciones del programa y las utiliza para controlar componentes como leds, botones y servomotores.
 
-En resumen, Arduino es la tarjeta que realiza las acciones y Arduino IDE es el programa con el que le damos las instrucciones.
+**Arduino IDE** es el programa donde se escribe, revisa y carga el código. Para comenzar conecté la tarjeta a la computadora con un cable USB, preparé el programa y lo envié al Arduino para observar la respuesta del circuito.
+
+Un **pin** es una conexión de la tarjeta que permite recibir o enviar señales. Cuando se configura como entrada puede leer el estado de un botón, y cuando funciona como salida puede controlar un componente, como un led.
+
+Las actividades se organizaron en tres partes: salidas digitales, entradas digitales y servomotores. En cada una fui relacionando las instrucciones del programa con lo que ocurría en los componentes.
+
+Para las actividades con dos servomotores y dos potenciómetros se requieren dos unidades de cada uno. La práctica de alimentación externa también necesita una fuente adecuada para el servomotor; estos elementos complementan los materiales de la tabla.
 
 ![foto de Arduino]({{ '/assets/img/01-publicar/ARDUINO%20FOTO.webp' | relative_url }})
 
@@ -56,35 +61,47 @@ En resumen, Arduino es la tarjeta que realiza las acciones y Arduino IDE es el p
 
 ### 0. Ejemplo Blink
 
-En esta práctica conecté el Arduino a la computadora y puse el código, al cargarlo pude ver cómo el led del arduino prendía y apagaba varias veces.
+En esta práctica conecté el Arduino a la computadora y cargué el ejemplo Blink. Al ejecutarlo pude observar cómo el led integrado de la tarjeta se encendía y apagaba de manera repetida. Fue mi primer acercamiento a la idea de que unas instrucciones sencillas pueden producir una acción visible en un circuito.
 
 ![Arduino]({{ '/assets/img/01-publicar/ARDUINOIMAGE.jpg' | relative_url }}) 
 
 ![código uno]({{ '/assets/img/01-publicar/CODIGO1.png' | relative_url }})
 
+
 ### 1. Salida digital HIGH
+
+Después trabajé con la instrucción HIGH para establecer un nivel alto en una salida digital. En el circuito del led, esta señal permitió encenderlo y observar cómo el estado de un pin se relaciona con la respuesta del componente.
+
+
 ### 2. Salida digital LOW
+
+En esta actividad cambié la salida a LOW para establecer un nivel bajo. Al comparar su comportamiento con HIGH entendí cómo alternar los estados de una salida para encender y apagar el led.
+
+
 ### 3. Salida digital con delay
 
-En esta parte hice lo mismo que en el anterior, solamente cambie el codigo dependiendo de como queria que enecendiera, alto, lento o con retardo digital. 
+Después añadí la instrucción delay para introducir una pausa entre los cambios del led. Modificar el tiempo de espera permitió que el parpadeo fuera más rápido o más lento, y me ayudó a distinguir entre el estado de una salida y el tiempo que permanece en ese estado.
 
 ![Arduino dos]({{ '/assets/img/01-publicar/ARDUINODOS.jpg' | relative_url }})
 
+
 ### 4. Salida digital con led
 
-En esta práctica conecté un led al Arduino y cargué un código para prenderlo y apagarlo, también tuve que colocar correctamente sus dos patitas para que funcionara.
+En esta práctica conecté un led externo al Arduino y cargué un programa para encenderlo y apagarlo. Tuve que identificar sus dos terminales y colocarlas correctamente, ya que su orientación influye en el funcionamiento del circuito.
 
 ![LED dos]({{ '/assets/img/01-publicar/LEDDOS.jpg' | relative_url }})
 
+
 ### 5. Salida digital en protoboard
 
-Coloqué un led y una resistencia en la protoboard, después los conecté al Arduino con cables y cargué el código, la resistencia sirve para que el led no reciba demasiada corriente y se dañe
+Coloqué un led y una resistencia en la protoboard y después los conecté al Arduino con cables jumper. La resistencia limita la corriente que pasa por el led y ayuda a protegerlo. Esta práctica me permitió reconocer cómo se organizan las conexiones en la protoboard y por qué no basta con colocar los componentes sin revisar el circuito.
 
 ![LED uno]({{ '/assets/img/01-publicar/LEDUNO.jpg' | relative_url }})
 
-### 6. salida digital con dos leds I
 
-Coloqué dos leds en la protoboard y utilicé una resistencia para proteger cada uno, después conecté los leds al Arduino usando varios cables y asigné un pin digital diferente para cada uno, en el código indiqué que ambos pines funcionaran como salidas, al terminar revisé que los dos leds prendieran correctamente.
+### 6. Salida digital con dos leds I
+
+Para esta actividad coloqué dos leds en la protoboard, cada uno con su resistencia, y los conecté a pines digitales diferentes del Arduino. En el código configuré ambos pines como salidas y revisé que los dos leds encendieran. Con esto entendí que una misma tarjeta puede controlar varios componentes.
 
 <video controls playsinline preload="metadata" style="width: 100%; height: auto;" aria-label="Práctica de Arduino con dos leds">
   <source src="{{ '/assets/videos/ARDUINOLED.mp4' | relative_url }}" type="video/mp4">
@@ -93,84 +110,102 @@ Coloqué dos leds en la protoboard y utilicé una resistencia para proteger cada
 
 <p><a href="{{ '/assets/videos/ARDUINOLED.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video en otra pestaña</a></p>
 
-### 7. salida digital con dos leds II
 
-En esta práctica mantuve la conexión de los dos leds, las resistencias, los cables y la protoboard, después cambié el código para controlar cada led de manera separada, hice que uno prendiera mientras el otro permanecía apagado y después cambiaban de estado, con esto aprendí que Arduino puede controlar varias salidas en diferentes momentos.
+### 7. Salida digital con dos leds II
+
+Mantuve las conexiones de los dos leds y cambié el código para alternar su encendido. Mientras uno estaba prendido, el otro permanecía apagado, y después intercambiaban sus estados. La actividad me ayudó a relacionar el orden de las instrucciones con la secuencia de luces que veía en el circuito.
 
 
-### 8. display de 7 segmentos
+### 8. Display de 7 segmentos
 
-En esta parte coloqué el display de 7 segmentos en la protoboard y conecté sus diferentes partes a los pines digitales del Arduino utilizando varios cables, también usé resistencias para controlar la corriente y proteger los segmentos, después escribí y cargué el código para prender ciertas partes del display, al combinar los segmentos pude formar un número
+En esta práctica coloqué un display de siete segmentos en la protoboard y conecté sus partes al Arduino con cables y resistencias. Después cargué un programa para activar determinados segmentos. Al combinar las partes encendidas pude formar un número y entender que cada segmento se controla como una salida.
 
-### 9. display de 7 segmentos
 
-En la última práctica utilicé la misma conexión del display de 7 segmentos, con la protoboard, los cables y las resistencias, después modifiqué el código para cambiar cuáles segmentos debían prender y cuáles debían permanecer apagados, de esta manera pude mostrar un número diferente y entendí que cada número necesita una combinación específica.
+### 9. Display de 7 segmentos
+
+En la siguiente actividad conservé el circuito del display y modifiqué la combinación de segmentos encendidos para mostrar otro número. Esto me permitió comparar los patrones y reconocer que, aunque el componente sea el mismo, el resultado cambia según las salidas que se activan.
+
 
 ### Conclusión
 
-Con todas estas prácticas aprendí a conectar y utilizar una tarjeta Arduino, un cable USB, cables de conexión, leds, resistencias, una protoboard y un display de 7 segmentos, también aprendí a cargar códigos desde Arduino IDE y a utilizar instrucciones como HIGH, LOW y delay, al realizar cada circuito pude observar cómo el código y las conexiones trabajan juntos para que los componentes hagan lo que se les indica.
+En esta primera parte aprendí a utilizar salidas digitales y a relacionar las instrucciones HIGH, LOW y delay con el comportamiento de leds y displays. También comprendí la importancia de la orientación de los componentes, las resistencias y las conexiones. Ver el circuito en funcionamiento me ayudó a entender mejor lo que indicaba el código.
 
 
 ## 2. Entradas digitales {#entradas-digitales}
 
 ### 10. Entrada digital con botón
 
-En esta práctica coloqué un botón, un led y resistencias en la protoboard, después conecté todo al Arduino utilizando cables, el botón funcionó como una entrada digital porque le enviaba una señal a la tarjeta cuando lo presionaba, mientras que el led funcionó como una salida, por medio del código hice que Arduino leyera el estado del botón y realizara una acción con el led.
+En esta práctica conecté un botón y un led al Arduino utilizando la protoboard, cables y resistencias. El botón funcionó como una entrada porque enviaba una señal que la tarjeta podía leer, mientras que el led fue la salida. A través del programa hice que el led respondiera al estado del botón.
+
 
 ### 11. Entrada digital con dos botones
 
-En esta actividad conecté dos botones y un led en la protoboard, utilicé resistencias y varios cables para conectar cada componente con los pines del Arduino, después configuré los botones como entradas y el led como salida, con el código pude leer cada botón por separado y hacer que el led respondiera dependiendo del botón que presionara.
+Después conecté dos botones y un led, asignando una entrada diferente a cada botón. En el programa pude revisar sus estados por separado y hacer que el led respondiera según el botón presionado. Así comprendí que un circuito puede recibir más de una señal de entrada.
+
 
 ### 12. Condicionales con un botón
 
-En esta práctica conecté un botón y un led al Arduino utilizando la protoboard, cables y resistencias, después agregué una condición if en el código para que Arduino tomara una decisión, si el botón estaba presionado el led realizaba una acción y si no estaba presionado se mantenía en otro estado, así entendí que las condiciones sirven para que el circuito responda de diferentes maneras
+Con el circuito de un botón y un led utilicé una condición if para que el programa tomara una decisión. Según el estado del botón, el led realizaba una acción o permanecía en otro estado. Esta práctica me ayudó a entender cómo una condición conecta una señal de entrada con una respuesta.
+
 
 ### 13. Condicionales con dos botones
 
-En esta parte conecté dos botones y dos leds en la protoboard, también utilicé resistencias para proteger los componentes y cables para unirlos con el Arduino, en el código agregué condiciones para revisar cuál botón estaba presionado, dependiendo de la señal recibida se prendía un led o se realizaba una acción diferente
+En esta actividad trabajé con dos botones y dos leds, junto con sus resistencias y cables. Añadí condiciones para revisar las señales de los botones y controlar las salidas correspondientes. Con ello pude observar que distintas entradas pueden provocar respuestas diferentes dentro del mismo programa.
+
 
 ### 14. Condición OR con botones
 
-En esta parte utilicé dos botones, un led, resistencias, cables y la protoboard, después agregué la condición OR en el código, esta condición permitió que el led prendiera cuando se presionaba cualquiera de los dos botones, no era necesario presionar los dos al mismo tiempo porque bastaba con que uno de ellos estuviera activado
+Utilicé dos botones y un led para trabajar con la condición OR. En el programa, la respuesta se activaba cuando al menos una de las condiciones de los botones se cumplía. Al probar el circuito comprendí que no era necesario activar ambos botones al mismo tiempo.
+
 
 ### 15. Condición AND con botones
 
-En esta actividad mantuve la conexión de los dos botones y el led, utilizando nuevamente cables, resistencias y la protoboard, después agregué la condición AND en el código, en este caso el led solamente prendía cuando los dos botones estaban presionados al mismo tiempo, si solo presionaba uno el led permanecía apagado
+Después cambié la lógica del programa para utilizar AND. En este caso, el led se encendía cuando se cumplían las dos condiciones de los botones al mismo tiempo. Comparar esta práctica con la anterior me ayudó a entender la diferencia entre pedir una condición o exigir que ambas se cumplan.
+
 
 ### 16. Contador con leds
 
-En esta última práctica coloqué varios leds, un botón y sus resistencias en la protoboard, después utilicé cables para conectar cada componente con un pin diferente del Arduino, en el código agregué un contador que aumentaba cada vez que presionaba el botón, los leds se iban prendiendo de acuerdo con el valor del contador, con esta actividad pude ver cómo Arduino guarda un valor y lo va cambiando cada vez que recibe una señal
+En esta práctica conecté varios leds y un botón al Arduino. En el programa utilicé una variable como contador para registrar las pulsaciones y cambiar el estado de los leds según el valor guardado. Esta actividad me permitió ver que un programa puede conservar información y utilizarla para decidir qué salida activar.
+
 
 ### Conclusión de la segunda parte
 
-Con estas prácticas aprendí a utilizar botones como entradas digitales y leds como salidas, también aprendí a conectar los componentes con cables, resistencias y una protoboard, entendí que Arduino puede leer las señales de los botones, tomar decisiones y controlar los leds de diferentes maneras.
+Con las entradas digitales aprendí a leer botones, utilizar condiciones y relacionar las señales recibidas con distintas respuestas del circuito. Las prácticas con OR, AND y el contador me ayudaron a comprender que Arduino puede tomar decisiones a partir del programa y de lo que ocurre en sus entradas.
+
 
 ## 3. Servomotores {#servomotores}
 
-### 17. servomotor
+### 17. Servomotor
 
-En esta práctica conecté un servomotor al Arduino utilizando cables y una protoboard, el servomotor tiene tres conexiones, una para la corriente, otra para tierra o GND y otra para recibir la señal del Arduino, después cargué el código para controlar su movimiento, con esta actividad pude observar cómo el servomotor cambiaba de posición de acuerdo con las instrucciones que tenía el programa
+Conecté un servomotor al Arduino para conocer sus tres conexiones: alimentación, tierra o GND y señal de control. Después cargué el programa y observé cómo cambiaba de posición. A diferencia de un led, este componente permite convertir las instrucciones del código en movimiento.
 
-### 18. servomotor en varias posiciones
 
-En esta actividad utilicé el mismo servomotor, pero cambié el código para moverlo a diferentes posiciones, primero indiqué los ángulos a los que debía girar y agregué pequeños tiempos de espera entre cada movimiento, al cargar el programa el servomotor se movió de una posición a otra de manera automática, con esto entendí que se puede controlar el ángulo y la velocidad de sus movimientos desde el código
+### 18. Servomotor en varias posiciones
 
-### 19. servomotor y potenciómetro
+En esta actividad utilicé el mismo servomotor y modifiqué el código para indicarle diferentes posiciones. También añadí pausas entre los movimientos, de modo que pudiera observar cada cambio de ángulo. Esto me ayudó a comprender cómo se organiza una secuencia de posiciones desde el programa.
 
-En esta práctica conecté un servomotor y un potenciómetro al Arduino utilizando cables y una protoboard, el potenciómetro funcionó como una perilla que podía girar con la mano, cuando lo movía Arduino leía su posición y mandaba una señal al servomotor, de esta manera el servomotor giraba de acuerdo con el movimiento que yo hacía en el potenciómetro
 
-### 19.2. dos servomotores y un potenciómetro
+### 19. Servomotor y potenciómetro
 
-En esta parte conecté dos servomotores y un potenciómetro en la misma protoboard, utilicé varios cables para llevar corriente, conectar la tierra y mandar las señales desde el Arduino, después modifiqué el código para que los dos servomotores respondieran al mismo potenciómetro, al girar la perilla pude controlar el movimiento de ambos servomotores al mismo tiempo
+Después conecté un potenciómetro para controlar la posición del servomotor. Al girar la perilla, Arduino leía la señal y el programa la relacionaba con un ángulo. Así pude observar cómo una entrada analógica, que puede tomar distintos valores, permite ajustar el movimiento de manera gradual.
 
-### 20.2. dos servomotores y dos potenciómetros
 
-En esta actividad conecté dos servomotores y dos potenciómetros, cada potenciómetro quedó encargado de controlar uno de los servomotores, utilicé la protoboard y varios cables para realizar todas las conexiones con el Arduino, después cargué el código y comprobé que podía mover cada servomotor por separado girando su potenciómetro correspondiente
+### 19.2. Dos servomotores y un potenciómetro
 
-### 21. fuente externa
+En esta práctica conecté dos servomotores y utilicé un solo potenciómetro como entrada. Modifiqué el programa para que ambos respondieran a la posición de la perilla. Con esta actividad entendí que una misma señal puede utilizarse para controlar más de un componente.
 
-En esta última práctica conecté una fuente externa para darle energía al servomotor sin depender solamente de la corriente del Arduino, también conecté el potenciómetro, la protoboard y los cables necesarios para mandar las señales, fue importante unir la tierra de la fuente externa con la tierra del Arduino para que todo funcionara correctamente, con esta conexión el servomotor pudo recibir energía de una fuente diferente mientras Arduino seguía controlando su movimiento
+
+### 20.2. Dos servomotores y dos potenciómetros
+
+Después utilicé dos potenciómetros, uno para cada servomotor. El programa leía las dos entradas y enviaba a cada motor la posición correspondiente. Al girar las perillas pude controlar los movimientos por separado y comparar este funcionamiento con el de la práctica anterior.
+
+
+### 21. Fuente externa
+
+En esta actividad utilicé una fuente externa para alimentar el servomotor, mientras Arduino enviaba la señal de control. También conecté el potenciómetro y los cables necesarios. Fue importante unir la tierra de la fuente con la tierra del Arduino para que compartieran una referencia, y entendí que controlar un motor y proporcionarle energía son dos funciones diferentes.
+
 
 ### Conclusión de la tercera parte
 
-Con estas prácticas aprendí a conectar y controlar uno o varios servomotores utilizando Arduino, cables, una protoboard, potenciómetros y una fuente externa, también aprendí que el código permite elegir la posición del servomotor y que un potenciómetro puede usarse para controlar su movimiento con la mano, por último entendí que una fuente externa ayuda a dar suficiente energía cuando se conectan varios componentes
+Con estas prácticas aprendí a controlar la posición de uno o varios servomotores y a utilizar potenciómetros para modificar su movimiento. También comprendí la diferencia entre una secuencia programada y un control que responde a una entrada. La actividad con la fuente externa me ayudó a reconocer la importancia de la alimentación y de una tierra común.
+

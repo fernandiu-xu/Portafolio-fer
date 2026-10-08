@@ -8,49 +8,56 @@ nav_order: 2
 
 # Mi página web
 
-<p class="fer-page-intro">El proceso de crear y personalizar mi primer portafolio con GitHub Pages.</p>
+<p class="fer-page-intro">Cómo empecé a crear un espacio para compartir mis proyectos y darle mi propio estilo.</p>
 
 <div class="fer-project-meta"><span>GitHub Pages</span><span>Markdown</span><span>HTML y CSS</span></div>
 
+## El propósito del proyecto
+
+El objetivo de esta actividad fue aprender a publicar una página web y organizar en ella los trabajos realizados en clase. Partimos de una plantilla proporcionada por el profesor y, a partir de esa base, fui modificando el contenido y la apariencia para convertirla en mi portafolio.
+
+Además de cambiar los colores, necesitaba entender dónde se guardaban los archivos, cómo se mostraba la información y de qué manera podía conectar una página con otra.
+
 ## 1. El punto de partida
 
-Lo primero para poder, iniciar con la pagina e hacerle todos loa cambios, primero tuve que descargar el archivo 
-JUST THE DOCS, que nos fue proporcionado, por ell profesor, al hacer picar Fork, se agrego y despues tuve que hacer que mi link fuera visto.
+Primero creé una copia de la plantilla **Just the Docs** en mi cuenta de GitHub mediante la opción *Fork*. Esto me permitió trabajar en mi propio repositorio y conservar la plantilla original del profesor.
 
-Ya estando el link, y creado un apartado de codigo, tuve que cambiar el link y nombre de usuario, para que fuera con mi nombre, al igual que el link fuera mio.
+Después ajusté el nombre del repositorio y la configuración de GitHub Pages para que mi página se publicara con una dirección propia. Así pude revisar los cambios desde el navegador y compartir el enlace de mi portafolio.
 
-![cambio de nombre]({{ '/assets/img/01-publicar/CAMBIODENOMBRE.png' | relative_url }})
+![Cambio de nombre del repositorio]({{ '/assets/img/01-publicar/CAMBIODENOMBRE.png' | relative_url }})
 
 ## 2. Una identidad propia
 
-Después empecé cambiando el color de la pagina, le puse el color de mi eleccion, que fue rosa y con los apartados del color amarillo, igualmente le agregue unos puntitos blancos, todo esto lon cambie en el apartado de custom.css, ahi primero cambie el color, despues agregue una funcion que hizo que tuviera los puntos de la parte de atras, seiguiendo las funciones de los colores. 
+Una vez que la página estaba publicada, empecé a personalizar su apariencia. Elegí el rosa pastel para el menú lateral y el amarillo para los botones, y añadí puntos blancos en el fondo para darle un estilo que me representara.
 
-![imagen del color de la página]({{ '/assets/img/01-publicar/IMAGENCOLORPAG.png' | relative_url }})
+Estos cambios se realizaron con CSS, que permite definir colores, tamaños, espacios y otros detalles visuales. Poco a poco comprendí cómo una misma estructura puede verse diferente al modificar sus estilos.
 
-![puntos blancos]({{ '/assets/img/01-publicar/PUNTOSBLANCOS.png' | relative_url }})
+![Cambios de color en el código de la página]({{ '/assets/img/01-publicar/IMAGENCOLORPAG.png' | relative_url }})
+
+![Personalización de los puntos blancos]({{ '/assets/img/01-publicar/PUNTOSBLANCOS.png' | relative_url }})
 
 ## 3. Organizar el contenido
 
-Después al cambiarle el aspecto, deje solamente dos casillas, las cuales son "SOBRE MI" Y "SEMANA UNO", los demas que quedaban, los oculte con la funcion "nav_exclude:true" con esto pude hacer que las demas casillas que no queria no aparecieran.
+Al principio dejé visibles únicamente los apartados de “Acerca de mí” y “Semana uno”. Para ocultar las páginas que todavía no necesitaba en el menú utilicé la opción `nav_exclude: true`, que permite conservar el archivo sin mostrarlo en la navegación.
 
-![eliminar página]({{ '/assets/img/01-publicar/ELIMINARPAGINA.png' | relative_url }})
+Después sustituí los textos de ejemplo por mi información y las explicaciones de mis actividades. También incorporé las imágenes correspondientes para que el proceso pudiera entenderse mejor.
 
-![segunda imagen de eliminación]({{ '/assets/img/01-publicar/ELIMINAD2.png' | relative_url }})
+![Configuración de las páginas visibles]({{ '/assets/img/01-publicar/ELIMINARPAGINA.png' | relative_url }})
 
+![Organización del menú]({{ '/assets/img/01-publicar/ELIMINAD2.png' | relative_url }})
 
-Despues empece cambiando el texto de las dos casillas que si queria en mi web, lo unico que hice fue cambiar el texto y borrando la informacion de cada uno, al final solo quedaron los dos, con su respectivo nombre.
-
+Conforme fui agregando más trabajos, el portafolio creció. Ahora los proyectos tienen nombres que indican su contenido: “Mi página web”, “Prácticas con Arduino” y “Cubo en SolidWorks”, lo que facilita encontrar cada actividad.
 
 ## 4. Los últimos detalles
 
-Para finalizar cambié, el nombre, el link de linkedin al mio, fue bastante sencillo, ya que solo tuve que remplazar el link del profesor, con el mio, al igual que el nombre.
+También cambié el nombre y el enlace de LinkedIn por mis datos. Estos ajustes ayudaron a que la página dejara de mostrar únicamente la información de la plantilla y comenzara a funcionar como un espacio personal.
 
-![cambiar link]({{ '/assets/img/01-publicar/CAMBIAR%20LINK.png' | relative_url }})
+![Actualización de los enlaces personales]({{ '/assets/img/01-publicar/CAMBIAR%20LINK.png' | relative_url }})
 
+Después mejoré la portada con tarjetas para los proyectos, imágenes y accesos directos. Al organizar el contenido busqué que los textos fueran fáciles de leer y que cada botón llevara al apartado correcto.
 
 ## Lo que aprendí
 
-Me gustó ver cómo la página fue tomando mi estilo. Aprendí a cambiar el contenido, organizar el menú y personalizar los colores desde el código.
+Con este proyecto aprendí a trabajar con un repositorio, publicar una página con GitHub Pages y utilizar Markdown, HTML y CSS para presentar información. También entendí que una página necesita tanto un diseño claro como una navegación que funcione.
 
-
-
+Me gustó ver cómo el portafolio fue tomando mi estilo. Ahora tengo un espacio que puedo seguir actualizando con nuevos trabajos y que muestra cómo ha cambiado mi manera de organizar y explicar lo que hago.

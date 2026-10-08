@@ -4,37 +4,42 @@ title: Cubo en SolidWorks
 nav_order: 5
 ---
 
-<p class="fer-page-label">Proyecto 03 · Diseño en 3D</p>
+<p class="fer-page-label">Proyecto 03 · Diseño y fabricación</p>
 
 # Cubo en SolidWorks
 
-<p class="fer-page-intro">Mis primeros pasos para transformar un dibujo en una pieza con medidas.</p>
+<p class="fer-page-intro">Del diseño de las piezas al corte láser de un cubo en madera MDF.</p>
 
-<div class="fer-project-meta"><span>SolidWorks</span><span>Diseño 3D</span><span>Cubo de 50 × 50 mm</span></div>
+<div class="fer-project-meta"><span>SolidWorks</span><span>Archivo DXF</span><span>Corte láser</span><span>Madera MDF</span></div>
 
-## El proyecto
+## El propósito de la práctica
 
-En esta ocasión nuestro trabajo fue hacer un cubo de 50x50 mm.
+En esta práctica utilizamos SolidWorks para diseñar las piezas de un cubo que después se fabricó con una cortadora láser. El objetivo fue aprender a trabajar con el programa, preparar un archivo para corte y conocer cómo un diseño digital puede convertirse en un objeto físico.
 
-## La herramienta
+Para fabricar las caras del cubo usamos madera MDF, un material que se utiliza en este tipo de trabajos porque permite obtener cortes definidos y piezas con buena precisión. Además de dibujar la forma, era importante considerar las medidas y la manera en que cada pieza se uniría con las demás.
 
-Lo primero que hicimos fue ver que es SolidWorks, el cual es un programa para diseñar piezas y objetos en 3D, como las piezas de tu brazo robótico.
+## El diseño de las piezas
 
-En él puedes:
-- dibujar la forma de una pieza y ponerle medidas exactas
-- darle grosor para convertirla en 3D
-- juntar varias piezas en un ensamblaje para revisar cómo encajan
-- hacer planos con medidas para fabricarlas
+Primero realizamos en SolidWorks el diseño de las caras que formarían el cubo, tomando como referencia las medidas de 50 × 50 mm indicadas para la actividad. En cada dibujo se definieron el contorno y las partes necesarias para unir las piezas entre sí.
 
-## Mi primera pieza
+Este proceso me ayudó a entender que diseñar una pieza no consiste solamente en darle una forma. Las dimensiones y las uniones también influyen en cómo quedará el objeto al fabricarlo, por eso deben pensarse desde el inicio y no hasta el momento de armarlo.
 
-Así empecé a "dibujar" o planear la pieza de un cubo, la primera pieza fue la tapa, con las medidas que se nos proporcionaron en la clase.
+![Diseño de una cara del cubo en SolidWorks]({{ '/assets/img/01-publicar/CUADRO1.png' | relative_url }})
 
-![Cuadro 1]({{ '/assets/img/01-publicar/CUADRO1.png' | relative_url }}) 
+## Preparar el archivo para el corte
 
-## Del diseño al archivo
+Una vez terminado el diseño, lo exportamos en formato **DXF**. Este archivo conserva la información de los contornos y las dimensiones del dibujo, lo que permite utilizarlo en el programa del equipo de corte.
 
-Ya que el cuadro lo termine de diseñar, lo que hice fue pasarlo a pdf, en la aplicacion de "mecatronica"
+El DXF es una parte importante del proceso porque conecta el trabajo realizado en SolidWorks con la fabricación. Antes de cortar, es necesario revisar la escala, las medidas y las líneas del archivo para comprobar que correspondan con las piezas diseñadas.
 
+## La fabricación en MDF
 
+Después de preparar el archivo, las piezas se fabricaron con ayuda de la cortadora láser. El equipo siguió los contornos del diseño para cortar las caras del cubo en la madera MDF.
 
+Durante esta parte de la práctica conocimos el funcionamiento de la máquina y la relación entre el archivo digital y el material. También comprendí que la precisión del diseño y el grosor del MDF son aspectos importantes para que las piezas puedan unirse de la manera prevista.
+
+## Lo que aprendí
+
+Esta actividad me permitió conocer el proceso completo, desde el diseño de una pieza hasta su fabricación. Aprendí a utilizar SolidWorks, entendí para qué sirve exportar un archivo DXF y vi cómo la cortadora láser transforma los contornos del dibujo en piezas reales.
+
+Lo que más me dejó esta práctica fue entender que cada etapa depende de la anterior. Un diseño con medidas claras y un archivo bien preparado ayudan a que el trabajo de fabricación sea más ordenado.
