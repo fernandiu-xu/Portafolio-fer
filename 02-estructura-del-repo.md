@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Sección uno
+title: Mi página web
 nav_order: 2
 ---
 
-# SEMANA UNO
+# Mi página web
 
 Lo primero para poder, iniciar con la pagina e hacerle todos loa cambios, primero tuve que descargar el archivo 
 JUST THE DOCS, que nos fue proporcionado, por ell profesor, al hacer picar Fork, se agrego y despues tuve que hacer que mi link fuera visto.

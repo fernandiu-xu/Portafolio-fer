@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Sección dos
+title: Prácticas con Arduino
 nav_order: 4
 ---
 
-# SEMANA DOS
+# Prácticas con Arduino
 
 En esta semana empezamos a trabajar con Arduino y la plataforma Arduino IDE, el cual es  una plataforma de electrónica que permite crear proyectos utilizando una tarjeta programable (Arduino), en ella se pueden conectar componentes como luces led, sensores, botones y motores.
 Arduino IDE es el programa que se utiliza para escribir, revisar y enviar instrucciones a la tarjeta desde una computadora, primero se conecta la tarjeta con un cable USB, después se escribe el código, se revisa que no tenga errores y finalmente se carga en Arduino.
@@ -47,9 +47,12 @@ Coloqué un led y una resistencia en la protoboard, después los conecté al Ard
 
 Coloqué dos leds en la protoboard y utilicé una resistencia para proteger cada uno, después conecté los leds al Arduino usando varios cables y asigné un pin digital diferente para cada uno, en el código indiqué que ambos pines funcionaran como salidas, al terminar revisé que los dos leds prendieran correctamente.
 
-<video width="100%" controls>
-  <source src="{{ '/videos/ARDUINOLED.mp4' | relative_url }}" type="video/mp4">
+<video controls playsinline preload="metadata" style="width: 100%; height: auto;" aria-label="Práctica de Arduino con dos leds">
+  <source src="{{ '/assets/videos/ARDUINOLED.mp4' | relative_url }}" type="video/mp4">
+  Tu navegador no puede reproducir este video. <a href="{{ '/assets/videos/ARDUINOLED.mp4' | relative_url }}">Abrir el video</a>.
 </video>
+
+<p><a href="{{ '/assets/videos/ARDUINOLED.mp4' | relative_url }}">Abrir el video en otra pestaña</a></p>
 
 <h3 style="color: #E89AAA;">7, salida digital con dos leds II</h3>
 

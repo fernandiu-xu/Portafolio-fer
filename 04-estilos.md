@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Sección tres
+title: Cubo en SolidWorks
 nav_order: 5
 ---
+
+# Cubo en SolidWorks
 
 En esta ocasion nuestro trabajo fue hacer un cubo de 50x50 mm.
 

@@ -41,19 +41,19 @@ nav_exclude: true
       </a>
       <a class="fer-card" href="{{ '/02-estructura-del-repo/' | relative_url }}">
         <span class="fer-card__number">02 / Mi primera página</span>
-        <span class="fer-card__title">Sección uno</span>
+        <span class="fer-card__title">Mi página web</span>
         <p>Cómo empecé a darle identidad a mi portafolio con GitHub y mis propios colores.</p>
         <span class="fer-card__action">Ver mi proceso <span aria-hidden="true">↗</span></span>
       </a>
       <a class="fer-card" href="{{ '/03-markdown/' | relative_url }}">
         <span class="fer-card__number">03 / Electrónica</span>
-        <span class="fer-card__title">Sección dos</span>
+        <span class="fer-card__title">Prácticas con Arduino</span>
         <p>Mis prácticas con Arduino, circuitos, leds, botones y servomotores.</p>
         <span class="fer-card__action">Explorar prácticas <span aria-hidden="true">↗</span></span>
       </a>
       <a class="fer-card" href="{{ '/04-estilos/' | relative_url }}">
         <span class="fer-card__number">04 / Diseño en 3D</span>
-        <span class="fer-card__title">Sección tres</span>
+        <span class="fer-card__title">Cubo en SolidWorks</span>
         <p>Mis primeros diseños en SolidWorks y el proceso para crear piezas con medidas.</p>
         <span class="fer-card__action">Ver mis diseños <span aria-hidden="true">↗</span></span>
       </a>
