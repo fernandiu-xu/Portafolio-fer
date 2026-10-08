@@ -14,5 +14,11 @@ En él puedes:
 - juntar varias piezas en un ensamblaje para revisar cómo encajan
 - hacer planos con medidas para fabricarlas
 
-Asi empece a "dibujar" o planear la pieza de un cubo, la primera pieza fue la tapa
+Asi empece a "dibujar" o planear la pieza de un cubo, la primera pieza fue la tapa, con las medidad que se nos proporcionaron en la clase.
+
+![Cuadro 1]({{ '/assets/img/01-publicar/CUADRO1.png' | relative_url }}) 
+
+Ya que el cuadro lo termine de diseñatr, lo que hice fue pasarlo a pdf, en la aplicacion de "mecatronica"
+
+
 
