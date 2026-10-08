@@ -280,8 +280,25 @@ En esta actividad trabajé con dos botones y dos leds, junto con sus resistencia
 
 ### 14. Condición OR con botones
 
-Utilicé dos botones y un led para trabajar con la condición OR. En el programa, la respuesta se activaba cuando al menos una de las condiciones de los botones se cumplía. Al probar el circuito comprendí que no era necesario activar ambos botones al mismo tiempo.
+Utilicé dos botones y un led para trabajar con la condición OR. Configuré los pines 8 y 2 como entradas y el pin 13 como salida. En el programa, el operador || permite encender el led cuando al menos uno de los botones está presionado. Si ninguno está activado, la instrucción else lo apaga. Al probar cada botón pude comprender que cualquiera de las dos entradas puede producir la misma respuesta, sin necesidad de presionarlas al mismo tiempo.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-14-video.jpg' | relative_url }}" aria-label="Práctica 14: condición OR con dos botones">
+      <source src="{{ '/assets/videos/arduino-practica-14-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Cualquiera de los dos botones puede encender el led.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-14-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-14.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-14.png' | relative_url }}" alt="Código de Arduino de la práctica 14 con la condición OR para encender el LED del pin 13 si el botón del pin 8 o el del pin 2 está presionado" loading="lazy"></a>
+    <figcaption>El operador OR (||) activa el led si al menos una de las dos entradas es HIGH. Si ambas son LOW, else lo apaga.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-14.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### 15. Condición AND con botones
 
