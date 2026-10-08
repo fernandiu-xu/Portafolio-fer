@@ -116,6 +116,17 @@ Para esta actividad coloqué dos leds en la protoboard, cada uno con su resisten
 Mantuve las conexiones de los dos leds y cambié el código para alternar su encendido. Mientras uno estaba prendido, el otro permanecía apagado, y después intercambiaban sus estados. La actividad me ayudó a relacionar el orden de las instrucciones con la secuencia de luces que veía en el circuito.
 
 
+<figure class="fer-cubo-figure">
+  <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-7.jpg' | relative_url }}" aria-label="Práctica 7: encendido y apagado de dos LEDs">
+    <source src="{{ '/assets/videos/arduino-practica-7.mp4' | relative_url }}" type="video/mp4">
+    Tu navegador no puede reproducir este video.
+  </video>
+  <figcaption>Práctica 7 · Encendido y apagado de los LEDs.</figcaption>
+</figure>
+
+[Abrir el video de la práctica 7]({{ '/assets/videos/arduino-practica-7.mp4' | relative_url }})
+
+
 ### 8. Display de 7 segmentos
 
 En esta práctica coloqué un display de siete segmentos en la protoboard y conecté sus partes al Arduino con cables y resistencias. Después cargué un programa para activar determinados segmentos. Al combinar las partes encendidas pude formar un número y entender que cada segmento se controla como una salida.
