@@ -1,5 +1,5 @@
 title: Portafolio
-description: Repositorio base para enseñar y crear documentación en GitHub Pages con Just the Docs
+description: Portafolio de Fernanda Ramos. Proyectos de diseño web, Arduino y SolidWorks.
 
 # GitHub Pages: modo recomendado
 remote_theme: just-the-docs/just-the-docs
@@ -31,7 +31,7 @@ search:
 # Ejemplo de enlace auxiliar (aparece arriba a la derecha)
 aux_links:
   "Repositorio en GitHub":
-    - "https://github.com/HuberGiron/portafolio-just-the-docs"
+    - "https://github.com/fernandiu-xu/Portafolio-fer"
 
 # Enlaces
 permalink: pretty
