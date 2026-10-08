@@ -137,8 +137,26 @@ Mantuve las conexiones de los dos leds y cambié el código para encenderlos y a
 
 ### 8. Display de 7 segmentos
 
-En esta práctica coloqué un display de siete segmentos en la protoboard y conecté sus partes al Arduino con cables y resistencias. Después cargué un programa para activar determinados segmentos. Al combinar las partes encendidas pude formar un número y entender que cada segmento se controla como una salida.
+En esta práctica coloqué un display de siete segmentos en la protoboard y conecté sus partes al Arduino con cables y resistencias. Después configuré en el programa los pines correspondientes como salidas. Al encender los siete segmentos pude mostrar el número 8 y observar que cada parte del display se controla por separado.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <a href="{{ '/assets/img/arduino/practica-8-display.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/assets/img/arduino/practica-8-display.png' | relative_url }}" alt="Display de siete segmentos encendido y conectado al Arduino en la práctica 8" loading="lazy">
+    </a>
+    <figcaption>El display con los segmentos encendidos.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/practica-8-display.png' | relative_url }}" target="_blank" rel="noopener">Ampliar la foto ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-8.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/assets/img/arduino/codigo-practica-8.png' | relative_url }}" alt="Código de la práctica 8 que configura los pines del display como OUTPUT y activa los segmentos y el punto con HIGH" loading="lazy">
+    </a>
+    <figcaption>En setup se configuran las salidas. En loop se encienden los segmentos y el punto con digitalWrite y HIGH.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-8.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### 9. Display de 7 segmentos
 
