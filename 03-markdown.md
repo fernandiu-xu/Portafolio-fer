@@ -118,12 +118,12 @@ Mantuve las conexiones de los dos leds y cambié el código para encenderlos y a
 <div class="fer-practice-pair">
   <figure class="fer-practice-panel">
     <h4>El circuito en funcionamiento</h4>
-    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-7.jpg' | relative_url }}" aria-label="Práctica 7: encendido y apagado de dos LEDs">
-      <source src="{{ '/assets/videos/arduino-practica-7.mp4' | relative_url }}" type="video/mp4">
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-7-nuevo.jpg' | relative_url }}" aria-label="Práctica 7: encendido y apagado de dos LEDs">
+      <source src="{{ '/assets/videos/arduino-practica-7-sin-audio.mp4' | relative_url }}" type="video/mp4">
       Tu navegador no puede reproducir este video.
     </video>
     <figcaption>Encendido y apagado de los LEDs.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-7.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-7-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
