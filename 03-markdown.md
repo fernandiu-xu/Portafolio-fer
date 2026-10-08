@@ -214,8 +214,25 @@ En esta práctica conecté un botón y un led al Arduino utilizando la protoboar
 
 ### 11. Entrada digital con dos botones
 
-Después conecté dos botones y un led, asignando una entrada diferente a cada botón. En el programa pude revisar sus estados por separado y hacer que el led respondiera según el botón presionado. Así comprendí que un circuito puede recibir más de una señal de entrada.
+Después conecté dos botones y dos leds al Arduino para controlar cada luz por separado. Configuré los pines 8 y 2 como entradas para los botones, y los pines 13 y 11 como salidas para los leds. El programa lee el estado de cada botón con digitalRead y lo envía al led correspondiente mediante digitalWrite. Al probarlos pude observar que cada botón controla su propia luz y comprender cómo se manejan varias entradas y salidas en un mismo circuito.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-11-video.jpg' | relative_url }}" aria-label="Práctica 11: dos botones que controlan dos LEDs">
+      <source src="{{ '/assets/videos/arduino-practica-11-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Cada botón controla el encendido de su led.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-11-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-11.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-11.png' | relative_url }}" alt="Código de Arduino de la práctica 11 que lee los botones en los pines 8 y 2 y controla los LEDs de los pines 13 y 11" loading="lazy"></a>
+    <figcaption>El estado del botón del pin 8 se envía al led del pin 13, y el del botón del pin 2 al led del pin 11.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-11.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### 12. Condicionales con un botón
 
