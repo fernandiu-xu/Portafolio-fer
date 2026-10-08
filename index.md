@@ -56,7 +56,7 @@ nav_exclude: true
         <span class="fer-card__action">Explorar prácticas <span aria-hidden="true">↗</span></span>
       </a>
       <a class="fer-card" href="{{ '/04-estilos/' | relative_url }}">
-        <img class="fer-card__image" src="{{ '/assets/img/01-publicar/CUADRO1.png' | relative_url }}" alt="Diseño del cubo en SolidWorks" loading="lazy">
+        <img class="fer-card__image" src="{{ '/assets/img/cubo/cubo-final.png' | relative_url }}" alt="Cubo de MDF terminado" loading="lazy">
 
         <span class="fer-card__number">04 / Diseño en 3D</span>
         <span class="fer-card__title">Cubo en SolidWorks</span>
