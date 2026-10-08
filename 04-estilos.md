@@ -10,7 +10,7 @@ nav_order: 5
 
 <p class="fer-page-intro">Del diseño de las piezas al corte láser de un cubo en madera MDF.</p>
 
-<div class="fer-project-meta"><span>SolidWorks</span><span>Archivo DXF</span><span>Corte láser</span><span>Madera MDF</span></div>
+<div class="fer-project-meta"><span>SolidWorks</span><span>DXF y PDF</span><span>Glowforge</span><span>Corte láser</span><span>Madera MDF</span></div>
 
 ## El propósito de la práctica
 
@@ -26,11 +26,9 @@ Este proceso me ayudó a entender que diseñar una pieza no consiste solamente e
 
 ![Diseño de una cara del cubo en SolidWorks]({{ '/assets/img/01-publicar/CUADRO1.png' | relative_url }})
 
-## Preparar el archivo para el corte
+Una vez terminado el diseño, lo exportamos en formato **DXF** y después lo convertimos a **PDF** con un convertidor. De esta manera obtuvimos un archivo compatible con **Glowforge**, el programa que utilizamos para enviar el diseño a la cortadora láser.
 
-Una vez terminado el diseño, lo exportamos en formato **DXF**. Este archivo conserva la información de los contornos y las dimensiones del dibujo, lo que permite utilizarlo en el programa del equipo de corte.
-
-El DXF es una parte importante del proceso porque conecta el trabajo realizado en SolidWorks con la fabricación. Antes de cortar, es necesario revisar la escala, las medidas y las líneas del archivo para comprobar que correspondan con las piezas diseñadas.
+Antes de realizar el corte, revisamos que las medidas, las líneas y la escala del archivo fueran correctas. Esta revisión nos ayudó a comprobar que el diseño conservara las dimensiones previstas y a evitar errores al fabricar las piezas.
 
 ## La fabricación en MDF
 
@@ -40,6 +38,6 @@ Durante esta parte de la práctica conocimos el funcionamiento de la máquina y 
 
 ## Lo que aprendí
 
-Esta actividad me permitió conocer el proceso completo, desde el diseño de una pieza hasta su fabricación. Aprendí a utilizar SolidWorks, entendí para qué sirve exportar un archivo DXF y vi cómo la cortadora láser transforma los contornos del dibujo en piezas reales.
+Esta actividad me permitió conocer el proceso completo, desde el diseño de una pieza hasta su fabricación. Aprendí a utilizar SolidWorks y a preparar el diseño en DXF y PDF para trabajarlo en Glowforge. También vi cómo la cortadora láser transforma los contornos del dibujo en piezas reales.
 
 Lo que más me dejó esta práctica fue entender que cada etapa depende de la anterior. Un diseño con medidas claras y un archivo bien preparado ayudan a que el trabajo de fabricación sea más ordenado.
