@@ -258,8 +258,25 @@ Con el circuito de un botón y un led utilicé las condiciones if y else if para
 
 ### 13. Condicionales con dos botones
 
-En esta actividad trabajé con dos botones y dos leds, junto con sus resistencias y cables. Añadí condiciones para revisar las señales de los botones y controlar las salidas correspondientes. Con ello pude observar que distintas entradas pueden provocar respuestas diferentes dentro del mismo programa.
+En esta actividad trabajé con dos botones y dos leds, junto con sus resistencias y cables. Configuré los pines 8 y 2 como entradas, y los pines 13 y 11 como salidas. Para cada botón añadí condiciones if y else if: cuando su lectura es HIGH se enciende el led correspondiente, y cuando es LOW se apaga. Al probar los botones por separado pude observar cómo cada entrada controla una luz y entender mejor cómo se toman decisiones dentro del programa.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-13-video.jpg' | relative_url }}" aria-label="Práctica 13: condicionales con dos botones y dos LEDs">
+      <source src="{{ '/assets/videos/arduino-practica-13-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Cada botón controla el encendido de su led.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-13-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-13.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-13.png' | relative_url }}" alt="Código de Arduino de la práctica 13 que lee los botones en los pines 8 y 2 y controla los LEDs de los pines 13 y 11" loading="lazy"></a>
+    <figcaption>Las condiciones if y else if revisan cada botón para encender su led con HIGH o apagarlo con LOW.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-13.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### 14. Condición OR con botones
 
