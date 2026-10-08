@@ -160,8 +160,28 @@ En esta práctica coloqué un display de siete segmentos en la protoboard y cone
 
 ### 9. Display de 7 segmentos
 
-En la siguiente actividad conservé el circuito del display y modifiqué la combinación de segmentos encendidos para mostrar otro número. Esto me permitió comparar los patrones y reconocer que, aunque el componente sea el mismo, el resultado cambia según las salidas que se activan.
+En esta actividad conservé el circuito del display y cambié el programa para mostrar una secuencia de números. Para formar cada número, el código enciende algunos segmentos con HIGH y apaga otros con LOW. Las pausas de un segundo permiten observar el cambio entre los números 0, 1 y 2. Así comprendí que un mismo display puede mostrar distintos resultados según la combinación de salidas que se activa.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-9-video.jpg' | relative_url }}" aria-label="Práctica 9: secuencia de números en un display de siete segmentos">
+      <source src="{{ '/assets/videos/arduino-practica-9-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Cambio de números en el display.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-9-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+    <a href="{{ '/assets/img/arduino/practica-9-display.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/practica-9-display.png' | relative_url }}" alt="Circuito de la práctica 9 con el display mostrando el número 1" loading="lazy" style="margin-top: 1rem;"></a>
+    <figcaption>Detalle del display y sus conexiones.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/practica-9-display.png' | relative_url }}" target="_blank" rel="noopener">Ampliar la foto ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-9.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-9.png' | relative_url }}" alt="Código de Arduino de la práctica 9: configuración de los segmentos y secuencia de números con HIGH, LOW y delay" loading="lazy"></a>
+    <figcaption>El código cambia los segmentos encendidos para formar cada número y utiliza delay(1000) entre los cambios.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-9.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### Conclusión
 
