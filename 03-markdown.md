@@ -113,19 +113,27 @@ Para esta actividad coloqué dos leds en la protoboard, cada uno con su resisten
 
 ### 7. Salida digital con dos leds II
 
-Mantuve las conexiones de los dos leds y cambié el código para alternar su encendido. Mientras uno estaba prendido, el otro permanecía apagado, y después intercambiaban sus estados. La actividad me ayudó a relacionar el orden de las instrucciones con la secuencia de luces que veía en el circuito.
+Mantuve las conexiones de los dos leds y cambié el código para encenderlos y apagarlos en una secuencia. Primero se enciende y se apaga el led conectado al pin 13, y después ocurre lo mismo con el del pin 12. Entre cada cambio, el programa espera un segundo con la instrucción delay(1000). Esta actividad me ayudó a relacionar el orden de las instrucciones con las luces que veía en el circuito.
 
-
-<figure class="fer-cubo-figure">
-  <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-7.jpg' | relative_url }}" aria-label="Práctica 7: encendido y apagado de dos LEDs">
-    <source src="{{ '/assets/videos/arduino-practica-7.mp4' | relative_url }}" type="video/mp4">
-    Tu navegador no puede reproducir este video.
-  </video>
-  <figcaption>Práctica 7 · Encendido y apagado de los LEDs.</figcaption>
-</figure>
-
-[Abrir el video de la práctica 7]({{ '/assets/videos/arduino-practica-7.mp4' | relative_url }})
-
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-7.jpg' | relative_url }}" aria-label="Práctica 7: encendido y apagado de dos LEDs">
+      <source src="{{ '/assets/videos/arduino-practica-7.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Encendido y apagado de los LEDs.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-7.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-7.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Ampliar la imagen del código de la práctica 7">
+      <img src="{{ '/assets/img/arduino/codigo-practica-7.png' | relative_url }}" alt="Código de Arduino: pines 13 y 12 como OUTPUT, encendido y apagado con digitalWrite y pausas de 1000 milisegundos" loading="lazy">
+    </a>
+    <figcaption>Los pines 13 y 12 se configuran como salidas en setup. En loop se repite la secuencia con HIGH, LOW y delay.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-7.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### 8. Display de 7 segmentos
 
