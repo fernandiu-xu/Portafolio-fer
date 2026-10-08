@@ -80,7 +80,7 @@ En este video se puede observar cómo la cortadora láser sigue el contorno de u
 Después del corte, unimos las caras de MDF para formar el cubo. En la fotografía se aprecia el resultado final y cómo las uniones de los bordes permiten ensamblar las piezas.
 
 <figure class="fer-cubo-figure fer-cubo-final">
-  <a href="{{ '/assets/img/cubo/cubo-final.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/cubo/cubo-final.png' | relative_url }}" alt="Cubo terminado y ensamblado en madera MDF junto a las piezas cortadas" loading="lazy"></a>
+  <a href="{{ '/assets/img/cubo/cubo-terminado.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/cubo/cubo-terminado.png' | relative_url }}" alt="Cubo terminado y ensamblado en madera MDF junto a las piezas cortadas" loading="lazy"></a>
   <figcaption>Resultado final: el cubo de MDF armado.</figcaption>
 </figure>
 
