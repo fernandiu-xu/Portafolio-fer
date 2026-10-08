@@ -4,22 +4,39 @@ title: Acerca de mí
 nav_order: 1
 ---
 
+<p class="fer-page-label">Detrás de los proyectos</p>
+
 # Acerca de mí
 
-HOLA SOY FERNANDA!!
+<div class="fer-about-intro">
+  <img src="{{ '/assets/img/01-publicar/YO.jpg' | relative_url }}" alt="Fernanda Ramos">
+  <div>
+    <p class="fer-about-hello">Hola, soy Fernanda</p>
+    <p>Soy una persona curiosa y me gusta aprender cosas nuevas. Disfruto hacer preguntas, probar ideas y entender cómo funciona lo que tengo frente a mí.</p>
+    <p>Este portafolio reúne una parte de ese proceso: lo que voy descubriendo, las cosas que construyo y lo que aprendo con cada proyecto.</p>
+    <div class="fer-project-meta"><span>Mecatrónica</span><span>Música</span><span>Tenis</span></div>
+  </div>
+</div>
 
-Soy una persona muy curiosa y me encanta aprender cosas nuevas cada día, desde pequeña he sentido una conexión especial con la música electrónica, porque además de gustarme mucho, me trae recuerdos muy bonitos. Me encanta escuchar a Avicii y descubrir diferentes estilos dentro de la música electrónica, aunque también disfruto mucho de esos momentos tranquilos en los que puedo leer, escribir o simplemente pasar tiempo con mis animales.
+## Lo que me inspira
 
-![foto mía]({{ '/assets/img/01-publicar/YO.jpg' | relative_url }})
+Desde pequeña he sentido una conexión especial con la música electrónica. Además de gustarme, me trae recuerdos muy bonitos. Me encanta escuchar a Avicii y descubrir distintos estilos, aunque también disfruto los momentos tranquilos para leer, escribir o pasar tiempo con mis animales.
 
-![Avicii]({{ '/assets/img/01-publicar/AVICII.png' | relative_url }})
+<div class="fer-gallery">
+  <figure><img src="{{ '/assets/img/01-publicar/AVICII.png' | relative_url }}" alt="Avicii" loading="lazy"><figcaption>La música que me acompaña</figcaption></figure>
+  <figure><img src="{{ '/assets/img/01-publicar/ANIMALES.jpg' | relative_url }}" alt="Mis animales" loading="lazy"><figcaption>Mis compañeros de todos los días</figcaption></figure>
+</div>
 
-![mis animales]({{ '/assets/img/01-publicar/ANIMALES.jpg' | relative_url }})
+## Fuera de los proyectos
 
-También me gusta mucho el deporte, especialmente el tenis, durante un tiempo practiqué tochito, pero tuve que dejarlo porque cada vez tenía menos tiempo, aun así, disfruto mantenerme activa, viajar y conocer lugares nuevos.
+Me gusta mucho el deporte, especialmente el tenis. Durante un tiempo practiqué tochito, pero tuve que dejarlo porque tenía menos tiempo. Aun así, disfruto mantenerme activa, viajar y conocer lugares nuevos.
 
-Algo que me representa mucho es que siempre quiero entender cómo funcionan las cosas. Me gusta armar, desarmar y volver a construir, experimentar y descubrir qué hay detrás de cada mecanismo, creo que esa curiosidad es una de las razones por las que la mecatrónica me llama tanto la atención, porque combina la creatividad con la tecnología y permite convertir una idea en algo que realmente funciona.
+## Mi curiosidad por la tecnología
 
-Además, me encanta la neurociencia, ya que me parece increíble todo lo que aún podemos aprender sobre el cerebro y la manera en que funciona; Para mí, tanto la neurociencia como la mecatrónica tienen algo en común: las dos invitan a hacer preguntas, buscar respuestas y nunca dejar de aprender, me gusta pensar que siempre hay algo nuevo por descubrir, construir o mejorar, y eso es justamente lo que hace que cada día encuentre algo que me motive.
+Siempre quiero entender cómo funcionan las cosas. Me gusta armar, desarmar y volver a construir, experimentar y descubrir qué hay detrás de cada mecanismo. Esa curiosidad es una de las razones por las que me llama la atención la mecatrónica: combina la creatividad con la tecnología y permite convertir una idea en algo que realmente funciona.
 
-![mecatrónica]({{ '/assets/img/01-publicar/mecatronica.png' | relative_url }})
+También me interesa la neurociencia y todo lo que podemos aprender sobre el cerebro. Para mí, ambas áreas invitan a hacer preguntas, buscar respuestas y seguir aprendiendo.
+
+![Mecatrónica]({{ '/assets/img/01-publicar/mecatronica.png' | relative_url }})
+
+<aside class="fer-note"><span aria-hidden="true">✦</span><p>Siempre encuentro algo que me motive a descubrir, construir o mejorar.</p></aside>

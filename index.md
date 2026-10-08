@@ -5,14 +5,12 @@ nav_order: 1
 nav_exclude: true
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css?v=20261008-fer' | relative_url }}">
-
 <div class="fer-home">
   <section class="fer-hero" aria-labelledby="fer-title">
     <div class="fer-hero__text">
-      <p class="fer-eyebrow">Fernanda Ramos · Mi espacio de aprendizaje</p>
+      <p class="fer-eyebrow">Fernanda Ramos · Portafolio personal</p>
       <h1 id="fer-title">PORTAFOLIO</h1>
-      <p class="fer-hello">Hola, soy Fernanda</p>
+      <p class="fer-hello">Ideas que se convierten en proyectos</p>
       <p class="fer-intro">Me gusta entender cómo funcionan las cosas y convertir mis ideas en algo que pueda construir. Aquí comparto mis prácticas, proyectos y lo que voy aprendiendo en el camino.</p>
       <a class="fer-button" href="#mis-trabajos">Explorar mis trabajos <span aria-hidden="true">↗</span></a>
     </div>
@@ -34,24 +32,32 @@ nav_exclude: true
     </div>
     <div class="fer-grid">
       <a class="fer-card" href="{{ '/01-publicar-en-github-pages/' | relative_url }}">
+        <img class="fer-card__image" src="{{ '/assets/img/01-publicar/YO.jpg' | relative_url }}" alt="Fernanda Ramos" loading="lazy">
+
         <span class="fer-card__number">01 / Sobre mí</span>
         <span class="fer-card__title">Acerca de mí</span>
         <p>Mis intereses, lo que me inspira y las cosas que disfruto aprender.</p>
         <span class="fer-card__action">Conóceme <span aria-hidden="true">↗</span></span>
       </a>
       <a class="fer-card" href="{{ '/02-estructura-del-repo/' | relative_url }}">
+        <img class="fer-card__image" src="{{ '/assets/img/01-publicar/IMAGENCOLORPAG.png' | relative_url }}" alt="Diseño de mi primera página web" loading="lazy">
+
         <span class="fer-card__number">02 / Mi primera página</span>
         <span class="fer-card__title">Mi página web</span>
         <p>Cómo empecé a darle identidad a mi portafolio con GitHub y mis propios colores.</p>
         <span class="fer-card__action">Ver mi proceso <span aria-hidden="true">↗</span></span>
       </a>
       <a class="fer-card" href="{{ '/03-markdown/' | relative_url }}">
+        <img class="fer-card__image" src="{{ '/assets/img/01-publicar/ARDUINOIMAGE.jpg' | relative_url }}" alt="Tarjeta Arduino utilizada en mis prácticas" loading="lazy">
+
         <span class="fer-card__number">03 / Electrónica</span>
         <span class="fer-card__title">Prácticas con Arduino</span>
         <p>Mis prácticas con Arduino, circuitos, leds, botones y servomotores.</p>
         <span class="fer-card__action">Explorar prácticas <span aria-hidden="true">↗</span></span>
       </a>
       <a class="fer-card" href="{{ '/04-estilos/' | relative_url }}">
+        <img class="fer-card__image" src="{{ '/assets/img/01-publicar/CUADRO1.png' | relative_url }}" alt="Diseño del cubo en SolidWorks" loading="lazy">
+
         <span class="fer-card__number">04 / Diseño en 3D</span>
         <span class="fer-card__title">Cubo en SolidWorks</span>
         <p>Mis primeros diseños en SolidWorks y el proceso para crear piezas con medidas.</p>
