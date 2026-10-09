@@ -394,8 +394,24 @@ En esta actividad utilicé el mismo servomotor y cambié el código para recorre
 
 ### 19. Servomotor y potenciómetro
 
-Después conecté un potenciómetro para controlar la posición del servomotor. Al girar la perilla, Arduino leía la señal y el programa la relacionaba con un ángulo. Así pude observar cómo una entrada analógica, que puede tomar distintos valores, permite ajustar el movimiento de manera gradual.
+Después conecté un potenciómetro para controlar la posición del servomotor. El programa utiliza analogRead(A0) para leer su señal y guarda el resultado en la variable valor. Con map convierte el rango de 0 a 1023 en una posición de 0° a 180°, que se envía al servo conectado al pin 9 mediante servoMotor.write(pos). El código espera un segundo antes de realizar la siguiente lectura. Al girar la perilla pude relacionar una entrada analógica con el ángulo del motor y comprender cómo adaptar una lectura para controlar otro componente.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-19-video.jpg' | relative_url }}" aria-label="Práctica 19: servomotor controlado con un potenciómetro">
+      <source src="{{ '/assets/videos/arduino-practica-19-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Prueba del control del servomotor con el potenciómetro.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-19-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <img src="{{ '/assets/img/arduino/codigo-practica-19.png' | relative_url }}" alt="Código de Arduino que lee A0, convierte la lectura de 0 a 1023 en un ángulo de 0 a 180 con map y controla el servo del pin 9" loading="lazy">
+    <figcaption>analogRead(A0) lee el potenciómetro. map convierte la lectura en un ángulo y servoMotor.write(pos) indica la posición, con una pausa de un segundo entre lecturas.</figcaption>
+  </figure>
+</div>
 
 ### 19.2. Dos servomotores y un potenciómetro
 
