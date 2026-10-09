@@ -127,11 +127,9 @@ Mantuve las conexiones de los dos leds y cambié el código para encenderlos y a
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-7.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Ampliar la imagen del código de la práctica 7">
-      <img src="{{ '/assets/img/arduino/codigo-practica-7.png' | relative_url }}" alt="Código de Arduino: pines 13 y 12 como OUTPUT, encendido y apagado con digitalWrite y pausas de 1000 milisegundos" loading="lazy">
-    </a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-7.png' | relative_url }}" alt="Código de Arduino: pines 13 y 12 como OUTPUT, encendido y apagado con digitalWrite y pausas de 1000 milisegundos" loading="lazy">
     <figcaption>Los pines 13 y 12 se configuran como salidas en setup. En loop se repite la secuencia con HIGH, LOW y delay.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-7.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -150,11 +148,9 @@ En esta práctica coloqué un display de siete segmentos en la protoboard y cone
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-8.png' | relative_url }}" target="_blank" rel="noopener">
-      <img src="{{ '/assets/img/arduino/codigo-practica-8.png' | relative_url }}" alt="Código de la práctica 8 que configura los pines del display como OUTPUT y activa los segmentos y el punto con HIGH" loading="lazy">
-    </a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-8.png' | relative_url }}" alt="Código de la práctica 8 que configura los pines del display como OUTPUT y activa los segmentos y el punto con HIGH" loading="lazy">
     <figcaption>En setup se configuran las salidas. En loop se encienden los segmentos y el punto con digitalWrite y HIGH.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-8.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -177,9 +173,9 @@ En esta actividad conservé el circuito del display y cambié el programa para m
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-9.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-9.png' | relative_url }}" alt="Código de Arduino de la práctica 9: configuración de los segmentos y secuencia de números con HIGH, LOW y delay" loading="lazy"></a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-9.png' | relative_url }}" alt="Código de Arduino de la práctica 9: configuración de los segmentos y secuencia de números con HIGH, LOW y delay" loading="lazy">
     <figcaption>El código cambia los segmentos encendidos para formar cada número y utiliza delay(1000) entre los cambios.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-9.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -206,9 +202,9 @@ En esta práctica conecté un botón y un led al Arduino utilizando la protoboar
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-10.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-10.png' | relative_url }}" alt="Código de Arduino que configura el pin 13 como OUTPUT y el pin 8 como INPUT y escribe en el LED el estado leído del botón" loading="lazy"></a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-10.png' | relative_url }}" alt="Código de Arduino que configura el pin 13 como OUTPUT y el pin 8 como INPUT y escribe en el LED el estado leído del botón" loading="lazy">
     <figcaption>digitalRead(8) lee el botón y digitalWrite envía su estado al led conectado al pin 13.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-10.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -228,9 +224,9 @@ Después conecté dos botones y dos leds al Arduino para controlar cada luz por 
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-11.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-11.png' | relative_url }}" alt="Código de Arduino de la práctica 11 que lee los botones en los pines 8 y 2 y controla los LEDs de los pines 13 y 11" loading="lazy"></a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-11.png' | relative_url }}" alt="Código de Arduino de la práctica 11 que lee los botones en los pines 8 y 2 y controla los LEDs de los pines 13 y 11" loading="lazy">
     <figcaption>El estado del botón del pin 8 se envía al led del pin 13, y el del botón del pin 2 al led del pin 11.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-11.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -250,9 +246,9 @@ Con el circuito de un botón y un led utilicé las condiciones if y else if para
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-12.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-12.png' | relative_url }}" alt="Código de Arduino de la práctica 12 con condiciones if y else if para controlar el LED del pin 13 según el botón del pin 8" loading="lazy"></a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-12.png' | relative_url }}" alt="Código de Arduino de la práctica 12 con condiciones if y else if para controlar el LED del pin 13 según el botón del pin 8" loading="lazy">
     <figcaption>Si digitalRead(8) es HIGH, se enciende el led del pin 13; si es LOW, se apaga.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-12.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -272,9 +268,9 @@ En esta actividad trabajé con dos botones y dos leds, junto con sus resistencia
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-13.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-13.png' | relative_url }}" alt="Código de Arduino de la práctica 13 que lee los botones en los pines 8 y 2 y controla los LEDs de los pines 13 y 11" loading="lazy"></a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-13.png' | relative_url }}" alt="Código de Arduino de la práctica 13 que lee los botones en los pines 8 y 2 y controla los LEDs de los pines 13 y 11" loading="lazy">
     <figcaption>Las condiciones if y else if revisan cada botón para encender su led con HIGH o apagarlo con LOW.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-13.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -294,9 +290,9 @@ Utilicé dos botones y un led para trabajar con la condición OR. Configuré los
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-14.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-14.png' | relative_url }}" alt="Código de Arduino de la práctica 14 con la condición OR para encender el LED del pin 13 si el botón del pin 8 o el del pin 2 está presionado" loading="lazy"></a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-14.png' | relative_url }}" alt="Código de Arduino de la práctica 14 con la condición OR para encender el LED del pin 13 si el botón del pin 8 o el del pin 2 está presionado" loading="lazy">
     <figcaption>El operador OR (||) activa el led si al menos una de las dos entradas es HIGH. Si ambas son LOW, else lo apaga.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-14.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -316,9 +312,9 @@ Después cambié la lógica del programa para utilizar la condición AND. Conser
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-15.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-15.png' | relative_url }}" alt="Código de Arduino de la práctica 15 con la condición AND para encender el LED del pin 13 si ambos botones de los pines 8 y 2 están presionados" loading="lazy"></a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-15.png' | relative_url }}" alt="Código de Arduino de la práctica 15 con la condición AND para encender el LED del pin 13 si ambos botones de los pines 8 y 2 están presionados" loading="lazy">
     <figcaption>El operador AND (&amp;&amp;) activa el led solo si ambas entradas son HIGH. Si alguna es LOW, else lo apaga.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-15.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+    
   </figure>
 </div>
 
@@ -338,12 +334,12 @@ En esta práctica conecté cuatro leds a los pines 13, 12, 11 y 10, y un botón 
   </figure>
   <figure class="fer-practice-panel fer-practice-code">
     <h4>El código de la práctica</h4>
-    <a href="{{ '/assets/img/arduino/codigo-practica-16-1.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-16-1.png' | relative_url }}" alt="Primera parte del código: variable cuenta, pines 13 a 10 como salidas y pin 2 como entrada, incremento y reinicio del contador" loading="lazy"></a>
+    <img src="{{ '/assets/img/arduino/codigo-practica-16-1.png' | relative_url }}" alt="Primera parte del código: variable cuenta, pines 13 a 10 como salidas y pin 2 como entrada, incremento y reinicio del contador" loading="lazy">
     <figcaption>La variable cuenta comienza en cero. Al leer HIGH en el botón, aumenta su valor y el programa espera 500 milisegundos. Al llegar a cinco vuelve a cero.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-16-1.png' | relative_url }}" target="_blank" rel="noopener">Ampliar la primera parte ↗</a>
-    <a href="{{ '/assets/img/arduino/codigo-practica-16-2.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-16-2.png' | relative_url }}" alt="Segunda parte del código: condiciones para encender dos, tres o cuatro LEDs según el valor de cuenta" loading="lazy" style="margin-top: 1rem;"></a>
+    
+    <img src="{{ '/assets/img/arduino/codigo-practica-16-2.png' | relative_url }}" alt="Segunda parte del código: condiciones para encender dos, tres o cuatro LEDs según el valor de cuenta" loading="lazy" style="margin-top: 1rem;">
     <figcaption>Las condiciones encienden uno, dos, tres o cuatro leds según el valor de cuenta.</figcaption>
-    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-16-2.png' | relative_url }}" target="_blank" rel="noopener">Ampliar la segunda parte ↗</a>
+    
   </figure>
 </div>
 

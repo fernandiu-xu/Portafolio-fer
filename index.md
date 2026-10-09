@@ -70,5 +70,5 @@ nav_exclude: true
     <span aria-hidden="true">✦</span>
     <p>Siempre hay algo nuevo por descubrir, construir o mejorar.</p>
   </aside>
-  <p class="fer-repo"><a href="https://github.com/fernandiu-xu/Portafolio-fer">Ver el código de mi portafolio en GitHub ↗</a></p>
+
 </div>
