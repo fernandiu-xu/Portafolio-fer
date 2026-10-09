@@ -27,5 +27,7 @@
 .main-content .fer-material-item { display: flex; align-items: center; gap: .6rem; }
 .main-content .fer-material-image { display: block; flex: 0 0 52px; width: 52px; height: 52px; max-width: 52px; margin: 0; border: 1px solid #f1dce4; border-radius: 10px; object-fit: contain; }
 .main-content .fer-materials-table thead th:first-child { width: 34%; }
-.main-content .fer-materials-table thead th:nth-child(2) { width: 12%; }
-.main-content .fer-materials-table thead th:last-child { width: 54%; }
+.main-content .fer-materials-table thead th:nth-child(2) { width: 15%; }
+.main-content .fer-materials-table thead th:last-child { width: 51%; }
+
+.main-content .fer-materials-table thead th:nth-child(2) { white-space: nowrap; }
