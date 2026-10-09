@@ -14,7 +14,7 @@ nav_order: 4
 
 <nav class="fer-jump-nav" aria-label="Temas de las prácticas"><a href="#materiales">Materiales</a><a href="#salidas-digitales">Salidas digitales</a><a href="#entradas-digitales">Entradas digitales</a><a href="#servomotores">Servomotores</a></nav>
 
-<link rel="stylesheet" href="{{ '/assets/css/materiales.css?v=20261009-imagenes' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/materiales.css?v=20261009-imagenes2' | relative_url }}">
 
 <section class="fer-materials" aria-labelledby="materiales">
   <div class="fer-materials-heading">
