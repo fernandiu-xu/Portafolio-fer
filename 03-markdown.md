@@ -415,8 +415,24 @@ Después conecté un potenciómetro para controlar la posición del servomotor. 
 
 ### 19.2. Dos servomotores y un potenciómetro
 
-En esta práctica conecté dos servomotores y utilicé un solo potenciómetro como entrada. Modifiqué el programa para que ambos respondieran a la posición de la perilla. Con esta actividad entendí que una misma señal puede utilizarse para controlar más de un componente.
+En esta práctica conecté dos servomotores y utilicé un solo potenciómetro para controlar sus posiciones. En el programa declaré myservo1 y myservo2, con sus señales en los pines 9 y 2. La lectura de A0 se convierte con map en un ángulo de 0° a 180° y se guarda en la variable pos. Después, ese mismo valor se envía a los dos motores mediante write(pos). El código incluye una pausa de 10 milisegundos entre lecturas. Al girar la perilla pude observar cómo una misma entrada puede controlar más de un componente.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-19-2-video.jpg' | relative_url }}" aria-label="Práctica 19.2: dos servomotores y un potenciómetro">
+      <source src="{{ '/assets/videos/arduino-practica-19-2-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Prueba de los dos servomotores controlados con un potenciómetro.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-19-2-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <img src="{{ '/assets/img/arduino/codigo-practica-19-2.png' | relative_url }}" alt="Código con dos objetos Servo conectados a los pines 9 y 2, lectura del potenciómetro en A0 y envío de la misma posición a ambos motores" loading="lazy">
+    <figcaption>analogRead(A0) lee el potenciómetro y map convierte su valor a un ángulo de 0° a 180°. Ambos servos reciben pos, con una pausa de 10 milisegundos.</figcaption>
+  </figure>
+</div>
 
 ### 20.2. Dos servomotores y dos potenciómetros
 
