@@ -352,8 +352,24 @@ Con las entradas digitales aprendí a leer botones, utilizar condiciones y relac
 
 ### 17. Servomotor
 
-Conecté un servomotor al Arduino para conocer sus tres conexiones: alimentación, tierra o GND y señal de control. Después cargué el programa y observé cómo cambiaba de posición. A diferencia de un led, este componente permite convertir las instrucciones del código en movimiento.
+Conecté un servomotor al Arduino para conocer sus tres conexiones: alimentación, tierra o GND y señal de control. En el programa incluí la librería Servo.h y declaré el objeto servoMotor. Después utilicé attach(9) para asignar el pin 9 a la señal y write(90) para indicar la posición de 90 grados. Esta práctica me ayudó a entender cómo una instrucción del código permite controlar la posición de un motor.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-17-video.jpg' | relative_url }}" aria-label="Práctica 17: servomotor en la posición de 90 grados">
+      <source src="{{ '/assets/videos/arduino-practica-17-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Prueba del servomotor conectado al Arduino.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-17-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <img src="{{ '/assets/img/arduino/codigo-practica-17.png' | relative_url }}" alt="Código de Arduino con la librería Servo.h, servoMotor.attach(9) y servoMotor.write(90)" loading="lazy">
+    <figcaption>Servo.h permite controlar el motor. attach(9) asigna el pin de señal y write(90) indica la posición de 90 grados.</figcaption>
+  </figure>
+</div>
 
 ### 18. Servomotor en varias posiciones
 
