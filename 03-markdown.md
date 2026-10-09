@@ -373,8 +373,24 @@ Conecté un servomotor al Arduino para conocer sus tres conexiones: alimentació
 
 ### 18. Servomotor en varias posiciones
 
-En esta actividad utilicé el mismo servomotor y modifiqué el código para indicarle diferentes posiciones. También añadí pausas entre los movimientos, de modo que pudiera observar cada cambio de ángulo. Esto me ayudó a comprender cómo se organiza una secuencia de posiciones desde el programa.
+En esta actividad utilicé el mismo servomotor y cambié el código para recorrer tres posiciones: 0°, 90° y 180°. La señal de control se mantiene en el pin 9, y las instrucciones servoMotor.write indican cada ángulo. Entre los movimientos añadí delay(1000), una pausa de un segundo que permite observar cada posición antes del siguiente cambio. Como las instrucciones están dentro de loop, la secuencia se repite. Esta práctica me ayudó a relacionar el orden del programa y sus tiempos de espera con el movimiento del motor.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-18-video.jpg' | relative_url }}" aria-label="Práctica 18: servomotor en posiciones de 0, 90 y 180 grados">
+      <source src="{{ '/assets/videos/arduino-practica-18-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>El servomotor cambia de posición siguiendo la secuencia del programa.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-18-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <img src="{{ '/assets/img/arduino/codigo-practica-18.png' | relative_url }}" alt="Código de Arduino con Servo.h y una secuencia de posiciones de 0, 90 y 180 grados con pausas de un segundo" loading="lazy">
+    <figcaption>write(0), write(90) y write(180) indican las posiciones. delay(1000) mantiene una pausa de un segundo entre cada cambio.</figcaption>
+  </figure>
+</div>
 
 ### 19. Servomotor y potenciómetro
 
