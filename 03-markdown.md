@@ -324,8 +324,28 @@ Después cambié la lógica del programa para utilizar la condición AND. Conser
 
 ### 16. Contador con leds
 
-En esta práctica conecté varios leds y un botón al Arduino. En el programa utilicé una variable como contador para registrar las pulsaciones y cambiar el estado de los leds según el valor guardado. Esta actividad me permitió ver que un programa puede conservar información y utilizarla para decidir qué salida activar.
+En esta práctica conecté cuatro leds a los pines 13, 12, 11 y 10, y un botón al pin 2. Utilicé la variable cuenta para guardar un valor que aumenta cuando el programa lee el botón en HIGH, con una pausa de 500 milisegundos entre lecturas. Las condiciones del código permiten encender los leds de manera progresiva: uno cuando cuenta vale 1, dos cuando vale 2, y así hasta encender los cuatro. Al llegar a 5, el contador vuelve a cero y todas las luces se apagan. Esta actividad me ayudó a comprender cómo una variable conserva información y permite cambiar las salidas del circuito.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-16-video.jpg' | relative_url }}" aria-label="Práctica 16: contador con cuatro LEDs">
+      <source src="{{ '/assets/videos/arduino-practica-16-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Los leds se encienden progresivamente según el valor del contador.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-16-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-16-1.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-16-1.png' | relative_url }}" alt="Primera parte del código: variable cuenta, pines 13 a 10 como salidas y pin 2 como entrada, incremento y reinicio del contador" loading="lazy"></a>
+    <figcaption>La variable cuenta comienza en cero. Al leer HIGH en el botón, aumenta su valor y el programa espera 500 milisegundos. Al llegar a cinco vuelve a cero.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-16-1.png' | relative_url }}" target="_blank" rel="noopener">Ampliar la primera parte ↗</a>
+    <a href="{{ '/assets/img/arduino/codigo-practica-16-2.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-16-2.png' | relative_url }}" alt="Segunda parte del código: condiciones para encender dos, tres o cuatro LEDs según el valor de cuenta" loading="lazy" style="margin-top: 1rem;"></a>
+    <figcaption>Las condiciones encienden uno, dos, tres o cuatro leds según el valor de cuenta.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-16-2.png' | relative_url }}" target="_blank" rel="noopener">Ampliar la segunda parte ↗</a>
+  </figure>
+</div>
 
 ### Conclusión de la segunda parte
 
