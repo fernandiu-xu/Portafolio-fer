@@ -302,8 +302,25 @@ Utilicé dos botones y un led para trabajar con la condición OR. Configuré los
 
 ### 15. Condición AND con botones
 
-Después cambié la lógica del programa para utilizar AND. En este caso, el led se encendía cuando se cumplían las dos condiciones de los botones al mismo tiempo. Comparar esta práctica con la anterior me ayudó a entender la diferencia entre pedir una condición o exigir que ambas se cumplan.
+Después cambié la lógica del programa para utilizar la condición AND. Conservé los botones en los pines 8 y 2 y el led en el pin 13. El operador && exige que las dos entradas sean HIGH al mismo tiempo para encender la luz. Si uno de los botones se suelta, la condición deja de cumplirse y else apaga el led. Al comparar esta práctica con OR comprendí la diferencia entre aceptar cualquiera de las dos entradas y necesitar que ambas estén activadas.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-15-video.jpg' | relative_url }}" aria-label="Práctica 15: condición AND con dos botones">
+      <source src="{{ '/assets/videos/arduino-practica-15-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>El led se enciende cuando los dos botones están presionados.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-15-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <a href="{{ '/assets/img/arduino/codigo-practica-15.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/arduino/codigo-practica-15.png' | relative_url }}" alt="Código de Arduino de la práctica 15 con la condición AND para encender el LED del pin 13 si ambos botones de los pines 8 y 2 están presionados" loading="lazy"></a>
+    <figcaption>El operador AND (&amp;&amp;) activa el led solo si ambas entradas son HIGH. Si alguna es LOW, else lo apaga.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/img/arduino/codigo-practica-15.png' | relative_url }}" target="_blank" rel="noopener">Ampliar el código ↗</a>
+  </figure>
+</div>
 
 ### 16. Contador con leds
 
