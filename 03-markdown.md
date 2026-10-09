@@ -436,8 +436,24 @@ En esta práctica conecté dos servomotores y utilicé un solo potenciómetro pa
 
 ### 20.2. Dos servomotores y dos potenciómetros
 
-Después utilicé dos potenciómetros, uno para cada servomotor. El programa leía las dos entradas y enviaba a cada motor la posición correspondiente. Al girar las perillas pude controlar los movimientos por separado y comparar este funcionamiento con el de la práctica anterior.
+Después utilicé dos potenciómetros para controlar los servomotores por separado. El programa lee A0 y A1 y guarda los resultados en valor1 y valor2. Cada lectura se convierte con map en un ángulo de 0° a 180°, almacenado en pos1 o pos2. El servo del pin 9 recibe pos1 y el del pin 2 recibe pos2, con una pausa de 10 milisegundos entre lecturas. Al girar cada perilla pude ajustar un motor de manera independiente y comparar este funcionamiento con la práctica anterior, donde los dos respondían a una misma entrada.
 
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline preload="metadata" poster="{{ '/assets/img/arduino/practica-20-2-video.jpg' | relative_url }}" aria-label="Práctica 20.2: dos servomotores y dos potenciómetros">
+      <source src="{{ '/assets/videos/arduino-practica-20-2-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Cada potenciómetro controla la posición de su servomotor.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-20-2-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <img src="{{ '/assets/img/arduino/codigo-practica-20-2.png' | relative_url }}" alt="Código de dos servos en los pines 9 y 2 y dos potenciómetros leídos en A0 y A1, con posiciones independientes" loading="lazy">
+    <figcaption>Las lecturas de A0 y A1 se convierten con map en pos1 y pos2. Cada motor recibe su propia posición, con una pausa de 10 milisegundos.</figcaption>
+  </figure>
+</div>
 
 ### 21. Fuente externa
 
