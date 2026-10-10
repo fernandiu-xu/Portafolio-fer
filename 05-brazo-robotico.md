@@ -42,7 +42,10 @@ El objetivo fue que el brazo pudiera moverse al girar los potenciómetros y util
   </div>
 </section>
 
-<!-- Evidencia: fotografía de los materiales -->
+<figure class="fer-cubo-figure">
+  <a href="{{ '/assets/img/brazo-robotico/materiales.jpeg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/brazo-robotico/materiales.jpeg' | relative_url }}" alt="Brazo robótico de MDF junto al Arduino, la protoboard, los potenciómetros y una pelota roja" loading="lazy"></a>
+  <figcaption>El brazo y los componentes utilizados en las pruebas.</figcaption>
+</figure>
 
 <h2 id="diseno-del-brazo">Diseño del brazo</h2>
 
@@ -52,13 +55,25 @@ Al principio intentamos diseñar desde cero todas las piezas del brazo en **Soli
 
 Durante el diseño encontramos dificultades para que las piezas coincidieran entre sí y el ensamble funcionara como esperábamos. Este primer intento nos permitió identificar que las medidas y la ubicación de las uniones son fundamentales para que el brazo pueda armarse y moverse correctamente.
 
-<!-- Evidencia: diseños iniciales en SolidWorks -->
+<figure class="fer-cubo-figure">
+  <a href="{{ '/assets/img/brazo-robotico/diseno-solidworks.jpeg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/brazo-robotico/diseno-solidworks.jpeg' | relative_url }}" alt="Diseños y medidas de las piezas del primer intento en SolidWorks" loading="lazy"></a>
+  <figcaption>Primeros diseños de la estructura y sus piezas en SolidWorks.</figcaption>
+</figure>
 
 ### La plantilla utilizada
 
 Como el diseño inicial no funcionó de la manera prevista, utilizamos una **plantilla externa** como base para fabricar las piezas. Antes de enviarla a corte, ajustamos el diseño al **MDF de 3 mm de grosor**, que era el material disponible para construir la estructura.
 
-<!-- Evidencia: plantilla de las piezas, partes 1 y 2 -->
+<div class="fer-gallery fer-cubo-designs">
+<figure class="fer-cubo-figure">
+  <a href="{{ '/assets/img/brazo-robotico/plantilla-1.jpeg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/brazo-robotico/plantilla-1.jpeg' | relative_url }}" alt="Primera parte de la plantilla con contornos de las piezas del brazo" loading="lazy"></a>
+  <figcaption>Figura 1. Plantilla de las piezas, parte 1.</figcaption>
+</figure>
+<figure class="fer-cubo-figure">
+  <a href="{{ '/assets/img/brazo-robotico/plantilla-2.jpeg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/brazo-robotico/plantilla-2.jpeg' | relative_url }}" alt="Segunda parte de la plantilla con piezas de la base y la pinza" loading="lazy"></a>
+  <figcaption>Figura 2. Plantilla de las piezas, parte 2.</figcaption>
+</figure>
+</div>
 
 <h2 id="corte-laser">Corte láser</h2>
 
@@ -66,7 +81,14 @@ Una vez listo el diseño, acomodamos las piezas para aprovechar mejor el espacio
 
 Después enviamos el archivo a la cortadora láser para fabricar cada pieza. Esta etapa conectó el trabajo de diseño con la construcción de la estructura.
 
-<!-- Evidencia: video del corte láser -->
+<figure class="fer-cubo-figure">
+  <video controls playsinline muted preload="metadata" aria-label="Corte láser de las piezas del brazo robótico" poster="{{ '/assets/img/brazo-robotico/corte-poster.jpg' | relative_url }}">
+    <source src="{{ '/assets/videos/brazo-robotico/corte-sin-audio.mp4' | relative_url }}" type="video/mp4">
+    Tu navegador no permite reproducir este video. Puedes abrirlo con el enlace de abajo.
+  </video>
+  <figcaption>La cortadora láser durante la fabricación de las piezas de MDF.</figcaption>
+  <a class="fer-evidence-link" href="{{ '/assets/videos/brazo-robotico/corte-sin-audio.mp4' | relative_url }}">Abrir el video ↗</a>
+</figure>
 
 <h2 id="ensamble-del-brazo">Ensamble del brazo</h2>
 
@@ -83,7 +105,7 @@ Durante el ensamble revisamos que las piezas pudieran moverse libremente y que l
 
 Los tres primeros movimientos corresponden a los grados de libertad del brazo, mientras que el cuarto servomotor acciona la pinza.
 
-<!-- Evidencia: brazo ensamblado -->
+
 
 <h2 id="circuito-electronico">Circuito electrónico</h2>
 
@@ -102,7 +124,10 @@ El Arduino se conectó a la computadora mediante un **cable USB A-B** para carga
 
 Antes de montar el circuito físico, realizamos un modelo en **Tinkercad** para simular las conexiones y probar el código. Después utilizamos ese modelo como referencia para conectar los componentes.
 
-<!-- Evidencia: circuito en Tinkercad y conexiones físicas -->
+<figure class="fer-cubo-figure">
+  <a href="{{ '/assets/img/brazo-robotico/circuito-tinkercad.jpeg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/brazo-robotico/circuito-tinkercad.jpeg' | relative_url }}" alt="Circuito en Tinkercad con Arduino, cuatro servomotores y cuatro potenciómetros" loading="lazy"></a>
+  <figcaption>Simulación del circuito en Tinkercad antes de realizar las conexiones físicas.</figcaption>
+</figure>
 
 <h2 id="programacion">Programación</h2>
 
@@ -112,10 +137,30 @@ El programa lee los cuatro potenciómetros mediante las entradas analógicas del
 
 De esta manera podemos controlar por separado los movimientos de la base, del brazo inferior, del brazo superior y de la pinza.
 
-<!-- Evidencia: código utilizado -->
 
-## Pruebas de funcionamiento
+
+## Resultado final
 
 La prueba del proyecto consiste en mover el brazo mediante los potenciómetros y utilizar la pinza para tomar la pelota de aproximadamente **6 cm de diámetro**. En esta etapa se observa cómo trabajan en conjunto la estructura, las conexiones y el programa.
 
-<!-- Evidencia: videos del movimiento del brazo y agarre de la pelota -->
+### Movimiento del brazo y agarre
+
+<figure class="fer-cubo-figure">
+  <video controls playsinline muted preload="metadata" aria-label="Resultado final: Robot pelota" poster="{{ '/assets/img/brazo-robotico/robot-pelota-poster.jpg' | relative_url }}">
+    <source src="{{ '/assets/videos/brazo-robotico/robot-pelota-sin-audio.mp4' | relative_url }}" type="video/mp4">
+    Tu navegador no permite reproducir este video. Puedes abrirlo con el enlace de abajo.
+  </video>
+  <figcaption>Prueba del brazo ensamblado y de la pinza al sujetar la pelota.</figcaption>
+  <a class="fer-evidence-link" href="{{ '/assets/videos/brazo-robotico/robot-pelota-sin-audio.mp4' | relative_url }}">Abrir el video ↗</a>
+</figure>
+
+### Otra prueba con la pelota
+
+<figure class="fer-cubo-figure">
+  <video controls playsinline muted preload="metadata" aria-label="Resultado final: Pelota video" poster="{{ '/assets/img/brazo-robotico/pelota-poster.jpg' | relative_url }}">
+    <source src="{{ '/assets/videos/brazo-robotico/pelota-sin-audio.mp4' | relative_url }}" type="video/mp4">
+    Tu navegador no permite reproducir este video. Puedes abrirlo con el enlace de abajo.
+  </video>
+  <figcaption>Prueba del control del brazo y de la apertura y cierre de la pinza.</figcaption>
+  <a class="fer-evidence-link" href="{{ '/assets/videos/brazo-robotico/pelota-sin-audio.mp4' | relative_url }}">Abrir el video ↗</a>
+</figure>

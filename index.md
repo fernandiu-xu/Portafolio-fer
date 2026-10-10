@@ -64,6 +64,8 @@ nav_exclude: true
         <span class="fer-card__action">Ver mis diseños <span aria-hidden="true">↗</span></span>
       </a>
       <a class="fer-card" href="{{ '/brazo-robotico/' | relative_url }}">
+        <img class="fer-card__image" src="{{ '/assets/img/brazo-robotico/robot-pelota-poster.jpg' | relative_url }}" alt="Brazo robótico de MDF sujetando una pelota roja" loading="lazy">
+
         <span class="fer-card__number">05 / Robótica · Semana 5 y 6</span>
         <span class="fer-card__title">Brazo robótico</span>
         <p>El diseño y la construcción de un brazo de MDF, controlado con Arduino, servomotores y potenciómetros.</p>
