@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Robot recolector · Portafolio Fer</title>
+<link rel="stylesheet" href="style.css"><script src="game.js" defer></script>
+</head>
+<body>
+<main class="game">
+<header><span class="tag">Un pequeño robot, una gran misión</span><h1>Robot recolector <span aria-hidden="true">✦</span></h1><p>Recoge 12 estrellas y esquiva los bloques. ¡Tienes 3 vidas!</p></header>
+<div class="scoreboard" aria-label="Marcador"><span>Estrellas <b id="score">0 / 12</b></span><span>Vidas <b id="lives">♥ ♥ ♥</b></span><span>Récord <b id="record">0</b></span></div>
+<div class="stage"><canvas id="board" width="600" height="390" tabindex="0" aria-label="Zona de juego. Usa las flechas izquierda y derecha o las teclas A y D para moverte. Presiona P para pausar.">Tu navegador necesita admitir canvas para jugar.</canvas><div class="overlay" id="overlay"><h2 id="message-title">¿Lista para la misión?</h2><p id="message">Mueve al robot de lado a lado. Las estrellas suman y los bloques quitan vidas.</p><button id="start">Jugar</button></div></div>
+<div class="controls"><button id="left" aria-label="Mover a la izquierda">←</button><button id="pause" disabled>Pausar</button><button id="right" aria-label="Mover a la derecha">→</button></div>
+<p class="hint">Teclado: ← → o A / D · P para pausar<br>Celular: mantén presionadas las flechas de abajo</p>
+<p id="status" class="sr-only" role="status" aria-live="polite"></p>
+</main>
+</body></html>

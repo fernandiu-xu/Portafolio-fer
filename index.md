@@ -71,6 +71,12 @@ nav_exclude: true
         <p>El diseño y la construcción de un brazo de MDF, controlado con Arduino, servomotores y potenciómetros.</p>
         <span class="fer-card__action">Conocer el proyecto <span aria-hidden="true">↗</span></span>
       </a>
+      <a class="fer-card" href="{{ '/videojuego/' | relative_url }}">
+        <span class="fer-card__number">06 / Programación web</span>
+        <span class="fer-card__title">Robot recolector</span>
+        <p>Mi videojuego en HTML, CSS y JavaScript: recoge estrellas y ayuda a un pequeño robot a completar su misión.</p>
+        <span class="fer-card__action">Jugar y ver el proyecto <span aria-hidden="true">↗</span></span>
+      </a>
     </div>
   </section>
 
