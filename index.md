@@ -73,8 +73,8 @@ nav_exclude: true
       </a>
       <a class="fer-card" href="{{ '/videojuego/' | relative_url }}">
         <span class="fer-card__number">06 / Programación web</span>
-        <span class="fer-card__title">Nova: misión energía</span>
-        <p>Una aventura con tres niveles: brinca entre plataformas, recoge piezas y dispara para despejar el camino.</p>
+        <span class="fer-card__title">Café de nubes</span>
+        <p>Prepara bebidas para los visitantes de un café flotante. Tres rondas, clientes adorables y recetas llenas de magia.</p>
         <span class="fer-card__action">Jugar y ver el proyecto <span aria-hidden="true">↗</span></span>
       </a>
     </div>

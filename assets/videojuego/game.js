@@ -1,113 +1,57 @@
 'use strict';
-// NOVA: plataformas, movimiento, saltos, objetos y proyectiles en canvas.
-const $ = id => document.getElementById(id);
-const canvas = $('board'), ctx = canvas.getContext('2d');
-const W = 960, H = 540, FLOOR = 480;
-const worlds = [
- {name:'Jardín mecánico',sky:['#253454','#6a5072'],accent:'#95ddd1',platforms:[[180,390,180],[440,310,190],[700,390,150]],pieces:[[260,364],[535,284],[770,364]],enemies:[[370,436,330,450],[650,436,580,820]]},
- {name:'Fábrica violeta',sky:['#251e45','#7a4270'],accent:'#ffb3d6',platforms:[[150,390,160],[370,300,170],[610,380,160]],pieces:[[225,364],[450,274],[690,354]],enemies:[[310,436,240,390],[570,436,460,700],[650,336,620,735]]},
- {name:'Estación lunar',sky:['#101c35','#3b5074'],accent:'#ffe799',platforms:[[170,390,160],[390,300,180],[650,380,150]],pieces:[[250,364],[480,274],[730,354]],enemies:[[300,436,230,380],[510,256,410,530],[620,436,550,770]]}
-];
-let mode='ready', level=0, hearts=3, count=0, time=0, last=0, shots=[], sparks=[], pieces=[], enemies=[], platforms=[], shootClock=0, jumpQueued=false, completed=0;
-try { completed=Number(localStorage.getItem('fer-nova-completed'))||0; } catch (_) {}
-$('best').textContent=`Misiones completadas: ${completed}`;
-const input={left:false,right:false,fire:false};
-const hero={x:55,y:FLOOR-44,w:32,h:44,vx:0,vy:0,facing:1,grounded:false,invincible:0,coyote:0};
-function say(text){$('status').textContent=text;}
-function clearInput(){input.left=input.right=input.fire=false;jumpQueued=false;}
-function hud(){ $('level').textContent=`${level+1} / 3 · ${worlds[level].name}`; $('pieces').textContent=`${count} / 3`; $('hearts').textContent='♥ '.repeat(hearts).trim()||'0'; $('mission').textContent=count===3?'¡Estación activada! Lleva las piezas a la derecha →':'Recoge 3 piezas y entra en la estación iluminada.'; }
-function overlay(tag,title,text,label){$('overlay-tag').textContent=tag;$('title').textContent=title;$('message').textContent=text;$('start').textContent=label;$('overlay').hidden=false;}
-function loadLevel(index){
- level=index; hearts=3;count=0;shots=[];sparks=[];shootClock=0;clearInput();
- const world=worlds[level];platforms=[{x:0,y:FLOOR,w:W,h:60},...world.platforms.map(([x,y,w])=>({x,y,w,h:18}))];
- pieces=world.pieces.map(([x,y])=>({x,y,r:12,taken:false}));
- enemies=world.enemies.map(([x,y,min,max],i)=>({x,y,w:34,h:34,min,max,dir:i%2?-1:1,speed:40+level*9,alive:true}));
- Object.assign(hero,{x:55,y:FLOOR-44,vx:0,vy:0,facing:1,grounded:true,invincible:1,coyote:.1});
- mode='playing';$('overlay').hidden=true;$('pause').disabled=false;$('pause').textContent='Ⅱ';hud();canvas.focus();say(`Nivel ${level+1}. ${world.name}. Recoge las tres piezas.`);
+const $=id=>document.getElementById(id);
+const svg=body=>`<svg class="ingredient-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${body}</svg>`;
+const icons={
+ milk:svg('<path d="M15 9h19l5 8v26H11V17z" fill="#f8eee1" stroke="#b7a5a4" stroke-width="2"/><path d="M15 9l5 8h19M20 17v26M15 9V5h19v4" fill="none" stroke="#b7a5a4" stroke-width="2"/><path d="M22 23h12v13H22z" fill="#b5ced5"/><path d="M27 25q-6 8 1 9q7-1-1-9" fill="#fff"/>'),
+ strawberry:svg('<path d="M8 20q-1-10 16-6q16-4 16 6q-1 17-16 23Q10 37 8 20" fill="#dd8296" stroke="#af667c" stroke-width="2"/><path d="M24 16L12 9l9 1l3-7l4 7l9-1z" fill="#92b8a0"/><path d="M16 22l1 2m13-2l-1 2m-7 5l1 2m10-3l-1 2m-10 5l1 2m-9-9l1 2" stroke="#ffe9b0" stroke-width="2" stroke-linecap="round"/>'),
+ coffee:svg('<ellipse cx="18" cy="26" rx="10" ry="14" transform="rotate(32 18 26)" fill="#9b7362" stroke="#70554d" stroke-width="2"/><path d="M24 14Q10 23 13 38" fill="none" stroke="#e0b693" stroke-width="2"/><ellipse cx="33" cy="18" rx="8" ry="11" transform="rotate(-28 33 18)" fill="#b1866f" stroke="#70554d" stroke-width="2"/><path d="M28 9q11 8 10 18" fill="none" stroke="#ebc29e" stroke-width="2"/>'),
+ tea:svg('<path d="M9 38Q3 10 35 5Q46 33 9 38" fill="#a4bea0" stroke="#76957b" stroke-width="2"/><path d="M7 42L34 9M15 33l-1-11m9 2l11-1m-8-7l-1-6" fill="none" stroke="#668e73" stroke-width="2" stroke-linecap="round"/>'),
+ lemon:svg('<path d="M7 24Q5 9 24 7Q44 11 42 25Q39 43 21 41Q8 39 7 24" fill="#f5d788" stroke="#c7ab65" stroke-width="2"/><path d="M24 12v23M13 24h23M16 16l16 16m0-16L16 32" stroke="#fff3c7" stroke-width="2"/><circle cx="24" cy="24" r="3" fill="#fff9db"/>'),
+ ice:svg('<path d="M8 13l21-6l12 10v23l-22 5L8 34z" fill="#d5e9ed" stroke="#9cbfc7" stroke-width="2"/><path d="M8 13l11 11l22-7M19 24v21" fill="none" stroke="#9cbfc7" stroke-width="2"/><path d="M24 29l11-3M12 20v9M15 12l12-3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>'),
+ cocoa:svg('<rect x="9" y="6" width="30" height="36" rx="4" fill="#b18977" stroke="#7d6057" stroke-width="2"/><path d="M19 6v36M29 6v36M9 18h30M9 30h30" stroke="#7d6057" stroke-width="2"/><path d="M12 9h4v6h-4m10-6h4v6h-4m10-6h4v6h-4" fill="#cba694"/>')
+};
+const ingredients=[['milk','Leche'],['strawberry','Fresa'],['coffee','Café'],['tea','Té'],['lemon','Limón'],['ice','Hielo'],['cocoa','Cacao']];
+const recipes=[{name:'Latte de fresa',items:['milk','strawberry']},{name:'Café suave',items:['coffee','milk']},{name:'Té de sol',items:['tea','lemon','ice']},{name:'Chocolate nube',items:['cocoa','milk']},{name:'Té cremoso',items:['tea','milk']},{name:'Fresa helada',items:['strawberry','ice']}];
+const names=['Mochi','Nube','Miel','Lila','Pipo','Canela','Boba','Almendra'];
+const rounds=[{goal:5,time:90,patience:43,recipes:3},{goal:7,time:105,patience:39,recipes:5},{goal:9,time:120,patience:36,recipes:6}];
+function portrait(kind=0,color='#e6bc9c'){
+ const ears=kind%3===0?'<path d="M18 40L14 10l26 15M58 25l26-15l-4 30" fill="'+color+'" stroke="#ad8f84" stroke-width="2"/><path d="M20 17l3 18l12-8M77 17l-3 18l-12-8" fill="#e6a8b5"/>':kind%3===1?'<ellipse cx="31" cy="19" rx="10" ry="23" fill="'+color+'" stroke="#ad8f84" stroke-width="2"/><ellipse cx="65" cy="19" rx="10" ry="23" fill="'+color+'" stroke="#ad8f84" stroke-width="2"/><path d="M31 3v23m34-23v23" stroke="#e6a8b5" stroke-width="7" stroke-linecap="round"/>':'<circle cx="24" cy="28" r="13" fill="'+color+'" stroke="#ad8f84" stroke-width="2"/><circle cx="73" cy="28" r="13" fill="'+color+'" stroke="#ad8f84" stroke-width="2"/>';
+ return `<svg class="portrait" viewBox="0 0 96 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${ears}<ellipse cx="48" cy="84" rx="31" ry="15" fill="#c3cfd5"/><rect x="35" y="76" width="26" height="22" rx="5" fill="#f5e2ca"/><ellipse cx="48" cy="52" rx="35" ry="29" fill="${color}" stroke="#ad8f84" stroke-width="2"/><ellipse cx="25" cy="61" rx="8" ry="4" fill="#e8a7b3"/><ellipse cx="71" cy="61" rx="8" ry="4" fill="#e8a7b3"/><circle cx="35" cy="49" r="3.2" fill="#58484d"/><circle cx="61" cy="49" r="3.2" fill="#58484d"/><path d="M45 57l3 3l3-3m-3 3q-5 8-10 1m10-1q5 8 10 1" stroke="#785b64" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M39 86h18m-14-5v10m10-10v10" stroke="#bb99a0" stroke-width="2"/></svg>`;
 }
-function pause(){
- if(mode==='playing'){mode='paused';clearInput();overlay('PAUSA','Un respiro para Nova','Las piezas, las vidas y tu posición se conservan. Continúa cuando quieras.','Continuar →');$('pause').textContent='▶';say('Juego pausado.');}
- else if(mode==='paused'){mode='playing';$('overlay').hidden=true;$('pause').textContent='Ⅱ';canvas.focus();}
+function cup(color='#e9d2c1',filled=false){return `<svg viewBox="0 0 90 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="43" cy="88" rx="35" ry="6" fill="#e5d5cc"/><path d="M67 30h9q18 1 6 23q-4 5-16 5" fill="none" stroke="#c6aea5" stroke-width="5"/><path d="M15 23h55l-5 53q-24 14-45 0z" fill="#fff6eb" stroke="#bda2a2" stroke-width="3"/><path d="M20 35h44l-4 37q-17 8-36 0z" fill="${color}"/><ellipse cx="42" cy="24" rx="28" ry="7" fill="${filled?color:'#fbf5ec'}" stroke="#bda2a2" stroke-width="3"/><path d="M35 50q7-12 13 0q3 7-6 13q-11-8-7-13" fill="#fff9eb" opacity=".8"/><path d="M33 12q-5-7 0-12m18 12q5-7 0-12" stroke="#b7a4b9" stroke-width="2" fill="none" stroke-linecap="round"/></svg>`;}
+$('hero-art').innerHTML=`<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><ellipse cx="115" cy="126" rx="110" ry="19" fill="#fff9ee"/><path d="M32 64q-16-39 8-31q9-17 26 9m53 16q5-44 21-38q20-6 22 41" fill="#e5bec8"/><ellipse cx="59" cy="83" rx="32" ry="29" fill="#f5ddc3"/><ellipse cx="145" cy="79" rx="33" ry="30" fill="#e4c9b3"/><circle cx="49" cy="77" r="3" fill="#65515e"/><circle cx="69" cy="77" r="3" fill="#65515e"/><circle cx="135" cy="74" r="3" fill="#65515e"/><circle cx="155" cy="74" r="3" fill="#65515e"/><path d="M53 86q6 8 12 0m74-3q6 8 12 0" stroke="#94717b" stroke-width="2" fill="none"/><rect x="19" y="108" width="189" height="14" rx="7" fill="#c9a89a"/><path d="M89 89h31l-4 26H94z" fill="#f7ecdc" stroke="#b7a4a5" stroke-width="2"/><path d="M124 83h27l-4 29h-19z" fill="#f4c3d0" stroke="#b7a4a5" stroke-width="2"/><path d="M102 83q-5-7 0-14m34 8q6-7 1-15" stroke="#c4a6b9" stroke-width="2" fill="none"/><path d="M194 39l3 9l9 3l-9 3l-3 9l-3-9l-9-3l9-3z" fill="#d6b573"/></svg>`;
+$('welcome-art').innerHTML=portrait(0,'#f2d5bc');
+let mode='ready',round=0,score=0,roundStartScore=0,served=0,hearts=3,remaining=90,customers=[null,null,null],tray=[],streak=0,best=0,last=0;
+try{best=Number(localStorage.getItem('fer-cafe-best'))||0;}catch(_){}
+$('record').textContent=`Mejor puntuación: ${best}`;
+function feedback(text){$('feedback').textContent=text;}
+function hud(){ $('round').textContent=`${round+1} / 3`;$('served').textContent=`${served} / ${rounds[round].goal}`;$('time').textContent=`${Math.max(0,Math.ceil(remaining))} s`;$('score').textContent=score;$('hearts').textContent='♥ '.repeat(hearts).trim()||'0'; }
+function newCustomer(){const n=Math.floor(Math.random()*names.length);return {name:names[n],kind:n%3,color:['#efcfb4','#e6cbd7','#d8c6b9','#f4debc'][n%4],recipe:recipes[Math.floor(Math.random()*rounds[round].recipes)],patience:rounds[round].patience};}
+function fillSeats(){for(let i=0;i<3;i++)if(!customers[i]&&served+customers.filter(Boolean).length<rounds[round].goal)customers[i]=newCustomer();}
+function renderCustomers(){
+ $('customers').innerHTML=customers.map((c,i)=>c?`<article class="customer" id="customer-${i}"><div class="customer-head">${portrait(c.kind,c.color)}</div><p class="customer-name">${c.name}</p><p class="drink-name">${c.recipe.name}</p><div class="recipe">${c.recipe.items.map((key,j)=>`${j?'<span class="recipe-plus">+</span>':''}<span class="recipe-chip">${icons[key]}${ingredients.find(a=>a[0]===key)[1]}</span>`).join('')}</div><div class="patience" role="progressbar" aria-label="Paciencia de ${c.name}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span id="patience-${i}" style="width:100%"></span></div><button class="serve" data-seat="${i}" ${mode==='playing'?'':'disabled'}>Servir ${['Q','W','E'][i]}</button></article>`:'<div class="empty-seat"><span>✦</span>Pedido entregado</div>').join('');
+ $('customers').querySelectorAll('[data-seat]').forEach(b=>b.addEventListener('click',()=>serve(Number(b.dataset.seat))));
 }
-function overlap(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;}
-function particles(x,y,color,n=12){for(let i=0;i<n;i++)sparks.push({x,y,vx:(Math.random()-.5)*170,vy:(Math.random()-.6)*170,life:.5+Math.random()*.3,color});}
-function hurt(){
- if(hero.invincible>0)return; hearts--;particles(hero.x+16,hero.y+20,'#ffa9c5');hud();
- if(hearts<=0){mode='lost';clearInput();$('pause').disabled=true;overlay('PUEDES VOLVER A INTENTARLO','Nova necesita otra oportunidad',`Reinicia el nivel ${level+1}. Brinca sobre los drones o desactívalos con J. No hay límite de tiempo.`,'Reintentar nivel →');say('Sin vidas. Puedes reintentar este nivel.');$('start').focus();}
- else{hero.invincible=1.8;hero.vy=-250;hero.x=Math.max(0,Math.min(W-hero.w,hero.x-hero.facing*28));say(`Quedan ${hearts} vidas.`);}
+function renderTray(){
+ $('tray').innerHTML=tray.length?tray.map(k=>`<button class="tray-chip" data-remove="${k}" aria-label="Quitar ${ingredients.find(a=>a[0]===k)[1]}">${icons[k]}${ingredients.find(a=>a[0]===k)[1]} ×</button>`).join(''):'<span class="empty">Elige los ingredientes de un pedido</span>';
+ $('tray').querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',()=>{if(mode==='playing'){tray=tray.filter(k=>k!==b.dataset.remove);renderTray();}}));
+ const color=tray.includes('strawberry')?'#ebafc3':tray.includes('coffee')?'#b78c70':tray.includes('cocoa')?'#ac8978':tray.includes('tea')?'#b9cbb0':tray.includes('lemon')?'#f1d99a':'#ede1cb';$('glass').innerHTML=cup(color,tray.length>0);
 }
-function completeLevel(){
- clearInput();$('pause').disabled=true;
- if(level===worlds.length-1){mode='won';completed++;try{localStorage.setItem('fer-nova-completed',String(completed));}catch(_){}$('best').textContent=`Misiones completadas: ${completed}`;overlay('MISIÓN COMPLETADA','¡Los tres mundos tienen energía!','Nova entregó las nueve piezas. Terminaste la aventura: puedes volver a jugar desde el primer mundo.','Jugar otra vez →');say('Ganaste. Completaste los tres niveles.');}
- else{mode='level-complete';overlay('ESTACIÓN RESTAURADA',`¡Nivel ${level+1} completado!`,`Entregaste las tres piezas. La siguiente misión será en ${worlds[level+1].name}. Comenzarás con tres vidas.`,'Siguiente nivel →');say(`Nivel ${level+1} completado.`);}
- $('start').focus();
-}
-function update(dt){
- const world=worlds[level];hero.invincible=Math.max(0,hero.invincible-dt);shootClock=Math.max(0,shootClock-dt);
- hero.vx=((input.right?1:0)-(input.left?1:0))*235;
- if(hero.vx)hero.facing=Math.sign(hero.vx);
- hero.coyote=hero.grounded?.1:Math.max(0,hero.coyote-dt);
- if(jumpQueued&&hero.coyote>0){hero.vy=-640;hero.grounded=false;hero.coyote=0;particles(hero.x+16,hero.y+44,world.accent,6);}jumpQueued=false;
- hero.x+=hero.vx*dt;hero.x=Math.max(0,Math.min(W-hero.w,hero.x));
- // Colisiones horizontales solo con los laterales de plataformas elevadas.
- for(const p of platforms.slice(1))if(overlap(hero,p)){if(hero.vx>0)hero.x=p.x-hero.w;else if(hero.vx<0)hero.x=p.x+p.w;}
- const oldY=hero.y;hero.vy+=1600*dt;hero.y+=hero.vy*dt;hero.grounded=false;
- for(const p of platforms)if(overlap(hero,p)){
-  if(hero.vy>=0&&oldY+hero.h<=p.y+2){hero.y=p.y-hero.h;hero.vy=0;hero.grounded=true;}
-  else if(hero.vy<0&&oldY>=p.y+p.h-2){hero.y=p.y+p.h;hero.vy=0;}
- }
- if(input.fire&&shootClock<=0){shots.push({x:hero.x+(hero.facing>0?hero.w:-14),y:hero.y+18,w:14,h:6,vx:hero.facing*520,life:1.8});shootClock=.28;particles(hero.x+16+hero.facing*22,hero.y+21,'#ffe799',3);}
- pieces.forEach(p=>{if(!p.taken&&overlap(hero,{x:p.x-12,y:p.y-12,w:24,h:24})){p.taken=true;count++;particles(p.x,p.y,'#ffe799',18);hud();say(`Pieza ${count} de 3 recogida.`);}});
- for(const e of enemies)if(e.alive){e.x+=e.dir*e.speed*dt;if(e.x<e.min){e.x=e.min;e.dir=1;}if(e.x>e.max){e.x=e.max;e.dir=-1;}}
- for(let i=shots.length-1;i>=0;i--){const s=shots[i];s.x+=s.vx*dt;s.life-=dt;let hit=false;for(const e of enemies)if(e.alive&&overlap(s,e)){e.alive=false;hit=true;particles(e.x+17,e.y+17,'#b8e8e0',18);break;}if(hit||s.life<=0||s.x<-30||s.x>W+30)shots.splice(i,1);}
- for(const e of enemies)if(e.alive&&overlap(hero,e)){hurt();break;}
- if(mode==='playing'&&count===3&&hero.x+hero.w>875&&hero.y+hero.h>=FLOOR-8)completeLevel();
- if(hero.y>H+100){hero.y=FLOOR-hero.h;hero.x=55;hero.vy=0;hurt();}
- for(let i=sparks.length-1;i>=0;i--){const p=sparks[i];p.life-=dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=180*dt;if(p.life<=0)sparks.splice(i,1);}
-}
-function rounded(x,y,w,h,r,fill){ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill();}
-function drawBackground(){
- const world=worlds[level];const gradient=ctx.createLinearGradient(0,0,0,H);gradient.addColorStop(0,world.sky[0]);gradient.addColorStop(1,world.sky[1]);ctx.fillStyle=gradient;ctx.fillRect(0,0,W,H);
- ctx.fillStyle='#ffffff';ctx.globalAlpha=.35;for(let i=0;i<42;i++){const x=(i*137+31)%W,y=(i*73+22)%260;ctx.beginPath();ctx.arc(x,y,1+(i%3)*.5,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;
- ctx.fillStyle=level===2?'#e3defb':'#c9adc8';ctx.globalAlpha=.16;ctx.beginPath();ctx.arc(825,95,53,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;
- for(let i=0;i<11;i++){const x=i*95-10,y=320+(i%3)*30;rounded(x,y,65,180,4,'#1b233755');ctx.fillStyle=world.accent;ctx.globalAlpha=.15;for(let j=0;j<4;j++)ctx.fillRect(x+12,y+15+j*24,10,8);ctx.globalAlpha=1;}
- ctx.fillStyle='#ffffff50';ctx.font='12px system-ui';ctx.fillText(`0${level+1} / ${world.name.toUpperCase()}`,28,35);
-}
-function drawGate(){
- const active=count===3,world=worlds[level];rounded(868,370,70,110,12,'#141a31');rounded(878,380,50,90,8,active?world.accent+'99':'#393b55');ctx.strokeStyle=active?world.accent:'#767082';ctx.lineWidth=3;ctx.strokeRect(882,384,42,86);
- ctx.fillStyle=active?'#ffe799':'#a5a0bd';ctx.font='bold 10px system-ui';ctx.textAlign='center';ctx.fillText(active?'ENTREGAR':'ESTACIÓN',903,359);ctx.textAlign='left';
- if(active){ctx.globalAlpha=.16+Math.sin(time*4)*.06;rounded(858,365,90,115,14,world.accent);ctx.globalAlpha=1;}
-}
-function drawHero(){
- if(hero.invincible>0&&Math.floor(time*12)%2===0)return;
- const x=hero.x,y=hero.y,step=hero.grounded&&hero.vx?Math.sin(time*15)*3:0;
- ctx.fillStyle='#242a40';ctx.beginPath();ctx.ellipse(x+16,y+47,22,5,0,0,Math.PI*2);ctx.fill();
- rounded(x+3,y+34+step,9,12,3,'#b183a8');rounded(x+20,y+34-step,9,12,3,'#b183a8');
- rounded(x-4,y+19,7,17,3,'#d99bb5');rounded(x+29,y+19,7,17,3,'#d99bb5');
- rounded(x,y+14,32,25,6,'#ecacc5');rounded(x-3,y,38,24,7,'#ffd1df');rounded(x+2,y+5,28,13,4,'#27394f');
- ctx.fillStyle='#aaf7eb';ctx.fillRect(x+7+hero.facing*2,y+9,4,4);ctx.fillRect(x+19+hero.facing*2,y+9,4,4);
- ctx.strokeStyle='#f8cadd';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x+16,y);ctx.lineTo(x+16,y-7);ctx.stroke();ctx.fillStyle='#ffe799';ctx.beginPath();ctx.arc(x+16,y-8,3,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='#ffe799';ctx.fillRect(x+10,y+27,12,5);
- // Las piezas recogidas viajan en la mochila de Nova.
- for(let i=0;i<count;i++)rounded(x+(hero.facing>0?-7:33),y+19+i*6,5,4,1,'#ffe799');
-}
-function draw(){
- ctx.clearRect(0,0,W,H);drawBackground();
- const world=worlds[level];
- platforms.forEach(p=>{rounded(p.x,p.y,p.w,p.h,p.y===FLOOR?0:7,p.y===FLOOR?'#26354b':'#49465e');rounded(p.x,p.y,p.w,5,2,world.accent);if(p.y===FLOOR){ctx.fillStyle='#ffffff09';for(let x=15;x<W;x+=45)ctx.fillRect(x,FLOOR+22,24,4);}else{ctx.fillStyle='#ffffff20';for(let x=p.x+12;x<p.x+p.w-10;x+=25)ctx.fillRect(x,p.y+9,10,3);}});
- drawGate();
- pieces.forEach(p=>{if(p.taken)return;const bob=Math.sin(time*3+p.x)*3;ctx.globalAlpha=.15;ctx.fillStyle='#ffe799';ctx.beginPath();ctx.arc(p.x,p.y+bob,23,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;rounded(p.x-10,p.y-11+bob,20,22,4,'#ffe799');rounded(p.x-5,p.y-5+bob,10,10,2,'#bd8158');ctx.fillStyle='#fff8d6';ctx.fillRect(p.x-3,p.y-3+bob,6,6);});
- enemies.forEach(e=>{if(!e.alive)return;const y=e.y+Math.sin(time*5+e.x)*2;rounded(e.x,y,e.w,e.h,9,'#605470');rounded(e.x+5,y+8,24,12,5,'#242338');ctx.fillStyle='#ff8dab';ctx.fillRect(e.x+12,y+12,10,4);ctx.strokeStyle='#a292bb';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(e.x-5,y+6);ctx.lineTo(e.x+e.w+5,y+6);ctx.stroke();});
- shots.forEach(s=>{ctx.shadowColor='#ffe799';ctx.shadowBlur=12;rounded(s.x,s.y,s.w,s.h,3,'#fff0ac');ctx.shadowBlur=0;});drawHero();
- sparks.forEach(p=>{ctx.globalAlpha=Math.min(1,p.life*2);ctx.fillStyle=p.color;ctx.fillRect(p.x,p.y,3,3);});ctx.globalAlpha=1;
-}
-function frame(t){const dt=Math.min((t-last)/1000||0,.025);last=t;time+=dt;if(mode==='playing')update(dt);draw();requestAnimationFrame(frame);}
-$('start').addEventListener('click',()=>{if(mode==='paused')pause();else if(mode==='level-complete')loadLevel(level+1);else if(mode==='lost')loadLevel(level);else loadLevel(0);});
-$('pause').addEventListener('click',pause);
-window.addEventListener('keydown',e=>{const k=e.key.toLowerCase();if(['arrowleft','arrowright','arrowup',' ','a','d','w','j','x','p'].includes(k))e.preventDefault();if(k==='p'&&!e.repeat)pause();if(mode!=='playing')return;if(k==='arrowleft'||k==='a')input.left=true;if(k==='arrowright'||k==='d')input.right=true;if([' ','w','arrowup'].includes(k)&&!e.repeat)jumpQueued=true;if(k==='j'||k==='x')input.fire=true;});
-window.addEventListener('keyup',e=>{const k=e.key.toLowerCase();if(k==='arrowleft'||k==='a')input.left=false;if(k==='arrowright'||k==='d')input.right=false;if(k==='j'||k==='x')input.fire=false;});
-for(const key of ['left','right','jump','fire']){const button=$(key);button.addEventListener('pointerdown',e=>{e.preventDefault();if(mode==='playing'){if(key==='jump')jumpQueued=true;else input[key]=true;}button.setPointerCapture(e.pointerId);});for(const t of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(t,()=>{if(key!=='jump')input[key]=false;});}
-window.addEventListener('blur',()=>{clearInput();if(mode==='playing')pause();});document.addEventListener('visibilitychange',()=>{if(document.hidden&&mode==='playing')pause();});
-// Vista previa del primer escenario antes de comenzar.
-platforms=[{x:0,y:FLOOR,w:W,h:60},...worlds[0].platforms.map(([x,y,w])=>({x,y,w,h:18}))];pieces=worlds[0].pieces.map(([x,y])=>({x,y,taken:false}));
-requestAnimationFrame(frame);
+function choose(key){if(mode!=='playing')return;if(tray.includes(key)){tray=tray.filter(k=>k!==key);}else if(tray.length<3){tray.push(key);}else{feedback('El vaso admite hasta 3 ingredientes. Quita uno o vacíalo para cambiar la receta.');return;}renderTray();}
+function clearTray(){if(mode!=='playing')return;tray=[];renderTray();feedback('Vaso limpio. Prepara el pedido que prefieras.');}
+function sameRecipe(a,b){return a.length===b.length&&a.every(k=>b.includes(k));}
+function showOverlay(tag,title,message,label){$('overlay-tag').textContent=tag;$('title').textContent=title;$('message').textContent=message;$('start').textContent=label;$('overlay').hidden=false;}
+function saveBest(){if(score>best){best=score;try{localStorage.setItem('fer-cafe-best',String(best));}catch(_){}$('record').textContent=`Mejor puntuación: ${best}`;}}
+function startRound(index,retry=false){if(!retry)roundStartScore=score;else score=roundStartScore;round=index;served=0;hearts=3;remaining=rounds[round].time;streak=0;tray=[];customers=[null,null,null];mode='playing';fillSeats();renderCustomers();renderTray();hud();$('overlay').hidden=true;$('pause').disabled=false;$('pause').textContent='Ⅱ';feedback(`Ronda ${round+1}: atiende ${rounds[round].goal} pedidos. ¡El café está abierto!`);$('ingredients').querySelector('button').focus();}
+function pause(){if(mode==='playing'){mode='paused';showOverlay('UN DESCANSO ENTRE NUBES','Tu café puede esperar','Los clientes y el reloj también descansan. Continúa cuando quieras.','Continuar →');$('pause').textContent='▶';renderCustomers();}else if(mode==='paused'){mode='playing';$('overlay').hidden=true;$('pause').textContent='Ⅱ';renderCustomers();}}
+function lose(){mode='lost';$('pause').disabled=true;saveBest();renderCustomers();showOverlay('UNA NUEVA OPORTUNIDAD','Hasta las nubes tienen días difíciles','Puedes volver a intentar esta ronda con tres vidas. Tu puntuación vuelve al inicio de la ronda.','Reintentar ronda →');feedback('La ronda terminó. Puedes reintentar.');$('start').focus();}
+function finishRound(){saveBest();$('pause').disabled=true;renderCustomers();if(round===2){mode='won';showOverlay('TU CAFÉ YA ES UN FAVORITO','¡Tres rondas llenas de magia!',`Atendiste los 21 pedidos de la aventura. Terminaste con ${score} puntos. ¿Podrás superar tu récord?`,'Volver a abrir el café →');}else{mode='round-complete';showOverlay('QUÉ BUEN SERVICIO',`¡Ronda ${round+1} completada!`,`Todos recibieron su bebida. En la siguiente ronda habrá nuevas recetas y ${rounds[round+1].goal} pedidos. Tendrás tres vidas nuevas.`,'Siguiente ronda →');}feedback('¡Pedidos completados!');$('start').focus();}
+function serve(index){if(mode!=='playing'||!customers[index])return;const c=customers[index];if(!sameRecipe(tray,c.recipe.items)){score=Math.max(0,score-10);remaining=Math.max(0,remaining-4);streak=0;feedback(`Revisa la receta de ${c.name}. Se descontaron 10 puntos y 4 segundos.`);hud();if(remaining<=0)lose();return;}
+ streak++;const bonus=Math.min(streak,5)*10;score+=100+bonus;served++;customers[index]=null;tray=[];feedback(`¡Qué rico! +${100+bonus} puntos${streak>1?' · '+streak+' pedidos seguidos':''}.`);renderTray();hud();if(served>=rounds[round].goal){finishRound();return;}fillSeats();renderCustomers();const card=$('customer-'+index);if(card)card.classList.add('pop');}
+function tick(dt){if(mode!=='playing')return;remaining-=dt;if(remaining<=0){remaining=0;hud();lose();return;}let changed=false;for(let i=0;i<3;i++){const c=customers[i];if(!c)continue;c.patience-=dt;if(c.patience<=0){customers[i]=null;hearts--;streak=0;changed=true;feedback('Un cliente tuvo que irse. Atiende primero a quien tenga menos paciencia.');}else{const percent=Math.max(0,c.patience/rounds[round].patience*100),bar=$('patience-'+i);if(bar){bar.style.width=percent+'%';bar.parentElement.setAttribute('aria-valuenow',String(Math.round(percent)));$('customer-'+i).classList.toggle('urgent',percent<25);}}}
+ if(hearts<=0){hearts=0;hud();lose();return;}if(changed){fillSeats();renderCustomers();}hud();}
+function frame(t){const dt=Math.min((t-last)/1000||0,.1);last=t;tick(dt);requestAnimationFrame(frame);}
+$('ingredients').innerHTML=ingredients.map(([key,label],i)=>`<button class="ingredient-button" data-ingredient="${key}" aria-label="${label}">${icons[key]}<span>${label}</span><small>${i+1}</small></button>`).join('');$('ingredients').querySelectorAll('[data-ingredient]').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.ingredient)));
+$('clear').addEventListener('click',clearTray);$('pause').addEventListener('click',pause);$('start').addEventListener('click',()=>{if(mode==='paused')pause();else if(mode==='round-complete')startRound(round+1);else if(mode==='lost')startRound(round,true);else{score=0;roundStartScore=0;startRound(0);}});
+window.addEventListener('keydown',e=>{const k=e.key.toLowerCase();if(['1','2','3','4','5','6','7','q','w','e','r','p'].includes(k))e.preventDefault();if(e.repeat)return;if(k==='p'){pause();return;}if(mode!=='playing')return;if(/^[1-7]$/.test(k))choose(ingredients[Number(k)-1][0]);if(k==='q')serve(0);if(k==='w')serve(1);if(k==='e')serve(2);if(k==='r')clearTray();});window.addEventListener('blur',()=>{if(mode==='playing')pause();});document.addEventListener('visibilitychange',()=>{if(document.hidden&&mode==='playing')pause();});
+fillSeats();renderCustomers();renderTray();hud();requestAnimationFrame(frame);

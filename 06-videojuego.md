@@ -7,125 +7,118 @@ permalink: /videojuego/
 
 <p class="fer-page-label">Proyecto 05 · Programación web</p>
 
-# Nova: misión energía
+# Café de nubes
 
-<p class="fer-page-intro">Una aventura de plataformas con tres mundos, saltos, piezas para transportar y disparos de energía.</p>
+<p class="fer-page-intro">Un café flotante, clientes con antojos y una barra de bebidas para preparar pequeños momentos de magia.</p>
 
-<div class="fer-project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Canvas</span><span>3 niveles</span><span>GitHub Pages</span></div>
+<div class="fer-project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>3 rondas</span><span>Ilustraciones SVG</span><span>GitHub Pages</span></div>
 
-## ¿De qué trata?
+## ¿De qué trata el juego?
 
-Nova es un pequeño robot que debe devolver la energía a tres lugares: el **Jardín mecánico**, la **Fábrica violeta** y la **Estación lunar**. En cada escenario hay tres piezas de energía sobre las plataformas. La misión consiste en recogerlas, llevarlas en la mochila y entregarlas en la estación que se encuentra a la derecha.
+En **Café de nubes** administras un pequeño café que flota en el cielo. Sus visitantes son gatitos, conejitos y osos que llegan con un pedido. Tu misión es elegir los ingredientes correctos, preparar la bebida y servirla antes de que se termine su paciencia.
 
-Para avanzar, Nova puede caminar, brincar y lanzar disparos de energía. Los drones patrullan los escenarios y quitan una vida si lo tocan, pero también se pueden desactivar con los disparos. Cada nivel comienza con **tres vidas**, y los disparos son ilimitados.
+Cada pedido muestra su receta con dibujos y nombres, así que no tienes que memorizarla. Puedes atender primero a quien tenga menos paciencia. Las bebidas cambian de color al prepararlas, y los pedidos correctos suman puntos. Si sirves varios seguidos sin errores, recibes una bonificación.
 
-El estilo combina escenarios oscuros con detalles rosa, luces amarillas y plataformas iluminadas. El personaje y los objetos están dibujados con código, con animaciones para caminar, efectos al recoger piezas y partículas al disparar.
+La aventura tiene tres rondas y **21 pedidos en total**. Cada ronda empieza con tres vidas. Si un cliente se va sin recibir su bebida, pierdes una vida. Si te equivocas al servir, se descuentan 10 puntos y cuatro segundos, pero puedes corregir la preparación.
 
 ## Cómo jugar
 
-| Acción | Teclado | Celular |
+1. Presiona **Abrir mi café**.
+2. Mira los ingredientes que aparecen en el pedido de un cliente.
+3. Toca esos ingredientes en la barra de bebidas. Puedes agregarlos en cualquier orden.
+4. Presiona **Servir** en el cliente que pidió esa bebida.
+5. Completa los pedidos de la ronda para continuar a la siguiente.
+
+Para quitar un ingrediente, vuelve a tocarlo o presiona su nombre en la preparación. **Vaciar vaso** elimina todos los ingredientes sin penalización. Puedes pausar cuando quieras.
+
+| Acción | Con botones | Con teclado |
 | :--- | :--- | :--- |
-| Moverse | Flechas ← → o A / D | Mantén presionada una flecha |
-| Brincar | Espacio, W o ↑ | Toca **Brincar** |
-| Disparar | J o X | Mantén presionado **Disparar** |
-| Pausar o continuar | P | Botón Ⅱ / ▶ |
+| Elegir ingredientes | Toca sus dibujos | Números 1 a 7 |
+| Servir | Botón de cada cliente | Q, W o E, de izquierda a derecha |
+| Vaciar el vaso | **Vaciar vaso** | R |
+| Pausar o continuar | Botón Ⅱ / ▶ | P |
 
-Presiona **Comenzar aventura**, recoge las tres piezas y llega a la estación de la derecha. Cuando tienes todas las piezas, la estación se ilumina y aparece la indicación de entregarlas. Al completar un nivel puedes pasar al siguiente.
-
-Si te quedas sin vidas, puedes reintentar ese mismo nivel. No hay límite de tiempo. Para usar el teclado, primero haz clic dentro del juego.
+Si usas el teclado, haz clic primero dentro del juego.
 
 ## Juega aquí
 
 <style>
-.fer-game-frame { display:block; width:100%; max-width:960px; height:850px; margin:1.5rem auto; border:1px solid #44405e; border-radius:18px; background:#131629; }
-@media(max-width:600px){.fer-game-frame{height:700px;}}
-@media(max-width:400px){.fer-game-frame{height:680px;}}
+.fer-game-frame { display:block; width:100%; max-width:980px; height:1040px; margin:1.5rem auto; border:1px solid #e5dde4; border-radius:24px; background:#f9f3eb; }
+@media(max-width:600px){.fer-game-frame{height:1130px;}}
+@media(max-width:400px){.fer-game-frame{height:1160px;}}
 </style>
 
-<iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html?v=20261010-nova' | relative_url }}" title="Nova: misión energía, aventura de plataformas" loading="lazy"></iframe>
+<iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html?v=20261010-cafe1' | relative_url }}" title="Café de nubes: juego interactivo de preparación de bebidas" loading="lazy"></iframe>
 
-[Abrir el juego en una página completa ↗]({{ '/assets/videojuego/index.html?v=20261010-nova' | relative_url }})
+[Abrir Café de nubes en una página completa ↗]({{ '/assets/videojuego/index.html?v=20261010-cafe1' | relative_url }})
 
-## Los tres niveles
+## Las tres rondas
 
-| Nivel | Escenario | Misión |
-| :---: | :--- | :--- |
-| 1 | Jardín mecánico | Conocer los controles, subir a las plataformas y recoger las primeras tres piezas. |
-| 2 | Fábrica violeta | Recorrer una nueva distribución de plataformas y enfrentar más drones, incluido uno en una plataforma. |
-| 3 | Estación lunar | Recoger las últimas piezas entre plataformas y drones para completar la misión. |
+| Ronda | Pedidos | Tiempo | Recetas |
+| :---: | :---: | :---: | :--- |
+| 1 | 5 | 90 segundos | Latte de fresa, café suave y té de sol. |
+| 2 | 7 | 105 segundos | Se agregan chocolate nube y té cremoso. |
+| 3 | 9 | 120 segundos | Aparece también la fresa helada y los clientes tienen menos paciencia. |
 
-## Cómo se construyó el juego
+Los pedidos se eligen al azar entre las recetas disponibles en cada ronda. Si pierdes, puedes reintentar esa ronda con tres vidas y la puntuación que tenías al comenzarla. Al completar las tres, aparece la pantalla final. La mejor puntuación se guarda en el navegador cuando el almacenamiento está disponible.
 
-El proyecto utiliza tres archivos que trabajan juntos. **HTML** organiza la pantalla, **CSS** define su presentación y **JavaScript** controla las acciones y las reglas.
+## Diseño del juego
+
+El juego combina colores crema, rosa, azul suave y detalles de madera para crear un café tranquilo y acogedor. Los personajes y los ingredientes están ilustrados con **SVG**, un formato que mantiene los dibujos claros al cambiar su tamaño.
+
+La interfaz está dividida en dos partes: arriba se encuentran los clientes con sus pedidos y sus barras de paciencia; abajo está la barra para preparar las bebidas. El marcador siempre muestra la ronda, los pedidos entregados, el tiempo, los puntos y las vidas.
+
+El vaso cambia de color según lo que agregas. Los mensajes indican cuándo una bebida fue correcta, si hubo un error o si un cliente tuvo que irse, para que se entienda lo que sucede durante la partida.
+
+## Cómo se hizo el código
+
+El proyecto utiliza tres archivos:
 
 | Archivo | Función |
 | :--- | :--- |
-| `index.html` | Contiene el canvas, el marcador, la pantalla de inicio y los botones para moverse, brincar, disparar y pausar. |
-| `style.css` | Define los colores, la distribución y la adaptación de los controles a pantallas pequeñas. |
-| `game.js` | Define los niveles, la gravedad, los saltos, las colisiones, los drones, las piezas y los proyectiles. |
+| `index.html` | Organiza la pantalla, el marcador, las tarjetas de clientes, la barra de ingredientes y los botones. |
+| `style.css` | Define los colores, los tamaños y la adaptación a pantallas pequeñas. |
+| `game.js` | Genera pedidos, compara recetas, controla el tiempo, calcula puntos y administra las rondas. |
 
-### La pantalla y el diseño
+### Preparación de una bebida
 
-El juego se dibuja en una etiqueta `canvas`. JavaScript actualiza la imagen cuadro por cuadro, mientras los botones y el marcador permanecen en HTML.
-
-```html
-<canvas id="board" width="960" height="540" tabindex="0"></canvas>
-<button id="jump">Brincar ↑</button>
-<button id="fire">Disparar ✦</button>
-```
-
-Con CSS se conserva la proporción del escenario y se preparan botones grandes para utilizarlos en el celular. El marcador muestra el nivel, las piezas recogidas y las vidas disponibles.
-
-### Movimiento, gravedad y salto
-
-El personaje tiene una posición y una velocidad horizontal y vertical. Cuando brinca recibe una velocidad hacia arriba. Después, la gravedad lo hace bajar hasta que toca una plataforma o el suelo.
+Los ingredientes elegidos se guardan en una lista llamada `tray`. Al tocar un ingrediente, se agrega a esa lista. Si ya estaba seleccionado, se quita. El vaso admite hasta tres ingredientes.
 
 ```js
-hero.vy = -640;       // Impulso del salto
-hero.vy += 1600 * dt; // La gravedad aumenta la velocidad de caída
-hero.y += hero.vy * dt;
-```
-
-La variable `dt` representa el tiempo entre cuadros. Las colisiones permiten que Nova aterrice encima de las plataformas, choque con sus lados y se detenga al llegar a los bordes de la pantalla.
-
-### Piezas y estación de entrega
-
-Al tocar una pieza, el programa la marca como recogida y aumenta el contador. También aparecen pequeñas luces y una pieza más en la mochila del robot. La estación se activa solamente cuando se han recogido las tres.
-
-```js
-p.taken = true;
-count++;
-
-if (count === 3 && hero.x + hero.w > 875 &&
-    hero.y + hero.h >= FLOOR - 8) {
-  completeLevel();
+if (tray.includes(key)) {
+  tray = tray.filter(k => k !== key);
+} else if (tray.length < 3) {
+  tray.push(key);
 }
 ```
 
-### Disparos y drones
+### Comprobar una receta
 
-Los disparos son objetos que avanzan en la dirección en la que mira el robot. El programa revisa si uno coincide con un dron. Si lo alcanza, el dron se desactiva y aparece un efecto de partículas.
+Cada cliente tiene una lista con los ingredientes que necesita. El programa compara esa receta con la preparación. No importa el orden, pero deben coincidir todos los ingredientes y la cantidad.
 
 ```js
-if (e.alive && overlap(s, e)) {
-  e.alive = false;
+function sameRecipe(a, b) {
+  return a.length === b.length &&
+         a.every(k => b.includes(k));
 }
 ```
 
-Los drones patrullan entre dos posiciones. Si tocan a Nova, se pierde una vida y el personaje tiene un pequeño periodo de protección para evitar perder varias vidas de inmediato.
+Al servir correctamente, el contador de pedidos aumenta, el vaso se limpia y llega otro cliente si todavía faltan pedidos. La bonificación crece cuando se entregan varias bebidas correctas seguidas, hasta un máximo de cinco pedidos en la racha.
 
-### Cambio de nivel y pausa
+### Tiempo y paciencia
 
-Cada escenario tiene sus propias plataformas, piezas, drones y colores. Al completar uno se carga el siguiente, con tres vidas nuevas. La última entrega termina la aventura.
+El reloj de la ronda y la paciencia de los clientes disminuyen con el tiempo. Las barras permiten identificar quién necesita ser atendido primero. Cuando queda poca paciencia, la barra cambia de color.
 
-El programa diferencia entre jugar, pausar, perder, completar un nivel y ganar. Al pausar conserva la posición y el avance. Si el juego pierde el foco, también se pausa automáticamente.
+Al pausar, ambos relojes se detienen. El juego también se pausa cuando pierde el foco o se deja de ver la pestaña.
 
-## Pruebas y mejoras
+### Avance y reinicio
 
-Se probaron los saltos hacia las **nueve plataformas**, los límites del movimiento, la recolección de piezas y la entrega en la estación. También se revisaron los disparos contra drones, la pérdida de vidas, la protección después de un golpe, el reintento y el paso por los tres niveles hasta la victoria.
+El programa distingue entre la pantalla inicial, una ronda en juego, la pausa, una ronda completada, una derrota y la victoria final. Así cada botón inicia la acción correspondiente: continuar, pasar de ronda, reintentar o comenzar una nueva aventura.
 
-Los controles táctiles permiten mantener presionados los botones de movimiento y disparo. El botón de brincar genera un salto por pulsación. El diseño incluye pantallas de inicio, pausa, cambio de nivel y final para que siempre se entienda qué hacer después.
+## Pruebas del juego
 
-## Publicación y código
+Se comprobaron las recetas en distintos órdenes, los puntos, las penalizaciones, el límite de tres ingredientes y la limpieza del vaso. También se revisaron la paciencia de los clientes, la pérdida de vidas, la pausa, el reintento y los **21 pedidos** necesarios para completar las tres rondas.
 
-El juego está publicado en GitHub Pages y se puede jugar dentro de esta pestaña o abrir en una página completa. Los archivos y la liga para jugar se encuentran en [mi repositorio de GitHub](https://github.com/fernandiu-xu/Portafolio-fer/tree/main/assets/videojuego).
+## Publicación y repositorio
+
+Puedes jugar aquí mismo o abrir el café en una página completa. Los archivos HTML, CSS y JavaScript, junto con la liga para jugar, están en [mi repositorio de GitHub](https://github.com/fernandiu-xu/Portafolio-fer/tree/main/assets/videojuego).
