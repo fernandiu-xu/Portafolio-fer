@@ -29,14 +29,14 @@ El objetivo fue que el brazo pudiera moverse al girar los potenciómetros y util
     <table class="fer-materials-table">
       <thead><tr><th scope="col">Material</th><th scope="col">Cantidad</th><th scope="col">Uso</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Arduino</th><td>1</td><td>Recibir las señales de los potenciómetros y controlar los servomotores.</td></tr>
-        <tr><th scope="row">Servomotores SG90</th><td>4</td><td>Realizar los movimientos del brazo y abrir o cerrar la pinza.</td></tr>
-        <tr><th scope="row">Potenciómetros de 1 kΩ</th><td>4</td><td>Controlar manualmente la posición de cada servomotor.</td></tr>
-        <tr><th scope="row">Protoboard</th><td>1</td><td>Organizar y realizar las conexiones del circuito.</td></tr>
-        <tr><th scope="row">Cables jumper</th><td>Varios</td><td>Conectar el Arduino, los potenciómetros y los servomotores.</td></tr>
-        <tr><th scope="row">Cable USB A-B</th><td>1</td><td>Cargar el programa en Arduino y alimentarlo durante las primeras pruebas.</td></tr>
-        <tr><th scope="row">MDF de 3 mm</th><td>Según diseño</td><td>Fabricar las piezas de la estructura mediante corte láser.</td></tr>
-        <tr><th scope="row">Tornillos y tuercas</th><td>Varios</td><td>Unir algunas partes de la estructura.</td></tr>
+        <tr><th scope="row"><div class="fer-material-item"><img class="fer-material-image" src="{{ '/assets/img/materiales/arduino-uno.svg' | relative_url }}" alt="Ilustración de Arduino Uno" width="52" height="52"><span>Arduino</span></div></th><td>1</td><td>Recibir las señales de los potenciómetros y controlar los servomotores.</td></tr>
+        <tr><th scope="row"><div class="fer-material-item"><img class="fer-material-image" src="{{ '/assets/img/materiales/servo-sg90.svg' | relative_url }}" alt="Ilustración de Microservomotor SG90" width="52" height="52"><span>Servomotores SG90</span></div></th><td>4</td><td>Realizar los movimientos del brazo y abrir o cerrar la pinza.</td></tr>
+        <tr><th scope="row"><div class="fer-material-item"><img class="fer-material-image" src="{{ '/assets/img/materiales/potenciometro.svg' | relative_url }}" alt="Ilustración de Potenciómetro" width="52" height="52"><span>Potenciómetros de 1 kΩ</span></div></th><td>4</td><td>Controlar manualmente la posición de cada servomotor.</td></tr>
+        <tr><th scope="row"><div class="fer-material-item"><img class="fer-material-image" src="{{ '/assets/img/materiales/protoboard.svg' | relative_url }}" alt="Ilustración de Protoboard" width="52" height="52"><span>Protoboard</span></div></th><td>1</td><td>Organizar y realizar las conexiones del circuito.</td></tr>
+        <tr><th scope="row"><div class="fer-material-item"><img class="fer-material-image" src="{{ '/assets/img/materiales/jumpers.svg' | relative_url }}" alt="Ilustración de Cables jumper" width="52" height="52"><span>Cables jumper</span></div></th><td>Varios</td><td>Conectar el Arduino, los potenciómetros y los servomotores.</td></tr>
+        <tr><th scope="row"><div class="fer-material-item"><img class="fer-material-image" src="{{ '/assets/img/materiales/cable-usb.svg' | relative_url }}" alt="Ilustración de Cable USB A-B" width="52" height="52"><span>Cable USB A-B</span></div></th><td>1</td><td>Cargar el programa en Arduino y alimentarlo durante las primeras pruebas.</td></tr>
+        <tr><th scope="row"><div class="fer-material-item"><img class="fer-material-image" src="{{ '/assets/img/materiales/mdf.svg' | relative_url }}" alt="Ilustración de Placas de MDF de 3 mm" width="52" height="52"><span>MDF de 3 mm</span></div></th><td>Según diseño</td><td>Fabricar las piezas de la estructura mediante corte láser.</td></tr>
+        <tr><th scope="row"><div class="fer-material-item"><img class="fer-material-image" src="{{ '/assets/img/materiales/tornillos-tuercas.svg' | relative_url }}" alt="Ilustración de Tornillo y tuerca" width="52" height="52"><span>Tornillos y tuercas</span></div></th><td>Varios</td><td>Unir algunas partes de la estructura.</td></tr>
       </tbody>
     </table>
   </div>
