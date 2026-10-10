@@ -42,9 +42,9 @@ Si te quedas sin vidas, puedes reintentar ese mismo nivel. No hay límite de tie
 @media(max-width:400px){.fer-game-frame{height:680px;}}
 </style>
 
-<iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html' | relative_url }}" title="Nova: misión energía, aventura de plataformas" loading="lazy"></iframe>
+<iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html?v=20261010-nova' | relative_url }}" title="Nova: misión energía, aventura de plataformas" loading="lazy"></iframe>
 
-[Abrir el juego en una página completa ↗]({{ '/assets/videojuego/index.html' | relative_url }})
+[Abrir el juego en una página completa ↗]({{ '/assets/videojuego/index.html?v=20261010-nova' | relative_url }})
 
 ## Los tres niveles
 
