@@ -1,23 +1,21 @@
-# Robot recolector
+# Nova: misión energía
 
-Videojuego sencillo creado con HTML, CSS y JavaScript para el portafolio de Fernanda.
+Aventura de plataformas en HTML, CSS y JavaScript, con tres niveles, piezas para transportar a una estación, saltos y disparos contra drones.
 
-[Jugar en GitHub Pages](https://fernandiu-xu.github.io/Portafolio-fer/assets/videojuego/index.html)
+[Jugar](https://fernandiu-xu.github.io/Portafolio-fer/assets/videojuego/index.html)
 
-[Ver la explicación del proyecto](https://fernandiu-xu.github.io/Portafolio-fer/videojuego/)
+[Explicación del proyecto](https://fernandiu-xu.github.io/Portafolio-fer/videojuego/)
 
 ## Controles
 
-- Flechas izquierda y derecha o A y D para moverse.
-- Botones de flecha para jugar en el celular.
-- P o el botón Pausar para detener o continuar la partida.
+- Flechas o A / D: caminar.
+- Espacio, W o flecha arriba: brincar.
+- J o X: disparar.
+- P: pausar.
+- En celular: botones en pantalla.
 
-Recoge 12 estrellas antes de perder las 3 vidas. Los bloques morados quitan una vida; dejar pasar una estrella no tiene penalización.
+Recoge las tres piezas de cada nivel y llévalas a la estación a la derecha. Los disparos son ilimitados. Cada nivel comienza con tres vidas; si pierdes puedes reintentar ese nivel. No hay límite de tiempo.
 
 ## Archivos
 
-- index.html: pantalla y controles.
-- style.css: presentación y adaptación a pantallas pequeñas.
-- game.js: reglas, movimiento, colisiones y marcador.
-
-No necesita instalar dependencias ni utilizar un servidor especial. GitHub Pages sirve los tres archivos directamente.
+index.html contiene la pantalla. style.css define el diseño. game.js implementa niveles, física, colisiones, drones y proyectiles. No necesita dependencias ni un servidor especial; funciona directamente en GitHub Pages.

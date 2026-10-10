@@ -7,99 +7,125 @@ permalink: /videojuego/
 
 <p class="fer-page-label">Proyecto 05 · Programación web</p>
 
-# Robot recolector
+# Nova: misión energía
 
-<p class="fer-page-intro">Un videojuego sencillo en HTML, CSS y JavaScript, con un robot que recoge estrellas y esquiva obstáculos.</p>
+<p class="fer-page-intro">Una aventura de plataformas con tres mundos, saltos, piezas para transportar y disparos de energía.</p>
 
-<div class="fer-project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Canvas</span><span>GitHub Pages</span></div>
+<div class="fer-project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Canvas</span><span>3 niveles</span><span>GitHub Pages</span></div>
 
 ## ¿De qué trata?
 
-El personaje es un pequeño robot rosa que se mueve de lado a lado para recoger las estrellas que caen desde arriba. La misión es conseguir **12 estrellas** antes de perder las **3 vidas**. Los bloques morados son obstáculos: si uno toca al robot, pierde una vida. Dejar pasar una estrella no quita vidas.
+Nova es un pequeño robot que debe devolver la energía a tres lugares: el **Jardín mecánico**, la **Fábrica violeta** y la **Estación lunar**. En cada escenario hay tres piezas de energía sobre las plataformas. La misión consiste en recogerlas, llevarlas en la mochila y entregarlas en la estación que se encuentra a la derecha.
 
-Elegí una temática de robótica para relacionar el juego con mis otros proyectos del portafolio. El estilo utiliza rosa y amarillo pastel, con figuras sencillas para distinguir al personaje, las estrellas y los obstáculos.
+Para avanzar, Nova puede caminar, brincar y lanzar disparos de energía. Los drones patrullan los escenarios y quitan una vida si lo tocan, pero también se pueden desactivar con los disparos. Cada nivel comienza con **tres vidas**, y los disparos son ilimitados.
+
+El estilo combina escenarios oscuros con detalles rosa, luces amarillas y plataformas iluminadas. El personaje y los objetos están dibujados con código, con animaciones para caminar, efectos al recoger piezas y partículas al disparar.
 
 ## Cómo jugar
 
-1. Presiona **Jugar**.
-2. Mueve al robot con las flechas **← y →**, o con las teclas **A y D**. En el celular, mantén presionados los botones de flecha.
-3. Recoge las estrellas amarillas y esquiva los bloques morados.
-4. Puedes pausar con **P** o con el botón **Pausar**. Al terminar, presiona **Volver a jugar** para comenzar otra partida.
+| Acción | Teclado | Celular |
+| :--- | :--- | :--- |
+| Moverse | Flechas ← → o A / D | Mantén presionada una flecha |
+| Brincar | Espacio, W o ↑ | Toca **Brincar** |
+| Disparar | J o X | Mantén presionado **Disparar** |
+| Pausar o continuar | P | Botón Ⅱ / ▶ |
 
-Si usas el teclado, primero haz clic dentro del juego. El récord guarda la mayor cantidad de estrellas recogidas en este navegador cuando el almacenamiento está disponible.
+Presiona **Comenzar aventura**, recoge las tres piezas y llega a la estación de la derecha. Cuando tienes todas las piezas, la estación se ilumina y aparece la indicación de entregarlas. Al completar un nivel puedes pasar al siguiente.
+
+Si te quedas sin vidas, puedes reintentar ese mismo nivel. No hay límite de tiempo. Para usar el teclado, primero haz clic dentro del juego.
 
 ## Juega aquí
 
 <style>
-.fer-game-frame { display:block; width:100%; max-width:690px; height:800px; margin:1.5rem auto; border:1px solid #e8b6c8; border-radius:18px; background:#fff7fa; }
+.fer-game-frame { display:block; width:100%; max-width:960px; height:850px; margin:1.5rem auto; border:1px solid #44405e; border-radius:18px; background:#131629; }
 @media(max-width:600px){.fer-game-frame{height:700px;}}
-@media(max-width:400px){.fer-game-frame{height:600px;}}
+@media(max-width:400px){.fer-game-frame{height:680px;}}
 </style>
 
-<iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html' | relative_url }}" title="Robot recolector: videojuego interactivo" loading="lazy"></iframe>
+<iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html' | relative_url }}" title="Nova: misión energía, aventura de plataformas" loading="lazy"></iframe>
 
-[ Abrir el juego en una página completa ↗ ]({{ '/assets/videojuego/index.html' | relative_url }})
+[Abrir el juego en una página completa ↗]({{ '/assets/videojuego/index.html' | relative_url }})
+
+## Los tres niveles
+
+| Nivel | Escenario | Misión |
+| :---: | :--- | :--- |
+| 1 | Jardín mecánico | Conocer los controles, subir a las plataformas y recoger las primeras tres piezas. |
+| 2 | Fábrica violeta | Recorrer una nueva distribución de plataformas y enfrentar más drones, incluido uno en una plataforma. |
+| 3 | Estación lunar | Recoger las últimas piezas entre plataformas y drones para completar la misión. |
 
 ## Cómo se construyó el juego
 
-El proyecto se dividió en tres archivos. Esto permite cambiar la presentación y las reglas sin tener todo el código en una sola página.
+El proyecto utiliza tres archivos que trabajan juntos. **HTML** organiza la pantalla, **CSS** define su presentación y **JavaScript** controla las acciones y las reglas.
 
 | Archivo | Función |
 | :--- | :--- |
-| `index.html` | Contiene el título, el marcador, los botones y el área donde se dibuja el juego. |
-| `style.css` | Define los colores, tamaños y distribución de la pantalla, y adapta los controles al celular. |
-| `game.js` | Controla el movimiento, la caída de objetos, las colisiones, las vidas y los estados de la partida. |
+| `index.html` | Contiene el canvas, el marcador, la pantalla de inicio y los botones para moverse, brincar, disparar y pausar. |
+| `style.css` | Define los colores, la distribución y la adaptación de los controles a pantallas pequeñas. |
+| `game.js` | Define los niveles, la gravedad, los saltos, las colisiones, los drones, las piezas y los proyectiles. |
 
-### HTML: la pantalla del juego
+### La pantalla y el diseño
 
-La etiqueta `canvas` funciona como el área donde JavaScript dibuja al robot, las estrellas y los obstáculos. Los botones y el marcador se colocan fuera de esa área para que sean fáciles de leer y utilizar.
+El juego se dibuja en una etiqueta `canvas`. JavaScript actualiza la imagen cuadro por cuadro, mientras los botones y el marcador permanecen en HTML.
 
 ```html
-<canvas id="board" width="600" height="390" tabindex="0"></canvas>
-<button id="start">Jugar</button>
+<canvas id="board" width="960" height="540" tabindex="0"></canvas>
+<button id="jump">Brincar ↑</button>
+<button id="fire">Disparar ✦</button>
 ```
 
-### CSS: colores y adaptación
+Con CSS se conserva la proporción del escenario y se preparan botones grandes para utilizarlos en el celular. El marcador muestra el nivel, las piezas recogidas y las vidas disponibles.
 
-CSS da al juego su estilo rosa y amarillo pastel. El canvas conserva sus proporciones al cambiar el ancho de la pantalla. Los botones tienen un tamaño cómodo para usarlos con el dedo.
+### Movimiento, gravedad y salto
 
-```css
-canvas {
-  display: block;
-  width: 100%;
-  height: auto;
+El personaje tiene una posición y una velocidad horizontal y vertical. Cuando brinca recibe una velocidad hacia arriba. Después, la gravedad lo hace bajar hasta que toca una plataforma o el suelo.
+
+```js
+hero.vy = -640;       // Impulso del salto
+hero.vy += 1600 * dt; // La gravedad aumenta la velocidad de caída
+hero.y += hero.vy * dt;
+```
+
+La variable `dt` representa el tiempo entre cuadros. Las colisiones permiten que Nova aterrice encima de las plataformas, choque con sus lados y se detenga al llegar a los bordes de la pantalla.
+
+### Piezas y estación de entrega
+
+Al tocar una pieza, el programa la marca como recogida y aumenta el contador. También aparecen pequeñas luces y una pieza más en la mochila del robot. La estación se activa solamente cuando se han recogido las tres.
+
+```js
+p.taken = true;
+count++;
+
+if (count === 3 && hero.x + hero.w > 875 &&
+    hero.y + hero.h >= FLOOR - 8) {
+  completeLevel();
 }
 ```
 
-### JavaScript: movimiento y reglas
+### Disparos y drones
 
-El programa registra si se está presionando izquierda o derecha y actualiza la posición del robot. También limita su movimiento para que no salga de la pantalla.
-
-```js
-robot.x += ((keys.right ? 1 : 0) - (keys.left ? 1 : 0)) * 300 * dt;
-robot.x = Math.max(0, Math.min(WIDTH - robot.w, robot.x));
-```
-
-La variable `dt` representa el tiempo transcurrido entre cuadros. Así el movimiento depende del tiempo y no solamente de la velocidad de la computadora.
-
-Los objetos aparecen en posiciones aleatorias y bajan a una velocidad moderada. Cuando uno toca al robot, el programa revisa si es una estrella o un obstáculo: la estrella suma un punto y el bloque resta una vida.
+Los disparos son objetos que avanzan en la dirección en la que mira el robot. El programa revisa si uno coincide con un dron. Si lo alcanza, el dron se desactiva y aparece un efecto de partículas.
 
 ```js
-if (item.star) {
-  score++;
-} else {
-  lives--;
+if (e.alive && overlap(s, e)) {
+  e.alive = false;
 }
 ```
 
-Con `requestAnimationFrame` se actualiza y dibuja la escena continuamente. La partida puede estar lista para empezar, en juego, pausada o terminada. Esa separación permite detener el movimiento durante la pausa y reiniciar los puntos y las vidas al comenzar otra partida.
+Los drones patrullan entre dos posiciones. Si tocan a Nova, se pierde una vida y el personaje tiene un pequeño periodo de protección para evitar perder varias vidas de inmediato.
 
-## Pruebas y ajustes
+### Cambio de nivel y pausa
 
-Se comprobaron los límites del movimiento, la recolección de estrellas, la pérdida de vidas, la victoria al llegar a 12 puntos y la derrota al quedarse sin vidas. También se revisaron la pausa, el reinicio y los botones táctiles.
+Cada escenario tiene sus propias plataformas, piezas, drones y colores. Al completar uno se carga el siguiente, con tres vidas nuevas. La última entrega termina la aventura.
 
-Se añadió una pausa automática cuando el juego pierde el foco o la pestaña deja de estar visible, para que no siga avanzando mientras se está usando otra parte de la página. Además, el movimiento limita los saltos grandes de tiempo para que el robot no cambie de posición de golpe.
+El programa diferencia entre jugar, pausar, perder, completar un nivel y ganar. Al pausar conserva la posición y el avance. Si el juego pierde el foco, también se pausa automáticamente.
 
-## Publicación en GitHub Pages
+## Pruebas y mejoras
 
-Los archivos del juego se encuentran en la carpeta `assets/videojuego/` de [mi repositorio en GitHub](https://github.com/fernandiu-xu/Portafolio-fer/tree/main/assets/videojuego). GitHub Pages publica estos archivos y esta pestaña los muestra dentro del portafolio, por lo que se puede jugar directamente aquí o abrir el juego en una página completa.
+Se probaron los saltos hacia las **nueve plataformas**, los límites del movimiento, la recolección de piezas y la entrega en la estación. También se revisaron los disparos contra drones, la pérdida de vidas, la protección después de un golpe, el reintento y el paso por los tres niveles hasta la victoria.
+
+Los controles táctiles permiten mantener presionados los botones de movimiento y disparo. El botón de brincar genera un salto por pulsación. El diseño incluye pantallas de inicio, pausa, cambio de nivel y final para que siempre se entienda qué hacer después.
+
+## Publicación y código
+
+El juego está publicado en GitHub Pages y se puede jugar dentro de esta pestaña o abrir en una página completa. Los archivos y la liga para jugar se encuentran en [mi repositorio de GitHub](https://github.com/fernandiu-xu/Portafolio-fer/tree/main/assets/videojuego).
