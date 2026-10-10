@@ -609,3 +609,13 @@ body { background-color: #fffdfb; }
 .side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link[href$="/uso-ia/"]:focus-visible {
   outline-color: #ffffff !important;
 }
+
+/* El tema omite href cuando Uso de IA está seleccionado. */
+.side-bar.side-bar .nav-list > .nav-list-item:last-child > .nav-list-link.active,
+.side-bar.side-bar .nav-list > .nav-list-item:last-child > .nav-list-link.active:hover {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: transparent;
+  box-shadow: none !important;
+  transform: none;
+}
