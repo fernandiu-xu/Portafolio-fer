@@ -594,3 +594,18 @@ body { background-color: #fffdfb; }
   .fer-home a.fer-card { transition: none; transform: none; }
 }
 /* ===== FIN DE LA PERSONALIZACIÓN DE FERNANDA ===== */
+
+/* Uso de IA: enlace blanco sobre el fondo del sidebar */
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link[href$="/uso-ia/"],
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link[href$="/uso-ia/"]:visited,
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link[href$="/uso-ia/"]:hover,
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link[href$="/uso-ia/"].active {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: transparent;
+  box-shadow: none !important;
+  transform: none;
+}
+.side-bar.side-bar .nav-list > .nav-list-item > .nav-list-link[href$="/uso-ia/"]:focus-visible {
+  outline-color: #ffffff !important;
+}
