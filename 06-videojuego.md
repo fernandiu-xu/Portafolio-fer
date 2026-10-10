@@ -7,118 +7,123 @@ permalink: /videojuego/
 
 <p class="fer-page-label">Proyecto 05 · Programación web</p>
 
-# Café de nubes
+# NEON: Última señal
 
-<p class="fer-page-intro">Un café flotante, clientes con antojos y una barra de bebidas para preparar pequeños momentos de magia.</p>
+<p class="fer-page-intro">Una ciudad suspendida, un deslizador y una última misión para recuperar la energía de Helix.</p>
 
-<div class="fer-project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>3 rondas</span><span>Ilustraciones SVG</span><span>GitHub Pages</span></div>
+<div class="fer-project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Canvas 2D</span><span>3 sectores</span><span>GitHub Pages</span></div>
 
-## ¿De qué trata el juego?
+## La historia
 
-En **Café de nubes** administras un pequeño café que flota en el cielo. Sus visitantes son gatitos, conejitos y osos que llegan con un pedido. Tu misión es elegir los ingredientes correctos, preparar la bebida y servirla antes de que se termine su paciencia.
+En el año 2089, la ciudad de **Helix** depende de una torre orbital para mantenerse encendida. Una falla interrumpe su suministro y solo queda una señal de emergencia. Tu misión es pilotar un deslizador por las autopistas suspendidas, recuperar núcleos de energía y llevarlos hasta la torre.
 
-Cada pedido muestra su receta con dibujos y nombres, así que no tienes que memorizarla. Puedes atender primero a quien tenga menos paciencia. Las bebidas cambian de color al prepararlas, y los pedidos correctos suman puntos. Si sirves varios seguidos sin errores, recibes una bonificación.
-
-La aventura tiene tres rondas y **21 pedidos en total**. Cada ronda empieza con tres vidas. Si un cliente se va sin recibir su bebida, pierdes una vida. Si te equivocas al servir, se descuentan 10 puntos y cuatro segundos, pero puedes corregir la preparación.
-
-## Cómo jugar
-
-1. Presiona **Abrir mi café**.
-2. Mira los ingredientes que aparecen en el pedido de un cliente.
-3. Toca esos ingredientes en la barra de bebidas. Puedes agregarlos en cualquier orden.
-4. Presiona **Servir** en el cliente que pidió esa bebida.
-5. Completa los pedidos de la ronda para continuar a la siguiente.
-
-Para quitar un ingrediente, vuelve a tocarlo o presiona su nombre en la preparación. **Vaciar vaso** elimina todos los ingredientes sin penalización. Puedes pausar cuando quieras.
-
-| Acción | Con botones | Con teclado |
-| :--- | :--- | :--- |
-| Elegir ingredientes | Toca sus dibujos | Números 1 a 7 |
-| Servir | Botón de cada cliente | Q, W o E, de izquierda a derecha |
-| Vaciar el vaso | **Vaciar vaso** | R |
-| Pausar o continuar | Botón Ⅱ / ▶ | P |
-
-Si usas el teclado, haz clic primero dentro del juego.
+La aventura dura aproximadamente **90 segundos** y atraviesa tres sectores. Debes llegar al final con al menos **12 núcleos** y conservar la integridad de tu vehículo. Puedes cambiar de carril, saltar sobre barreras y grietas, o activar un impulso con escudo para atravesar obstáculos.
 
 ## Juega aquí
 
 <style>
-.fer-game-frame { display:block; width:100%; max-width:980px; height:1040px; margin:1.5rem auto; border:1px solid #e5dde4; border-radius:24px; background:#f9f3eb; }
-@media(max-width:600px){.fer-game-frame{height:1130px;}}
-@media(max-width:400px){.fer-game-frame{height:1160px;}}
+.fer-game-frame{display:block;width:100%;height:680px;margin:1.5rem auto;border:1px solid #243d59;border-radius:16px;background:#050914}
+@media(max-width:650px){.fer-game-frame{height:880px}}
 </style>
 
-<iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html?v=20261010-cafe1' | relative_url }}" title="Café de nubes: juego interactivo de preparación de bebidas" loading="lazy"></iframe>
+<iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html?v=20261010-neon1' | relative_url }}" title="NEON: Última señal, juego futurista de conducción" loading="lazy" allow="fullscreen"></iframe>
 
-[Abrir Café de nubes en una página completa ↗]({{ '/assets/videojuego/index.html?v=20261010-cafe1' | relative_url }})
+[Abrir NEON en una página completa ↗]({{ '/assets/videojuego/index.html?v=20261010-neon1' | relative_url }})
 
-## Las tres rondas
+## Cómo jugar
 
-| Ronda | Pedidos | Tiempo | Recetas |
-| :---: | :---: | :---: | :--- |
-| 1 | 5 | 90 segundos | Latte de fresa, café suave y té de sol. |
-| 2 | 7 | 105 segundos | Se agregan chocolate nube y té cremoso. |
-| 3 | 9 | 120 segundos | Aparece también la fresa helada y los clientes tienen menos paciencia. |
+Presiona **Iniciar misión** y busca los núcleos luminosos. El deslizador avanza automáticamente: tú decides cuándo cambiar de carril, saltar o utilizar el impulso. Mira los obstáculos desde lejos para preparar cada movimiento.
 
-Los pedidos se eligen al azar entre las recetas disponibles en cada ronda. Si pierdes, puedes reintentar esa ronda con tres vidas y la puntuación que tenías al comenzarla. Al completar las tres, aparece la pantalla final. La mejor puntuación se guarda en el navegador cuando el almacenamiento está disponible.
+| Acción | Teclado | Celular o ratón |
+| :--- | :--- | :--- |
+| Cambiar de carril | A / D o flechas izquierda y derecha | Botones ← y → |
+| Saltar | Espacio | Botón Saltar |
+| Impulso con escudo | Shift | Botón Impulso |
+| Pausar o continuar | P o Escape | Botón Ⅱ y Continuar misión |
+| Activar sonido | Botón Sonido | Botón Sonido |
 
-## Diseño del juego
+Si usas el teclado, haz clic primero dentro del juego. El sonido es opcional y empieza apagado.
 
-El juego combina colores crema, rosa, azul suave y detalles de madera para crear un café tranquilo y acogedor. Los personajes y los ingredientes están ilustrados con **SVG**, un formato que mantiene los dibujos claros al cambiar su tamaño.
+### Energía, integridad e impulso
 
-La interfaz está dividida en dos partes: arriba se encuentran los clientes con sus pedidos y sus barras de paciencia; abajo está la barra para preparar las bebidas. El marcador siempre muestra la ronda, los pedidos entregados, el tiempo, los puntos y las vidas.
+Cada núcleo recogido suma puntos. Si consigues varios sin recibir un impacto, formas una cadena que aumenta la recompensa hasta cinco veces el valor inicial. Chocar rompe la cadena y resta un punto de integridad; comienzas con tres.
 
-El vaso cambia de color según lo que agregas. Los mensajes indican cuándo una bebida fue correcta, si hubo un error o si un cliente tuvo que irse, para que se entienda lo que sucede durante la partida.
+Un salto bien calculado permite superar una barrera o una grieta y suma **75 puntos**. El impulso activa un escudo durante **1.3 segundos**, permite atravesar obstáculos y necesita **6 segundos** para recargarse. Atravesar un obstáculo con el escudo suma 50 puntos.
+
+Al cambiar de sector recuperas un punto de integridad, hasta un máximo de tres, y recibes 500 puntos. Completar la misión con la energía necesaria agrega 1500 puntos. El récord se guarda en el navegador cuando el almacenamiento está disponible.
+
+## Los tres sectores
+
+| Sector | Escenario | Duración | Dificultad |
+| :--- | :--- | :---: | :--- |
+| 01 · Distrito neón | Autopistas entre edificios con luces turquesa | 30 segundos | Introducción a los núcleos, barreras y grietas |
+| 02 · Jardines de plasma | Una zona iluminada en violeta | 30 segundos | Los objetos se acercan más rápido y aparecen núcleos adicionales |
+| 03 · Torre orbital | La aproximación final en tonos ámbar | 30 segundos | Mayor velocidad y menos tiempo para reaccionar |
+
+Los tramos se generan durante la partida. Cada grupo principal coloca energía en un carril y puede colocar un obstáculo en otro, conservando una ruta libre. Las combinaciones cambian en cada intento.
+
+## Diseño y gráficos
+
+Quise crear una experiencia de ciencia ficción con una pantalla de inicio que presenta la historia, el objetivo y la identidad del juego. Durante la partida, el marcador muestra los núcleos, la integridad, la puntuación y el avance de la misión.
+
+La ciudad tiene varias capas de edificios, ventanas iluminadas, un planeta con anillos y una torre de energía. La carretera utiliza perspectiva para producir una sensación de profundidad. El deslizador tiene propulsores, un salto animado y un escudo visible; los núcleos giran y los impactos producen partículas.
+
+Los gráficos se dibujan con **Canvas 2D** y una proyección de perspectiva. La música no es necesaria para jugar: los efectos de sonido se generan con Web Audio al activar el botón correspondiente.
 
 ## Cómo se hizo el código
 
-El proyecto utiliza tres archivos:
-
 | Archivo | Función |
 | :--- | :--- |
-| `index.html` | Organiza la pantalla, el marcador, las tarjetas de clientes, la barra de ingredientes y los botones. |
-| `style.css` | Define los colores, los tamaños y la adaptación a pantallas pequeñas. |
-| `game.js` | Genera pedidos, compara recetas, controla el tiempo, calcula puntos y administra las rondas. |
+| `index.html` | Organiza la pantalla de inicio, el lienzo, los indicadores y los controles |
+| `style.css` | Define la interfaz oscura, los colores neón y la distribución en distintas pantallas |
+| `game.js` | Dibuja la ciudad, genera tramos, controla el vehículo y calcula el resultado |
 
-### Preparación de una bebida
+### El ciclo del juego
 
-Los ingredientes elegidos se guardan en una lista llamada `tray`. Al tocar un ingrediente, se agrega a esa lista. Si ya estaba seleccionado, se quita. El vaso admite hasta tres ingredientes.
+El programa utiliza `requestAnimationFrame` para dibujar cada fotograma. Calcula el tiempo transcurrido entre fotogramas y actualiza los objetos antes de volver a dibujar. Así el movimiento depende del tiempo y no de una cantidad fija de cuadros.
 
 ```js
-if (tray.includes(key)) {
-  tray = tray.filter(k => k !== key);
-} else if (tray.length < 3) {
-  tray.push(key);
+function frame(ms) {
+  const dt = last ? Math.min((ms - last) / 1000, .05) : 0;
+  last = ms;
+  tick(dt);
+  draw();
+  requestAnimationFrame(frame);
 }
 ```
 
-### Comprobar una receta
+### Perspectiva de la pista
 
-Cada cliente tiene una lista con los ingredientes que necesita. El programa compara esa receta con la preparación. No importa el orden, pero deben coincidir todos los ingredientes y la cantidad.
+Los objetos lejanos se dibujan pequeños, cerca del horizonte. Conforme se acercan, su tamaño y su separación aumentan. Esta transformación crea la ilusión de avanzar por una carretera.
 
 ```js
-function sameRecipe(a, b) {
-  return a.length === b.length &&
-         a.every(k => b.includes(k));
+function project(l, p) {
+  const width = 28 + 390 * p * p;
+  return {
+    x: 480 + (l - 1) * width * .64,
+    y: 230 + 365 * p * p,
+    s: .15 + 1.25 * p * p,
+    w: width
+  };
 }
 ```
 
-Al servir correctamente, el contador de pedidos aumenta, el vaso se limpia y llega otro cliente si todavía faltan pedidos. La bonificación crece cuando se entregan varias bebidas correctas seguidas, hasta un máximo de cinco pedidos en la racha.
+### Colisiones y habilidades
 
-### Tiempo y paciencia
+Cuando un objeto llega al vehículo, el programa comprueba si está en el mismo carril. Si es un núcleo, aumenta la energía y la puntuación. Si es un obstáculo, revisa primero el escudo y después el salto; si ninguna habilidad está activa, descuenta integridad.
 
-El reloj de la ronda y la paciencia de los clientes disminuyen con el tiempo. Las barras permiten identificar quién necesita ser atendido primero. Cuando queda poca paciencia, la barra cambia de color.
+Después de un impacto hay un breve periodo de protección para evitar perder varios puntos de integridad al mismo tiempo.
 
-Al pausar, ambos relojes se detienen. El juego también se pausa cuando pierde el foco o se deja de ver la pestaña.
+### Estados de la misión
 
-### Avance y reinicio
+El juego distingue entre inicio, partida, pausa, derrota y victoria. En pausa no avanzan la misión, los obstáculos ni la recarga de habilidades. También se pausa automáticamente cuando la ventana pierde el foco o la pestaña deja de verse.
 
-El programa distingue entre la pantalla inicial, una ronda en juego, la pausa, una ronda completada, una derrota y la victoria final. Así cada botón inicia la acción correspondiente: continuar, pasar de ronda, reintentar o comenzar una nueva aventura.
+## Pruebas realizadas
 
-## Pruebas del juego
+Se comprobaron los límites de los carriles, los saltos, la recolección de energía, las cadenas de puntos, los impactos, el escudo y su recarga. También se verificaron la pausa, los cambios de sector, la recuperación de integridad, la victoria con 12 núcleos, la derrota por energía insuficiente y el reinicio de la partida.
 
-Se comprobaron las recetas en distintos órdenes, los puntos, las penalizaciones, el límite de tres ingredientes y la limpieza del vaso. También se revisaron la paciencia de los clientes, la pérdida de vidas, la pausa, el reintento y los **21 pedidos** necesarios para completar las tres rondas.
+Además, se generaron 100 grupos de objetos para comprobar que la energía y los obstáculos principales no ocupen el mismo carril.
 
 ## Publicación y repositorio
 
-Puedes jugar aquí mismo o abrir el café en una página completa. Los archivos HTML, CSS y JavaScript, junto con la liga para jugar, están en [mi repositorio de GitHub](https://github.com/fernandiu-xu/Portafolio-fer/tree/main/assets/videojuego).
+El juego funciona en el navegador sin instalar programas. Los archivos y la liga para jugar están en [mi repositorio de GitHub](https://github.com/fernandiu-xu/Portafolio-fer/tree/main/assets/videojuego).

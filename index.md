@@ -73,8 +73,8 @@ nav_exclude: true
       </a>
       <a class="fer-card" href="{{ '/videojuego/' | relative_url }}">
         <span class="fer-card__number">06 / Programación web</span>
-        <span class="fer-card__title">Café de nubes</span>
-        <p>Prepara bebidas para los visitantes de un café flotante. Tres rondas, clientes adorables y recetas llenas de magia.</p>
+        <span class="fer-card__title">NEON: Última señal</span>
+        <p>Pilota un deslizador por una ciudad futurista. Recupera energía, salta obstáculos y lleva la última señal hasta la torre orbital.</p>
         <span class="fer-card__action">Jugar y ver el proyecto <span aria-hidden="true">↗</span></span>
       </a>
     </div>

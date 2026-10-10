@@ -1,11 +1,9 @@
-# Café de nubes
+# NEON: Última señal
 
-Juego de preparación de bebidas con clientes ilustrados, tres rondas, tiempo, paciencia y bonificaciones por pedidos consecutivos.
+Juego futurista en HTML, CSS y JavaScript con Canvas 2D. Pilota un deslizador, recoge 12 núcleos y sobrevive a tres sectores de 30 segundos.
 
-[Jugar](https://fernandiu-xu.github.io/Portafolio-fer/assets/videojuego/index.html?v=20261010-cafe1)
+[Jugar en GitHub Pages](https://fernandiu-xu.github.io/Portafolio-fer/videojuego/)
 
-[Ver la explicación](https://fernandiu-xu.github.io/Portafolio-fer/videojuego/)
+Controles: A/D o flechas para cambiar de carril; Espacio para saltar; Shift para impulso con escudo; P para pausa. Incluye botones táctiles y sonido opcional generado con Web Audio.
 
-Toca los ingredientes de una receta y presiona Servir en su cliente. También puedes usar 1–7 para ingredientes, Q/W/E para servir, R para vaciar y P para pausar.
-
-Archivos: index.html, style.css y game.js. Las ilustraciones SVG se incluyen en JavaScript. No se necesitan dependencias ni servicios externos; funciona en GitHub Pages.
+Abre index.html para jugar. No requiere dependencias ni compilación. Gráficos originales dibujados por código; récord local mediante localStorage.
