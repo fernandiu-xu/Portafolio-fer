@@ -63,6 +63,12 @@ nav_exclude: true
         <p>El diseño de un cubo en SolidWorks, la preparación del archivo DXF y su fabricación en MDF.</p>
         <span class="fer-card__action">Ver mis diseños <span aria-hidden="true">↗</span></span>
       </a>
+      <a class="fer-card" href="{{ '/brazo-robotico/' | relative_url }}">
+        <span class="fer-card__number">05 / Robótica · Semana 5 y 6</span>
+        <span class="fer-card__title">Brazo robótico</span>
+        <p>El diseño y la construcción de un brazo de MDF, controlado con Arduino, servomotores y potenciómetros.</p>
+        <span class="fer-card__action">Conocer el proyecto <span aria-hidden="true">↗</span></span>
+      </a>
     </div>
   </section>
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Uso de IA
-nav_order: 6
+nav_order: 7
 ---
 
 <p class="fer-page-label">Sobre este portafolio</p>
