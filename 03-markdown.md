@@ -459,6 +459,24 @@ Después utilicé dos potenciómetros para controlar los servomotores por separa
 
 En esta actividad utilicé una fuente externa para alimentar el servomotor, mientras Arduino enviaba la señal de control. También conecté el potenciómetro y los cables necesarios. Fue importante unir la tierra de la fuente con la tierra del Arduino para que compartieran una referencia, y entendí que controlar un motor y proporcionarle energía son dos funciones diferentes.
 
+El código utiliza la librería Servo.h y declara dos servomotores, con sus señales asignadas a los pines 9 y 2. La lectura del potenciómetro en A0 se guarda en valor y se convierte con map de un rango de 0 a 1023 a un ángulo de 0° a 180°. Esa posición se envía a ambos servos con write(pos), con una pausa de 10 milisegundos entre lecturas.
+
+<div class="fer-practice-pair">
+  <figure class="fer-practice-panel">
+    <h4>El circuito en funcionamiento</h4>
+    <video controls playsinline muted preload="metadata" poster="{{ '/assets/img/arduino/practica-21-video.jpg' | relative_url }}" aria-label="Práctica 21: servomotor con fuente externa">
+      <source src="{{ '/assets/videos/arduino-practica-21-sin-audio.mp4' | relative_url }}" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+    <figcaption>Prueba del servomotor con el circuito y la fuente externa.</figcaption>
+    <a class="fer-evidence-link" href="{{ '/assets/videos/arduino-practica-21-sin-audio.mp4' | relative_url }}" target="_blank" rel="noopener">Abrir el video ↗</a>
+  </figure>
+  <figure class="fer-practice-panel fer-practice-code">
+    <h4>El código de la práctica</h4>
+    <img src="{{ '/assets/img/arduino/codigo-practica-21.png' | relative_url }}" alt="Código de Arduino con Servo.h, dos servos en los pines 9 y 2 y lectura de un potenciómetro en A0" loading="lazy">
+    <figcaption>analogRead(A0) lee el potenciómetro y map convierte su valor en un ángulo. Ambos servos reciben pos, con una pausa de 10 milisegundos.</figcaption>
+  </figure>
+</div>
 
 ### Conclusión de la tercera parte
 
