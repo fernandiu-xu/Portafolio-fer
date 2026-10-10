@@ -31,9 +31,9 @@ Si usas el teclado, primero haz clic dentro del juego. El récord guarda la mayo
 ## Juega aquí
 
 <style>
-.fer-game-frame { display:block; width:100%; max-width:690px; height:730px; margin:1.5rem auto; border:1px solid #e8b6c8; border-radius:18px; background:#fff7fa; }
-@media(max-width:600px){.fer-game-frame{height:640px;}}
-@media(max-width:400px){.fer-game-frame{height:570px;}}
+.fer-game-frame { display:block; width:100%; max-width:690px; height:800px; margin:1.5rem auto; border:1px solid #e8b6c8; border-radius:18px; background:#fff7fa; }
+@media(max-width:600px){.fer-game-frame{height:700px;}}
+@media(max-width:400px){.fer-game-frame{height:600px;}}
 </style>
 
 <iframe class="fer-game-frame" src="{{ '/assets/videojuego/index.html' | relative_url }}" title="Robot recolector: videojuego interactivo" loading="lazy"></iframe>
