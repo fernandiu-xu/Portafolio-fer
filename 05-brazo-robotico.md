@@ -139,6 +139,21 @@ De esta manera podemos controlar por separado los movimientos de la base, del br
 
 
 
+<figure class="fer-cubo-figure">
+  <a href="{{ '/assets/img/brazo-robotico/CODIGOBRAZO1.jpg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/brazo-robotico/CODIGOBRAZO1.jpg' | relative_url }}" alt="Código del brazo robótico en Arduino IDE, parte 1 de 3" loading="lazy"></a>
+  <figcaption>Código del brazo robótico, parte 1 de 3.</figcaption>
+</figure>
+
+<figure class="fer-cubo-figure">
+  <a href="{{ '/assets/img/brazo-robotico/CODIGOBRAZO2.jpg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/brazo-robotico/CODIGOBRAZO2.jpg' | relative_url }}" alt="Código del brazo robótico en Arduino IDE, parte 2 de 3" loading="lazy"></a>
+  <figcaption>Código del brazo robótico, parte 2 de 3.</figcaption>
+</figure>
+
+<figure class="fer-cubo-figure">
+  <a href="{{ '/assets/img/brazo-robotico/CODIGOBRAZO3.jpg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/brazo-robotico/CODIGOBRAZO3.jpg' | relative_url }}" alt="Código del brazo robótico en Arduino IDE, parte 3 de 3" loading="lazy"></a>
+  <figcaption>Código del brazo robótico, parte 3 de 3.</figcaption>
+</figure>
+
 ## Resultado final
 
 La prueba del proyecto consiste en mover el brazo mediante los potenciómetros y utilizar la pinza para tomar la pelota de aproximadamente **6 cm de diámetro**. En esta etapa se observa cómo trabajan en conjunto la estructura, las conexiones y el programa.
