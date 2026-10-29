@@ -67,6 +67,17 @@ La impresión del gecko tardó **aproximadamente 2 horas**. Al terminar, se deja
   <figcaption>Impresora Creality utilizada en el proyecto, con el gecko sobre la base de impresión.</figcaption>
 </figure>
 
+### Video de la impresión del gecko
+
+<figure class="fer-cubo-figure">
+  <video controls playsinline muted preload="metadata" style="display:block;width:100%;max-height:540px;border-radius:10px;background:#171717" aria-label="Video de la impresora Creality durante la impresión del gecko" poster="{{ '/assets/img/pieza-3d/impresora-creality.webp' | relative_url }}">
+    <source src="{{ '/assets/videos/pieza-3d/impresion-gecko.mp4' | relative_url }}" type="video/mp4">
+    Tu navegador no permite reproducir este video. Puedes abrirlo con el enlace de abajo.
+  </video>
+  <figcaption>Un momento del proceso de impresión del gecko en la Creality.</figcaption>
+  <a class="fer-evidence-link" href="{{ '/assets/videos/pieza-3d/impresion-gecko.mp4' | relative_url }}">Abrir el video ↗</a>
+</figure>
+
 ### Qué impresora utilizamos y cómo funciona
 
 La máquina de la fotografía es una **impresora 3D Creality de filamento**, que trabaja con tecnología **FDM**, o modelado por deposición fundida. Esta tecnología sirve para transformar un modelo digital en un objeto físico mediante la acumulación de capas de plástico.
